@@ -5,11 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link
-        href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/owlcarousel/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="styles/custom.lib.css">
     <link rel="stylesheet" href="styles/layout.css">
@@ -24,27 +23,23 @@
             <div class="preheader bg-primary">
                 <div class="container d-flex justify-content-between align-items-center py-1">
                     <p class="text-white text-center m-0 text__size--x09">
-                        Bằng việc tiếp tục truy cập, quý khách chấp nhận việc sử dụng cookies và ,<a
-                            class="text-white text__decorate--underline" href="#"> Điều khoản sử dụng</a> của dabook
+                        Bằng việc tiếp tục truy cập, quý khách chấp nhận việc sử dụng cookies và ,<a class="text-white text__decorate--underline" href="#"> Điều khoản sử dụng</a> của dabook
                     </p>
-                    <button class="btn btn-sm preheader__closebtn my-sm-0 border__radius--100" type="submit"><i
-                            class="fas fa-times"></i></button>
+                    <button class="btn btn-sm preheader__closebtn my-sm-0 border__radius--100" type="submit"><i class="fas fa-times"></i></button>
                 </div>
             </div>
-            <nav class="navbar container navbar-expand-lg navbar-light">
+            <nav class="navbar container navbar-expand-lg navbar-light py-0">
                 <a class="navbar-brand" href="#">
                     <h1 class="m-0 p-0"><img src="images/logo/logo_show.png" class="custom__navlogo" alt=""></h1>
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto custom__nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Home</a>
+                            <a class="nav-link active" href="#">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Vé máy bay</a>
@@ -58,15 +53,36 @@
                     </ul>
                     <form class="form-inline my-2 my-lg-0">
                         <img class="custom__nav__lang mx-2" src="images/lang/korea.png" alt="">
-                        <button class="btn btn-sm btn-primary shadow my-2 my-sm-0 border__radius--100"
-                            type="submit">Login</button>
+                        <button class="btn btn-sm btn-primary shadow my-2 my-sm-0 border__radius--100" type="submit">Login</button>
                     </form>
                 </div>
             </nav>
         </header>
         <!-- !End header -->
         <div class="wrapper__body">
-
+            <div class="container-fluid">
+                <div class="row mp-none">
+                    <div class="col-12 mp-none">
+                            <div class="owl-carousel owl-theme">
+                                    <img class="owl-lazy" data-src="https://placehold.it/350x450&text=1" data-src-retina="https://placehold.it/350x250&text=1-retina" alt="">
+                                    <img class="owl-lazy" data-src="https://placehold.it/350x650&text=2" data-src-retina="https://placehold.it/350x250&text=2-retina" alt="">
+                                  <picture>
+                                      <source class="owl-lazy" media="(min-width: 650px)" data-srcset="https://placehold.it/350x250&text=3-large">
+                                      <source class="owl-lazy" media="(min-width: 350px)" data-srcset="https://placehold.it/350x250&text=3-medium">
+                                      <img class="owl-lazy" data-src="https://placehold.it/350x250&text=3-fallback" alt="">
+                                  </picture>
+                                    <img class="owl-lazy" data-src="https://placehold.it/350x250&text=4" alt="">
+                                    <img class="owl-lazy" data-src="https://placehold.it/350x250&text=5" alt="">
+                                    <img class="owl-lazy" data-src="https://placehold.it/350x250&text=6" alt="">
+                                    <img class="owl-lazy" data-src="https://placehold.it/350x250&text=7" alt="">
+                                    <img class="owl-lazy" data-src="https://placehold.it/350x250&text=8" alt="">
+                                    <img class="owl-lazy" data-src="https://placehold.it/350x400&text=9" alt="">
+                                    <img class="owl-lazy" data-src="https://placehold.it/350x400&text=10" alt="">
+                                    <img class="owl-lazy" data-src="https://placehold.it/350x450&text=11" alt="">
+                                </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- Footer -->
         <footer class="footer bg-primary">
@@ -77,37 +93,101 @@
                         </h6>
                         </ul>
                         <ul class="list__style--none m-0 p-0 text__size--x09">
-                            <li><a class="text-white" href="#">Private Policy</a></li>
-                            <li><a class="text-white" href="#">Term of us</a></li>
-                            <li><a class="text-white" href="#">Instruction</a></li>
-                            <li><a class="text-white" href="#">Contact</a></li>
+                            <li class="mb-1"><a class="text-white-muted" href="#"><i class="fas fa-headset pr-1"></i> 19001542</a></li>
+                            <li class="mb-1"><a class="text-white-muted" href="#"><i class="far fa-envelope-open pr-1"></i> contact@dabook.vn</a></li>
+                            <li class="mb-1"><a class="text-white-muted" href="#"><i class="fas fa-phone-alt pr-1"></i> 0243-562-3772</a></li>
+                            <li class="mb-1"><a class="text-white-muted" href="#"><i class="fas fa-fax pr-1"></i> 0243-562-3772
+                                </a></li>
+                        </ul>
+                    </div>
+                    <div class="col-2">
+                        <h6 class="text-white pb-2 text__size--x1">Product</h6>
+                        <ul class="list__style--none m-0 p-0 text__size--x09">
+                            <li class="mb-1"><a class="text-white-muted" href="#">Flight</a></li>
+                            <li class="mb-1"><a class="text-white-muted" href="#">Tour</a></li>
+                            <li class="mb-1"><a class="text-white-muted" href="#">Car</a></li>
+                            <li class="mb-1"><a class="text-white-muted" href="#">Hotel</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-2">
+                        <h6 class="text-white pb-2 text__size--x1">Company</h6>
+                        <ul class="list__style--none m-0 p-0 text__size--x09">
+                            <li class="mb-1"><a class="text-white-muted" href="#">About us</a></li>
+                            <li class="mb-1"><a class="text-white-muted" href="#">Dabook blog</a></li>
+                            <li class="mb-1"><a class="text-white-muted" href="#">Promotion</a></li>
+                            <li class="mb-1"><a class="text-white-muted" href="#">Help</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-2">
+                        <h6 class="text-white pb-2 text__size--x1">Service</h6>
+                        <ul class="list__style--none m-0 p-0 text__size--x09">
+                            <li class="mb-1"><a class="text-white-muted" href="#">Visa</a></li>
+                            <li class="mb-1"><a class="text-white-muted" href="#">Law</a></li>
+                            <li class="mb-1"><a class="text-white-muted" href="#">Insurance</a></li>
+                            <li class="mb-1"><a class="text-white-muted" href="#">Invesment</a></li>
                         </ul>
                     </div>
                     <div class="col-3">
-                        <h6 class="text-white pb-3">Product</h6>
-                        <ul class="list__style--none m-0 p-0 text__size--x09">
-                            <li><a class="text-white" href="#">Private Policy</a></li>
-                            <li><a class="text-white" href="#">Term of us</a></li>
-                            <li><a class="text-white" href="#">Instruction</a></li>
-                            <li><a class="text-white" href="#">Contact</a></li>
+                        <h6 class="text-white pb-2 text__size--x1">Cetificate</h6>
+                        <ul class="list__style--none m-0 p-0 pb-3 text__size--x09 d-flex justify-content-between flex-wrap">
+                            <li class="mb-1"><a class="text-white-muted" href="#">
+                                    <div class="bg-white border-radius-10 cetificate">
+                                        <img class="cetificate__img" src="images/cetificate/iata.jpg" alt="">
+                                    </div>
+                                </a></li>
+                            <li class="mb-1"><a class="text-white-muted" href="#">
+                                    <div class="bg-white border-radius-10 cetificate">
+                                        <img class="cetificate__img" src="images/cetificate/dangki_bocongthuong.png" alt="">
+                                    </div>
+                                </a></li>
+                            <li class="mb-1"><a class="text-white-muted" href="#">
+                                    <div class="bg-white border-radius-10 cetificate">
+                                        <img class="cetificate__img" src="images/cetificate/thongbao_bocongthuong.png" alt="">
+                                    </div>
+                                </a></li>
+                            <li class="mb-1"><a class="text-white-muted" href="#">
+                                    <div class="bg-white border-radius-10 cetificate">
+                                        <img class="cetificate__img" src="images/cetificate/tcdl.jpg" alt="">
+                                    </div>
+                                </a></li>
+                            <li class="mb-1"><a class="text-white-muted" href="#">
+                                    <div class="bg-white border-radius-10 cetificate">
+                                        <img class="cetificate__img" src="images/cetificate/Norton-Mobile-Security-Logo.jpg" alt="">
+                                    </div>
+                                </a></li>
                         </ul>
-                    </div>
-                    <div class="col-3">
-                        <h6 class="text-white pb-3">Cetificate</h6>
-                        <ul class="list__style--none m-0 p-0 text__size--x09">
-                            <li><a class="text-white" href="#">Private Policy</a></li>
-                            <li><a class="text-white" href="#">Term of us</a></li>
-                            <li><a class="text-white" href="#">Instruction</a></li>
-                            <li><a class="text-white" href="#">Contact</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-3">
-                        <h6 class="text-white pb-3">Download app</h6>
-                        <ul class="list__style--none m-0 p-0 text__size--x09">
-                            <li><a class="text-white" href="#">Private Policy</a></li>
-                            <li><a class="text-white" href="#">Term of us</a></li>
-                            <li><a class="text-white" href="#">Instruction</a></li>
-                            <li><a class="text-white" href="#">Contact</a></li>
+                        <h6 class="text-white pb-2 text__size--x1">Payment</h6>
+                        <ul class="list__style--none m-0 p-0 text__size--x09 d-flex justify-content-between flex-wrap">
+                            <li class="mb-1"><a class="text-white-muted" href="#">
+                                    <div class="bg-white border-radius-10 cetificate">
+                                        <img class="cetificate__img" src="images/payment/agribank.jpg" alt="">
+                                    </div>
+                                </a></li>
+                            <li class="mb-1"><a class="text-white-muted" href="#">
+                                    <div class="bg-white border-radius-10 cetificate">
+                                        <img class="cetificate__img" src="images/payment/hdbank.jpg" alt="">
+                                    </div>
+                                </a></li>
+                            <li class="mb-1"><a class="text-white-muted" href="#">
+                                    <div class="bg-white border-radius-10 cetificate">
+                                        <img class="cetificate__img" src="images/payment/shinhanbank.jpg" alt="">
+                                    </div>
+                                </a></li>
+                            <li class="mb-1"><a class="text-white-muted" href="#">
+                                    <div class="bg-white border-radius-10 cetificate">
+                                        <img class="cetificate__img" src="images/payment/techcombank.png" alt="">
+                                    </div>
+                                </a></li>
+                            <li class="mb-1"><a class="text-white-muted" href="#">
+                                    <div class="bg-white border-radius-10 cetificate">
+                                        <img class="cetificate__img" src="images/payment/vietcombank.jpg" alt="">
+                                    </div>
+                                </a></li>
+                            <li class="mb-1"><a class="text-white-muted" href="#">
+                                    <div class="bg-white border-radius-10 cetificate">
+                                        <img class="cetificate__img" src="images/payment/vietinbank.png" alt="">
+                                    </div>
+                                </a></li>
                         </ul>
                     </div>
                 </div>
@@ -128,15 +208,11 @@
         </footer>
         <!-- !End footer -->
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="assets/owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/custom.js"></script>
 </body>
 
 </html>
