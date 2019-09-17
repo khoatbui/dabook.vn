@@ -1,0 +1,78 @@
+/* ===============GENERAL=============== */
+/* --------------Margin padding--------- */
+.mp--none{
+    margin: 0;
+    padding: 0;
+}
+/* -------------List Style------------------*/
+.list__style--none{
+    list-style: none;
+}
+/* -------------Border radius-------------- */
+.border__radius--100{
+    border-radius: 100px;
+}
+.border__radius--10{
+    border-radius: 10px;
+}
+.border__radius--5{
+    border-radius: 5px;
+}
+.border__radius--3{
+    border-radius: 3px;
+}
+
+/* -------------Font size-------------- */
+.text__size--x09{
+    font-size: 0.9rem;
+}
+.text__size--x08{
+    font-size: 0.8rem;
+}
+.text__size--x07{
+    font-size: 0.7rem;
+}
+.text__size--x06{
+    font-size: 0.6rem;
+}
+
+/* -------------Font decorate-------------- */
+.text__decorate--underline{
+    text-decoration: underline;
+}
+/* ===============HEADER=============== */
+.custom__navlogo{
+    height: 50px;
+}
+.custom__nav .nav-item a{
+    color: #35405A !important;
+    font-weight: 500 !important;
+}
+.preheader__closebtn{
+    height: 25px;
+    width: 25px;
+    line-height: 10px;
+    background-color:transparent;
+    color: #FFF;
+}
+.preheader__closebtn:hover{
+    color: #FFF;
+}
+.custom__nav__lang{
+    border-radius: 100px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.custom__nav__lang:hover {
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+/* ===============BODY================== */
+.wrapper__body{
+    min-height: 80vh;
+}
+
+/* ===============FOOTER=============== */
+.custom__footer__logo{
+    height: 40px;
+}
