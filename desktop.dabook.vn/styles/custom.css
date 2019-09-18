@@ -1,6 +1,18 @@
 /* ===============GENERAL=============== */
+.custom__background--main{
+  background-color: #0065B8 !important;
+}
+.custom__background--second{
+  background-color: #FFCC00 !important;
+}
+.custom__background--three{
+  background-color: #1B2E4A !important;
+}
+.custom__background--four{
+  background-color: #F3F7FC !important;
+}
 /* --------------Margin padding--------- */
-.mp--none {
+.mp-none {
   margin: 0;
   padding: 0;
 }
@@ -9,8 +21,19 @@
   list-style: none;
 }
 /* -------------Border radius-------------- */
+.border__radius--none{
+  border-radius: 0 ;
+}
 .border__radius--100 {
   border-radius: 100px;
+}
+.border__radius__left--100 {
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+}
+.border__radius__right--100 {
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
 }
 .border__radius--10 {
   border-radius: 10px;
@@ -21,7 +44,9 @@
 .border__radius--3 {
   border-radius: 3px;
 }
-
+.overflow--hidden {
+  overflow: hidden;
+}
 /* -------------Font size-------------- */
 .text__size--x09 {
   font-size: 0.9rem;
@@ -41,14 +66,36 @@
 .text__size--x11 {
   font-size: 1.1rem;
 }
+.text__size--x12 {
+  font-size: 1.2rem;
+}
+.text__size--x13 {
+  font-size: 1.3rem;
+}
+.text__size--x2 {
+  font-size: 2rem;
+}
 /* -------------Font decorate-------------- */
 .text__decorate--underline {
   text-decoration: underline;
 }
 
 /* ---------------Font color----------------- */
+h1,h2,h3,h4,h5.h6{
+  color: #35405a;
+}
 .text-white-muted {
   color: #ddd;
+}
+
+/* -----------------Border----------------- */
+.border__style--dash{
+  border-style: dashed;
+}
+
+/* ----------Cursor----------- */
+.cursor--pointer{
+  cursor: pointer;
 }
 /* ===============HEADER=============== */
 .custom__navlogo {
@@ -83,8 +130,140 @@
 /* ===============BODY================== */
 .wrapper__body {
   min-height: 80vh;
+  background-color: #FFF;
+}
+/* -----------Video component---------- */
+.component__videointro{
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+/* --------------Booking component--------- */
+.component__booking{
+  position: relative;
+
+}
+.component__booking__background{
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 600px;  
+}
+.custom__dropdown__btn:active,.custom__dropdown__btn:focus{
+  border-color: none !important;
+  box-shadow: none !important;
+}
+.search__card{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #FFF;
+  z-index: 2;
+}
+.dropdown__depature__card{
+  top: 70px !important;
+  margin:0 0.8rem;
+  width: 190%;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+.dropdown__arrived__card{
+  top: 70px !important;
+  right: 0 !important;
+  left: auto !important;
+  margin:0 0.8rem;
+  width: 190%;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+.result__item:hover{
+  background-color: #F3F7FC;
+}
+.dropdown__guest__card{
+  width: 200px;
+  left: auto !important;
+  right: 0 !important;
+}
+.custom__btn--guestchange{
+  width: 30px;
+  height: 30px;
+  line-height: 10px;
+  font-size: 0.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* --------------TOP DESTINATION----------- */
+.topdes__card{
+  height: 250px;
+  background-repeat: no-repeat;
+}
+.topdes__card__child {
+  background-repeat: no-repeat;
+  background-position:center;
+  height: 100%;
+}
+.topdes__card:hover .topdes__card__child {
+  transform: scale(1.2);
+  transition: all .5s;
+}
+.topdes__card::before,.topdes__card::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #35405a;
+  opacity: 0.15;
+  z-index: 1;
+}
+.topdes__card img{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.custom__ovelap__body{
+  position: absolute;
+  color: #FFF;
+  bottom: 10px;
+  left: 10px;
+  z-index: 2;
+}
+.card__shortcut__list{
+  display: none;
+}
+.topdes__card:hover .card__shortcut__list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* ---------------------Today promotion----------- */
+.todaypromo__card{
+  height: 150px;
+}
+.todaypromo__card__child {
+  background-repeat: no-repeat;
+  background-position:center;
+  height: 100%;
+}
+.todaypromo__card:hover .todaypromo__card__child {
+  transform: scale(1.2);
+  transition: all .5s;
 }
 
+
+/* ---------Flight deal---------- */
+.flightdeal__card{
+  overflow: hidden;
+}
+.flightdeal__card__brand{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 16%;
+}
+.flightdeal__card__logo{
+  height: 30px;
+}
 /* ===============FOOTER=============== */
 .custom__footer__logo {
   height: 55px;
@@ -108,4 +287,21 @@
 }
 .footer .text-white-muted:hover {
   color: #fff !important;
+}
+
+
+/* ==========STICKY ELEMENT====== */
+.component__contact{
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+.custom__btn__up{
+  width: 50px !important;
+  height: 50px !important;
+  border-bottom: 2px solid #FFF !important;
+}
+.custom__btn__contact{
+  width: 50px !important;
+  height: 50px !important;
 }

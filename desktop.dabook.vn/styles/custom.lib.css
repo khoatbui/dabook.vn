@@ -1,1 +1,70 @@
+.owl-carousel{
+    position: relative;
+}
+.owl-nav{
+    position: absolute;
+    top: 40%;
+    z-index: 100;
+    transform: translateY(-50%);
+    display: flex;
+    min-width: 108%;
+    justify-content: space-between;
+    left: -45px;
+}
+.owl-prev,.owl-next{
+    width: 40px;
+    height: 40px;
+    border-radius: 50% !important;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    background-color: #FFF;
+    opacity: 1;
+    outline: none;
+}
+.owl-prev:hover,.owl-next:hover {
+    background-color: #FFF !important;
+    color: #35405a !important;
+}
 
+
+/* ============BOOTSTRAP=========== */
+.form-control:focus {
+    border-color: none !important;
+    box-shadow: none !important;
+  }
+
+/* ============FALATPICKER========== */
+.flatpickr-input{
+    background-color: #FFF !important;
+}
+.flatpickr-calendar.animate.arrowTop.open{
+    -webkit-animation-name: fadeInDown !important;
+    animation-name: fadeInDown !important;
+    animation-duration: 1s;
+}
+@-webkit-keyframes fadeInDown {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -50%, 0);
+      transform: translate3d(0, -50%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -50%, 0);
+      transform: translate3d(0, -50%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
