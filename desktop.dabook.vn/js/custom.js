@@ -6,6 +6,7 @@ $('.owl__topdes').owlCarousel({
   merge: true,
   nav: true,
   dots: false,
+  lazyLoad: true,
   responsive: {
     678: {
       mergeFit: true,
@@ -28,6 +29,7 @@ $('.owl__todaypro').owlCarousel({
   nav: true,
   dots: false,
   autoplay: true,
+  lazyLoad: true,
   autoplayTimeout: 2000,
   autoplayHoverPause: true,
   responsive: {
@@ -69,6 +71,7 @@ $('.owl__favoritedeslist').owlCarousel({
   merge: true,
   nav: false,
   dots: false,
+  lazyLoad: true,
   responsive: {
     678: {
       mergeFit: true,
@@ -139,3 +142,27 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+// ========CHANGE DATA MERGE ON HOVER========
+$(document).ready(function() {
+  var originWidth = $('.owl__topdes .owl-item').width();
+  $('.owl__topdes .owl-item').hover(
+    function() {
+      $('.owl__topdes .owl-item:not(:hover)').animate(
+        { width: originWidth },
+        400
+      );
+      // $(this).width(originWidth * 2);
+      if ($(this).width() == originWidth) {
+        $(this).animate({ width: originWidth * 2 }, 400);
+        $(this).addClass('active');
+      }
+    },
+    function() {
+      // $(this)
+      //   .prev()
+      //   .width(originWidth * 2);
+      // $(this).width(originWidth);
+    }
+  );
+});

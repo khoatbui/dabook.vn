@@ -246,10 +246,10 @@ h5.h6 {
   background-position: center;
   height: 100%;
 }
-.topdes__card:hover .topdes__card__child {
+/* .topdes__card:hover .topdes__card__child {
   transform: scale(1.2);
   transition: all 0.5s;
-}
+} */
 .topdes__card::before,
 .topdes__card::after {
   content: '';
