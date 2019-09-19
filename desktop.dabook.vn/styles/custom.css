@@ -15,7 +15,7 @@ html {
   background-color: #f3f7fc !important;
 }
 /* --------------Margin padding--------- */
-.mp-none {
+.mp--none {
   margin: 0;
   padding: 0;
 }
@@ -81,6 +81,9 @@ html {
 /* -------------Font decorate-------------- */
 .text__decorate--underline {
   text-decoration: underline;
+}
+.text__wrap--nowrap{
+  white-space: nowrap;
 }
 
 /* ---------------Font color----------------- */
@@ -236,7 +239,11 @@ h5.h6 {
   justify-content: center;
   align-items: center;
 }
-/* --------------TOP DESTINATION----------- */
+.component__booking__sticky{
+  display: none;
+  z-index: 100;
+}
+/* --------------Top destination----------- */
 .topdes__card {
   height: 250px;
   background-repeat: no-repeat;
@@ -307,6 +314,11 @@ h5.h6 {
 .flightdeal__card__logo {
   height: 30px;
 }
+/* ------------About DaiMinh--------- */
+.component__about{
+  background-repeat: repeat;
+  background-position-x: center;
+}
 /* ===============FOOTER=============== */
 .custom__footer__logo {
   height: 55px;
@@ -347,4 +359,33 @@ h5.h6 {
 .custom__btn__contact {
   width: 50px !important;
   height: 50px !important;
+}
+
+
+/* =============GOODREAD LIST============== */
+.goodreadlist__card{
+  width: 30%;
+}
+.goodreadlist__card__img{
+  height: 180px;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.resetflex__grow{
+  flex-grow: 1;
+}
+/* =============GOODREAD DETAIL=============== */
+.goodread__owner__img{
+  width: 35px;
+}
+.hotnew__img{
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80px;
+}
+.goodread__social__img{
+  height: 50px;
+  width: 50px;
 }

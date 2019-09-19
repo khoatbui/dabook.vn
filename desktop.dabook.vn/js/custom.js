@@ -126,9 +126,9 @@ function scrollFunction() {
   } else {
     scrollTopBtn.style.display = 'none';
   }
-  if (
+  if (bookingSticky !=null && (
     document.body.scrollTop > 700 ||
-    document.documentElement.scrollTop > 700
+    document.documentElement.scrollTop > 700)
   ) {
     bookingSticky.style.display = 'block';
   } else {

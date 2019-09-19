@@ -49,7 +49,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto custom__nav">
                         <li class="nav-item">
-                            <a class="nav-link active" href="index.html">Home</a>
+                            <a class="nav-link active" href="index.html">about</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="promotion.html">Khuyến mãi</a>
@@ -77,6 +77,7 @@
 
         <!-- Wrapper body -->
         <div class="wrapper__body">
+
             <!-- Booking component -->
             <div class="component__booking">
                 <div class="owl-carousel owl__bookingbg owl-theme">
@@ -106,305 +107,165 @@
                         </div>
                     </div>
                 </div>
-                <div class="container">
-                    <div class="card search__card border-0 border__radius--10 shadow-lg">
-                        <div class="card-header bg-primary border__radius--none py-4">
-                            <h2 class="text-white text__size--x12">Search flight <i
-                                    class="fas fa-plane-departure text__size--x1 ml-2"></i></h2>
+            </div>
+            <!-- >>>>!Booking component -->
+            <div class="component__goodread py-4 my-4">
+                <div class="container p-0">
+                    <div class="row mp--none pb-4 border-bottom">
+                        <div class="col-4">
+                            <div class="nav flex-column nav-pills bg-primary text-white" id="v-pills-tab" role="tablist"
+                                aria-orientation="vertical">
+                                <a class="nav-link active text-white" id="v-pills-about-tab" data-toggle="pill"
+                                    href="#v-pills-about" role="tab" aria-controls="v-pills-about"
+                                    aria-selected="true">About us</a>
+                                <a class="nav-link text-white" id="v-pills-private-tab" data-toggle="pill"
+                                    href="#v-pills-private" role="tab" aria-controls="v-pills-private"
+                                    aria-selected="false">Private Policy</a>
+                                <a class="nav-link text-white" id="v-pills-term-tab" data-toggle="pill"
+                                    href="#v-pills-term" role="tab" aria-controls="v-pills-term"
+                                    aria-selected="false">Term and condition</a>
+                                <a class="nav-link text-white" id="v-pills-instruction-tab" data-toggle="pill"
+                                    href="#v-pills-instruction" role="tab" aria-controls="v-pills-instruction"
+                                    aria-selected="false">Instruction</a>
+                            </div>
+                            <div class="card shadow-lg border-0 my-4">
+                                <div class="card-body text__size--x09">
+                                    <div class="row mp--none">
+                                        <div class="col-12 mp--none">
+                                            <div class="form-group">
+                                                <label for="contact__name" class="font-weight-bold text-muted">Your
+                                                    name</label>
+                                                <input type="text" class="form-control text__size--x09"
+                                                    id="contact__name" placeholder="Enter your name">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 mp--none">
+                                            <div class="form-group">
+                                                <label for="contact__email" class="font-weight-bold text-muted">Your
+                                                    email</label>
+                                                <input type="email" class="form-control text__size--x09"
+                                                    id="contact__email" placeholder="your@email.com">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 mp--none">
+                                            <div class="form-group">
+                                                <label for="contact__phone" class="font-weight-bold text-muted">Your
+                                                    phone</label>
+                                                <input type="phone" class="form-control text__size--x09"
+                                                    id="contact__phone" placeholder="+84 090 898 898">
+                                            </div>
+                                        </div>
+                                        <di class="col-12 mp--none">
+                                            <div class="form-group">
+                                                <label for="contact__message"
+                                                    class="font-weight-bold text-muted">Message</label>
+                                                <textarea class="form-control text__size--x09" id="contact__message"
+                                                    rows="3"></textarea>
+                                            </div>
+                                        </di>
+                                        <div class="col-12 mp--none text-right">
+                                            <button
+                                                class="btn btn-sm btn-primary border__radius--100 shadow text__size--x08">Send
+                                                us</button>
+                                        </div>
+                                        <div class="col-12 mp--none py-2 text-right">
+                                            <p class="text__size--x07 text-muted">Or call <span
+                                                    class="font-weight-bold text-primary"><i
+                                                    class="fas fa-headset pr-1 text__size--x06"></i>19001542</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="card-body custom__background--four">
-                            <div class="row mp--none py-3">
-                                <div class="col-4">
-                                    <div class="dropdown">
-                                        <a class="btn btn-white btn-sm dropdown-toggle custom__dropdown__btn font-weight-bold"
-                                            href="#" role="button" id="dropdown__way" data-toggle="dropdown"
-                                            aria-haspopup="true" aria-expanded="false">
-                                            Mot chieu
-                                        </a>
+                        <div class="col-8">
+                            <div class="tab-content" id="v-pills-tabContent">
+                                <div class="tab-pane fade show active" id="v-pills-about" role="tabpanel"
+                                    aria-labelledby="v-pills-about-tab">
+                                    <div class="about__title mb-4 pb-4 border-bottom">
+                                        <h2 class="title">Về dabook.vn </h2>
+                                    </div>
+                                    <div class="about__content text__size--x09">
+                                        <div class="collapsible-content showinformation">
+                                            <p>DABOOK.VN là một thương hiệu của công ty TNHH thương mại, dịch vụ và du
+                                                lịch Đại minh - thành
+                                                lập vào tháng 4/2004 tại Hà nội. </p>
 
-                                        <div class="dropdown-menu shadow border-0 border__radius--10 text__size--x09 animated fadeInDown"
-                                            aria-labelledby="dropdown__way">
-                                            <a class="dropdown-item" href="#">Mot chieu</a>
-                                            <a class="dropdown-item" href="#">Khu hoi</a>
-                                            <a class="dropdown-item" href="#">Nhieu chang</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="dropdown">
-                                        <a class="btn btn-white btn-sm dropdown-toggle custom__dropdown__btn font-weight-bold"
-                                            href="#" role="button" id="dropdown__class" data-toggle="dropdown"
-                                            aria-haspopup="true" aria-expanded="false">
-                                            Economy
-                                        </a>
+                                            <p>Công ty tự hào với sứ mệnh phục vụ khách du lịch và nhà đầu tư trong suốt
+                                                15 năm qua, và đang
+                                                hướng đến trở thành công ty Quản lý điểm đến hàng đầu tại Việt Nam, tiếp
+                                                tục sứ mệnh cung
+                                                cấp các dịch vụ: vé máy bay nội địa và quốc tế; tour trọn gói, tour từng
+                                                phần và tour đánh
+                                                golf trong nước và quốc tế; cung cấp dịch vụ hộ chiếu, visa; đại lý bảo
+                                                hiểm du lịch, v.v.
+                                            </p>
 
-                                        <div class="dropdown-menu shadow border-0 border__radius--10 text__size--x09 animated fadeInDown"
-                                            aria-labelledby="dropdown__class">
-                                            <a class="dropdown-item" href="#">Economy</a>
-                                            <a class="dropdown-item" href="#">Business</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="dropdown">
-                                        <a class="btn btn-white btn-sm dropdown-toggle custom__dropdown__btn font-weight-bold"
-                                            href="#" role="button" id="dropdown__class" data-toggle="dropdown"
-                                            aria-haspopup="true" aria-expanded="false">
-                                            1 Hanh khach
-                                        </a>
+                                            <p>Chúng tôi đã hoàn thiện các hạ tầng kỹ thuật nhằm phục vụ hiệu quả nhất
+                                                quí khách hàng trên
+                                                nền tảng ứng dụng kỹ thuật số - Online service.</p>
 
-                                        <div class="dropdown-menu dropdown-menu-right dropdown__guest__card shadow border-0 border__radius--10 text__size--x09 animated fadeInDown"
-                                            aria-labelledby="dropdown__class">
-                                            <div class="card border-0 text__size--x08">
-                                                <div class="card-body pb-0">
-                                                    <div
-                                                        class="row m-0 p-0 pb-1 d-flex justify-content-between align-items-center">
-                                                        <div class="col-6 p-0 m-0">
-                                                            Người lớn
-                                                        </div>
-                                                        <div class="col-2 p-0 m-0">
-                                                            <button
-                                                                class="btn btn-light custom__btn--guestchange text-center"><i
-                                                                    class="fas fa-minus p-0 m-0"></i></button>
-                                                        </div>
-                                                        <div class="col-2 p-0 m-0 text-center">
-                                                            <span class="font-weight-bold">2</span>
-                                                        </div>
-                                                        <div class="col-2 p-0 m-0">
-                                                            <button
-                                                                class="btn btn-light custom__btn--guestchange text-primary text-center"><i
-                                                                    class="fas fa-plus p-0 m-0"></i></button>
-                                                        </div>
-                                                    </div>
-                                                    <div
-                                                        class="row m-0 p-0 pb-1 d-flex justify-content-between align-items-center">
-                                                        <div class="col-6 p-0 m-0">
-                                                            Trẻ em
-                                                        </div>
-                                                        <div class="col-2 p-0 m-0">
-                                                            <button
-                                                                class="btn btn-light custom__btn--guestchange text-center"><i
-                                                                    class="fas fa-minus p-0 m-0"></i></button>
-                                                        </div>
-                                                        <div class="col-2 p-0 m-0 text-center">
-                                                            <span class="font-weight-bold">2</span>
-                                                        </div>
-                                                        <div class="col-2 p-0 m-0">
-                                                            <button
-                                                                class="btn btn-light custom__btn--guestchange text-primary text-center"><i
-                                                                    class="fas fa-plus p-0 m-0"></i></button>
-                                                        </div>
-                                                    </div>
-                                                    <div
-                                                        class="row m-0 p-0 pb-1 d-flex justify-content-between align-items-center">
-                                                        <div class="col-6 p-0 m-0">
-                                                            Trẻ sơ sinh
-                                                        </div>
-                                                        <div class="col-2 p-0 m-0">
-                                                            <button
-                                                                class="btn btn-light custom__btn--guestchange text-center"><i
-                                                                    class="fas fa-minus p-0 m-0"></i></button>
-                                                        </div>
-                                                        <div class="col-2 p-0 m-0 text-center">
-                                                            <span class="font-weight-bold">2</span>
-                                                        </div>
-                                                        <div class="col-2 p-0 m-0">
-                                                            <button
-                                                                class="btn btn-light custom__btn--guestchange text-primary text-center"><i
-                                                                    class="fas fa-plus p-0 m-0"></i></button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row m-0 py-2 border-top">
-                                                        <div class="col-12 p-0 m-0 text-right">
-                                                            <button
-                                                                class="btn btn-sm btn-light text-primary">Done</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row mp--none py-3">
-                                <div class="col-6 mr-0 pr-0 dropdown">
-                                    <label for="booking__depature"
-                                        class="text__size--x09 font-weight-bolder px-2 text-muted">Departure</label>
-                                    <div class="input-group border border-right-0" id="dropdown__depature"
-                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <input type="text" class="form-control border-0 text__size--x09 dropdown-toggle"
-                                            id="booking__depature" aria-describedby="basic-addon3"
-                                            placeholder="[HAN] HaNoi">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text border-0 bg-white border-right"
-                                                id="basic-addon3"><i class="fas fa-exchange-alt"></i></span>
+                                            <p>Giá trị cốt lõi của công ty nằm ở Uy tín, Sự kết nối và Công nghệ, để
+                                                giúp khách hàng Tiết
+                                                kiệm thời gian và chi phí. Chúng tôi hiểu rằng khách hàng giờ đây cần:
+                                                Nhanh, Chính xác,
+                                                Thuận tiện, An toàn bảo mật và đa dạng hình thức mua vé, giao vé, thanh
+                                                toán…</p>
 
-                                        </div>
-                                    </div>
-                                    <div class="dropdown-menu dropdown__depature__card shadow border-0 border__radius--10 text__size--x09 animated fadeInDown overflow--hidden"
-                                        aria-labelledby="dropdown__depature">
-                                        <div class="p-2 m-0">
-                                            <div class="row p-2 cursor--pointer result__item">
-                                                <div class="col-1">
-                                                    <i class="fas fa-city text-muted"></i>
-                                                </div>
-                                                <div class="col-9">
-                                                    [HAN] Hà Nội, Việt Nam
-                                                </div>
-                                                <div class="col-2">
-                                                    <button
-                                                        class="btn btn-sm btn-light border__radius--100 text-muted text__size--x08">Select</button>
-                                                </div>
-                                            </div>
-                                            <div class="row p-2 cursor--pointer result__item">
-                                                <div class="col-1">
-                                                    <i class="fas fa-city text-muted"></i>
-                                                </div>
-                                                <div class="col-9">
-                                                    [HAN] Hà Nội, Việt Nam
-                                                </div>
-                                                <div class="col-2">
-                                                    <button
-                                                        class="btn btn-sm btn-light border__radius--100 text-muted text__size--x08">Select</button>
-                                                </div>
-                                            </div>
-                                            <div class="row p-2 cursor--pointer result__item">
-                                                <div class="col-1">
-                                                    <i class="fas fa-city text-muted"></i>
-                                                </div>
-                                                <div class="col-9">
-                                                    [HAN] Hà Nội, Việt Nam
-                                                </div>
-                                                <div class="col-2">
-                                                    <button
-                                                        class="btn btn-sm btn-light border__radius--100 text-muted text__size--x08">Select</button>
-                                                </div>
-                                            </div>
-                                            <div class="row p-2 cursor--pointer result__item">
-                                                <div class="col-1">
-                                                    <i class="fas fa-city text-muted"></i>
-                                                </div>
-                                                <div class="col-9">
-                                                    [HAN] Hà Nội, Việt Nam
-                                                </div>
-                                                <div class="col-2">
-                                                    <button
-                                                        class="btn btn-sm btn-light border__radius--100 text-muted text__size--x08">Select</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6 ml-0 pl-0 dropdown">
-                                    <label for="booking__arrived"
-                                        class="text__size--x09 font-weight-bold px-2 text-muted">Arrived</label>
-                                    <div class="input-group border border-left-0" id="dropdown__arrived"
-                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <input type="text" class="form-control border-0 text__size--x09 dropdown-toggle"
-                                            id="booking__arrived" aria-describedby="basic-addon3"
-                                            placeholder="[HCM] Ho Chi Minh">
-                                    </div>
+                                            <p>Chúng tôi tự hào là thành viên của IATA.</p>
+                                            <p>Chúng tôi tự hào là đại lý hàng đầu (top agent) của Asiana airlines,
+                                                Korean airlines và đường
+                                                bay đi Hàn quốc của Vietnam airlines trong 15 năm liên tục. Chúng tôi đã
+                                                được chọn là đại lý
+                                                tốt nhất của Bamboo Airlines vào năm 2019 và sẽ tiếp tục cung cấp dịch
+                                                vụ tốt nhất cho khách
+                                                hàng của chúng tôi.</p>
 
-                                    <div class="dropdown-menu dropdown-menu-right dropdown__arrived__card shadow border-0 border__radius--10 text__size--x09 animated fadeInDown overflow--hidden"
-                                        aria-labelledby="dropdown__arrived">
-                                        <div class="p-2 m-0">
-                                            <div class="row p-2 cursor--pointer result__item">
-                                                <div class="col-1">
-                                                    <i class="fas fa-city text-muted"></i>
-                                                </div>
-                                                <div class="col-9">
-                                                    [HAN] Hà Nội, Việt Nam
-                                                </div>
-                                                <div class="col-2">
-                                                    <button
-                                                        class="btn btn-sm btn-light border__radius--100 text-muted text__size--x08">Select</button>
-                                                </div>
-                                            </div>
-                                            <div class="row p-2 cursor--pointer result__item">
-                                                <div class="col-1">
-                                                    <i class="fas fa-city text-muted"></i>
-                                                </div>
-                                                <div class="col-9">
-                                                    [HAN] Hà Nội, Việt Nam
-                                                </div>
-                                                <div class="col-2">
-                                                    <button
-                                                        class="btn btn-sm btn-light border__radius--100 text-muted text__size--x08">Select</button>
-                                                </div>
-                                            </div>
-                                            <div class="row p-2 cursor--pointer result__item">
-                                                <div class="col-1">
-                                                    <i class="fas fa-city text-muted"></i>
-                                                </div>
-                                                <div class="col-9">
-                                                    [HAN] Hà Nội, Việt Nam
-                                                </div>
-                                                <div class="col-2">
-                                                    <button
-                                                        class="btn btn-sm btn-light border__radius--100 text-muted text__size--x08">Select</button>
-                                                </div>
-                                            </div>
-                                            <div class="row p-2 cursor--pointer result__item">
-                                                <div class="col-1">
-                                                    <i class="fas fa-city text-muted"></i>
-                                                </div>
-                                                <div class="col-9">
-                                                    [HAN] Hà Nội, Việt Nam
-                                                </div>
-                                                <div class="col-2">
-                                                    <button
-                                                        class="btn btn-sm btn-light border__radius--100 text-muted text__size--x08">Select</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row mp--none py-3">
-                                <div class="col-6 mr-0 pr-0">
+                                            <p>Chúng tôi hân hạnh là đại lý cung cấp dịch vụ Vé máy bay và du lịch cho
+                                                hơn 3000 khách hàng
+                                                thường xuyên và các tổ chức: Lotte hotel, Lotte E&amp;C, Hyundai
+                                                Aluminum, Samsung Welstory,
+                                                Đại sứ quán Hàn quốc, trường quốc tế Hàn quốc tại Hà nội, Dongyang
+                                                E&amp;C</p>
 
-                                    <label for="booking__checkin"
-                                        class="text__size--x09 font-weight-bold px-2 text-muted">Checkin</label>
-                                    <div class="input-group border border-right-0">
-                                        <input type="text" class="form-control border-0 text__size--x09"
-                                            id="booking__checkin" aria-describedby="basic-addon3" placeholder="Checkin">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text border-0 bg-white border-right"
-                                                id="basic-addon3"><i class="far fa-calendar-alt"></i></span>
+                                            <p>Công ty có Bộ phận Phòng vé tại Mỹ Đình – Hà Nôi quy mô 25 nhân viên năng
+                                                động phục vụ 24/7,
+                                                hotline ngoài giờ mọi thời điểm theo tiêu chí Tư vấn chính xác, Hướng
+                                                dẫn tận tình. Và đội
+                                                ngũ nhân viên giao vé làm việc liên tục.</p>
 
+                                            <p>Công ty tổ chức Du lịch Trong nước và Quốc tế Daiminh Travel trụ sở tại
+                                                Mỹ Đình Hà Nội</p>
+                                            <p>Các Tour Desks tại các Khách sạn 5 sao như Lotte Hotel Liễu Giai và
+                                                Sheraton Hotel Tây Hồ,
+                                            </p>
+                                            <p>Công ty TnH Lawfirm chuyên trợ giúp pháp lý và hoạt động đầu tư.</p>
+
+                                            <h4>Liên lạc với công ty: </h4>
+                                            <ol>
+                                                <li>Trụ sở: Daiminh Trading, Services and Tourism Co.,Ltd </li>
+                                                <li>Add: Lot 118, TT3, My Dinh 1, Nam Tu Liem, Hanoi </li>
+                                                <li>Tel: 024-5623777/778</li>
+                                                <li>Fax: 024-5623772</li>
+                                                <li>Hotline: +84 (0)93 604 1996</li>
+                                            </ol>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-6 ml-0 pl-0">
-                                    <label for="booking__checkout"
-                                        class="text__size--x09 font-weight-bold px-2 text-muted">Checkout</label>
-                                    <div class="input-group border border-left-0">
-                                        <input type="text" class="form-control border-0 text__size--x09"
-                                            id="booking__checkout" aria-describedby="basic-addon3"
-                                            placeholder="Checkout">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text border-0 bg-white" id="basic-addon3"><i
-                                                    class="far fa-calendar-alt"></i></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row mp--none text-right my-3">
-                                <div class="col-12">
-                                    <button
-                                        class="btn custom__background--second text-white shadow px-4 border__radius--100">Search</button>
-                                </div>
+                                <div class="tab-pane fade" id="v-pills-private" role="tabpanel"
+                                    aria-labelledby="v-pills-private-tab">...</div>
+                                <div class="tab-pane fade" id="v-pills-term" role="tabpanel"
+                                    aria-labelledby="v-pills-term-tab">...</div>
+                                <div class="tab-pane fade" id="v-pills-instruction" role="tabpanel"
+                                    aria-labelledby="v-pills-instruction-tab">...</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- >>>>!Booking component -->
-
             <!-- Booking sticky component -->
-            <div class="component__booking__sticky custom__background--main sticky--top animated fadeInDown"
+            <div class="component__booking__sticky position-relative animated fadeInDown"
                 id="icomponent__booking__sticky">
-                <div class="container">
+                <div class="container custom__background--main">
                     <div class="row mp--none py-3">
                         <div class="col-4 mp--none px-1 d-flex align-items-center">
                             <div class="row mp--none">
@@ -691,182 +552,6 @@
             </div>
             <!-- >>>>!Booking sticky component -->
 
-            <!-- Favorite destination -->
-            <div class="component__topdes py-4 my-4">
-                <div class="container">
-                    <div class="row mp--none">
-                        <div class="col-12 mp--none mb-2">
-                            <h4>Top cac diem den duoc yeu thich nhat</h4>
-                        </div>
-                    </div>
-                    <div class="row mp--none">
-                        <div class="col-12 mp--none">
-                            <div class="owl-carousel owl__topdes owl-theme">
-                                <div class="item" data-merge="2">
-                                    <div class="card topdes__card border__radius--10 overflow--hidden">
-                                        <div class="topdes__card__child"
-                                            style="background-image:url('images/destination/danang.jpg');"></div>
-                                        <div class="custom__ovelap__body">
-                                            <h5 class="card-title">Da nang</h5>
-                                            <div class="card__shortcut__list">
-                                                <div class="item mr-2">
-                                                    <a class="btn btn-sm btn-outline-light border__radius--100"
-                                                        href="/search?departure=danang">Vé
-                                                        máy bay</a>
-                                                </div>
-                                                <div class="item mr-2">
-                                                    <a class="btn btn-sm btn-outline-light border__radius--100"
-                                                        href="http://daiminh.dabook.vn/tour?search=danang">Tour du
-                                                        lich</a>
-                                                </div>
-                                                <div class="item mr-2">
-                                                    <a class="btn btn-sm btn-outline-light border__radius--100"
-                                                        href="http://daiminh.dabook.vn?search=danang">Kham
-                                                        pha</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item" data-merge="1">
-                                    <div class="card topdes__card border__radius--10 overflow--hidden">
-                                        <div class="topdes__card__child"
-                                            style="background-image:url('images/destination/hochiminh.jpg');"></div>
-                                        <div class="custom__ovelap__body">
-                                            <h5 class="card-title">Hochiminh city</h5>
-                                            <div class="card__shortcut__list">
-                                                <div class="item mr-2">
-                                                    <a class="btn btn-sm btn-outline-light border__radius--100"
-                                                        href="/search?departure=danang">Vé
-                                                        máy bay</a>
-                                                </div>
-                                                <div class="item mr-2">
-                                                    <a class="btn btn-sm btn-outline-light border__radius--100"
-                                                        href="http://daiminh.dabook.vn/tour?search=danang">Tour du
-                                                        lich</a>
-                                                </div>
-                                                <div class="item mr-2">
-                                                    <a class="btn btn-sm btn-outline-light border__radius--100"
-                                                        href="http://daiminh.dabook.vn?search=danang">Kham
-                                                        pha</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item" data-merge="1">
-                                    <div class="card topdes__card border__radius--10 overflow--hidden">
-                                        <div class="topdes__card__child"
-                                            style="background-image:url('images/destination/hoian.jpg');"></div>
-                                        <div class="custom__ovelap__body">
-                                            <h5 class="card-title">Hoian</h5>
-                                            <div class="card__shortcut__list">
-                                                <div class="item mr-2">
-                                                    <a class="btn btn-sm btn-outline-light border__radius--100"
-                                                        href="/search?departure=danang">Vé
-                                                        máy bay</a>
-                                                </div>
-                                                <div class="item mr-2">
-                                                    <a class="btn btn-sm btn-outline-light border__radius--100"
-                                                        href="http://daiminh.dabook.vn/tour?search=danang">Tour du
-                                                        lich</a>
-                                                </div>
-                                                <div class="item mr-2">
-                                                    <a class="btn btn-sm btn-outline-light border__radius--100"
-                                                        href="http://daiminh.dabook.vn?search=danang">Kham
-                                                        pha</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item" data-merge="1">
-                                    <div class="card topdes__card border__radius--10 overflow--hidden">
-                                        <div class="topdes__card__child"
-                                            style="background-image:url('images/destination/mucangchai.jpg');"></div>
-                                        <div class="custom__ovelap__body">
-                                            <h5 class="card-title">Mu cang chai</h5>
-                                            <div class="card__shortcut__list">
-                                                <div class="item mr-2">
-                                                    <a class="btn btn-sm btn-outline-light border__radius--100"
-                                                        href="/search?departure=danang">Vé
-                                                        máy bay</a>
-                                                </div>
-                                                <div class="item mr-2">
-                                                    <a class="btn btn-sm btn-outline-light border__radius--100"
-                                                        href="http://daiminh.dabook.vn/tour?search=danang">Tour du
-                                                        lich</a>
-                                                </div>
-                                                <div class="item mr-2">
-                                                    <a class="btn btn-sm btn-outline-light border__radius--100"
-                                                        href="http://daiminh.dabook.vn?search=danang">Kham
-                                                        pha</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- >>>>!Favorite destination -->
-
-            <!-- Top destination -->
-            <div class="component__topdes py-4 my-4">
-                <div class="container">
-                    <div class="row mp--none">
-                        <div class="col-12 mp--none mb-2">
-                            <h4>Top cac diem den noi tieng</h4>
-                        </div>
-                    </div>
-                    <div class="row mp--none">
-                        <div class="col-12 mp--none">
-                            <div class="owl-carousel owl__topdes owl-theme">
-                                <div class="item" data-merge="1">
-                                    <div class="card topdes__card border__radius--10 overflow--hidden">
-                                        <div class="topdes__card__child"
-                                            style="background-image:url('images/destination/danang.jpg');"></div>
-                                        <div class="custom__ovelap__body">
-                                            <h5 class="card-title">Da nang</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item" data-merge="1">
-                                    <div class="card topdes__card border__radius--10 overflow--hidden">
-                                        <div class="topdes__card__child"
-                                            style="background-image:url('images/destination/hochiminh.jpg');"></div>
-                                        <div class="custom__ovelap__body">
-                                            <h5 class="card-title">Hochiminh city</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item" data-merge="1">
-                                    <div class="card topdes__card border__radius--10 overflow--hidden">
-                                        <div class="topdes__card__child"
-                                            style="background-image:url('images/destination/hoian.jpg');"></div>
-                                        <div class="custom__ovelap__body">
-                                            <h5 class="card-title">Hoian</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item" data-merge="1">
-                                    <div class="card topdes__card border__radius--10 overflow--hidden">
-                                        <div class="topdes__card__child"
-                                            style="background-image:url('images/destination/mucangchai.jpg');"></div>
-                                        <div class="custom__ovelap__body">
-                                            <h5 class="card-title">Mu cang chai</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- >>>>!Top destination -->
-
             <!-- Today promotion -->
             <div class="component__todaypromotion py-4 my-4">
                 <div class="container">
@@ -950,7 +635,7 @@
                     </div>
                     <div class="row mp--none">
                         <div class="col-12 mp--none d-flex justify-content-between align-items-center flex-wrap">
-                            <div class="card flightdeal__card cursor--pointer shadow border-0 border__radius--10 my-2">
+                            <div class="card flightdeal__card shadow border-0 border__radius--10 my-2 cursor--pointer">
                                 <div class="flightdeal__card__brand">
                                     <img class="flightdeal__card__logo" src="images/brand/logo-vietnam-airlines.png"
                                         alt="">
@@ -967,7 +652,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card flightdeal__card cursor--pointer shadow border-0 border__radius--10 my-2">
+                            <div class="card flightdeal__card shadow border-0 border__radius--10 my-2 cursor--pointer">
                                 <div class="flightdeal__card__brand">
                                     <img class="flightdeal__card__logo" src="images/brand/AirAsia.png" alt="">
                                 </div>
@@ -983,7 +668,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card flightdeal__card cursor--pointer shadow border-0 border__radius--10 my-2">
+                            <div class="card flightdeal__card shadow border-0 border__radius--10 my-2 cursor--pointer">
                                 <div class="flightdeal__card__brand">
                                     <img class="flightdeal__card__logo" src="images/brand/logo-vietnam-airlines.png"
                                         alt="">
@@ -1000,7 +685,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card flightdeal__card cursor--pointer shadow border-0 border__radius--10 my-2">
+                            <div class="card flightdeal__card shadow border-0 border__radius--10 my-2 cursor--pointer">
                                 <div class="flightdeal__card__brand">
                                     <img class="flightdeal__card__logo" src="images/brand/Jetstar-logo.jpg" alt="">
                                 </div>
@@ -1016,7 +701,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card flightdeal__card cursor--pointer shadow border-0 border__radius--10 my-2">
+                            <div class="card flightdeal__card shadow border-0 border__radius--10 my-2 cursor--pointer">
                                 <div class="flightdeal__card__brand">
                                     <img class="flightdeal__card__logo" src="images/brand/vietjet-logo.png" alt="">
                                 </div>
@@ -1032,7 +717,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card flightdeal__card cursor--pointer shadow border-0 border__radius--10 my-2">
+                            <div class="card flightdeal__card shadow border-0 border__radius--10 my-2 cursor--pointer">
                                 <div class="flightdeal__card__brand">
                                     <img class="flightdeal__card__logo" src="images/brand/AirAsia.png" alt="">
                                 </div>
@@ -1048,7 +733,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card flightdeal__card cursor--pointer shadow border-0 border__radius--10 my-2">
+                            <div class="card flightdeal__card shadow border-0 border__radius--10 my-2 cursor--pointer">
                                 <div class="flightdeal__card__brand">
                                     <img class="flightdeal__card__logo" src="images/brand/logo-vietnam-airlines.png"
                                         alt="">
@@ -1065,7 +750,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card flightdeal__card cursor--pointer shadow border-0 border__radius--10 my-2">
+                            <div class="card flightdeal__card shadow border-0 border__radius--10 my-2 cursor--pointer">
                                 <div class="flightdeal__card__brand">
                                     <img class="flightdeal__card__logo" src="images/brand/logo-vietnam-airlines.png"
                                         alt="">
@@ -1082,7 +767,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card flightdeal__card cursor--pointer shadow border-0 border__radius--10 my-2">
+                            <div class="card flightdeal__card shadow border-0 border__radius--10 my-2 cursor--pointer">
                                 <div class="flightdeal__card__brand">
                                     <img class="flightdeal__card__logo" src="images/brand/logo-vietnam-airlines.png"
                                         alt="">
@@ -1104,66 +789,6 @@
                 </div>
             </div>
             <!-- Flight promotion -->
-
-            <!-- About Dabook.vn -->
-            <div class="component__about py-4 mt-4"  style="background-image:url('images/background/bg_letter.png');">
-                <div class="container border__radius--10">
-                    <div class="row mp--none py-4">
-                        <div class="col-12 mp--none">
-                                <h2 class="title">Về dabook.vn </h2>
-                                <div class="seo-fold fold-content seo-fold-content text__size--x09">
-                                    <div class="collapsible-content showinformation">
-                                        <p>DABOOK.VN là một thương hiệu của công ty TNHH thương mại, dịch vụ và du lịch Đại minh - thành
-                                            lập vào tháng 4/2004 tại Hà nội. </p>
-                
-                                        <p>Công ty tự hào với sứ mệnh phục vụ khách du lịch và nhà đầu tư trong suốt 15 năm qua, và đang
-                                            hướng đến trở thành công ty Quản lý điểm đến hàng đầu tại Việt Nam, tiếp tục sứ mệnh cung
-                                            cấp các dịch vụ: vé máy bay nội địa và quốc tế; tour trọn gói, tour từng phần và tour đánh
-                                            golf trong nước và quốc tế; cung cấp dịch vụ hộ chiếu, visa; đại lý bảo hiểm du lịch, v.v.
-                                        </p>
-                
-                                        <p>Chúng tôi đã hoàn thiện các hạ tầng kỹ thuật nhằm phục vụ hiệu quả nhất quí khách hàng trên
-                                            nền tảng ứng dụng kỹ thuật số - Online service.</p>
-                
-                                        <p>Giá trị cốt lõi của công ty nằm ở Uy tín, Sự kết nối và Công nghệ, để giúp khách hàng Tiết
-                                            kiệm thời gian và chi phí. Chúng tôi hiểu rằng khách hàng giờ đây cần: Nhanh, Chính xác,
-                                            Thuận tiện, An toàn bảo mật và đa dạng hình thức mua vé, giao vé, thanh toán…</p>
-                
-                                        <p>Chúng tôi tự hào là thành viên của IATA.</p>
-                                        <p>Chúng tôi tự hào là đại lý hàng đầu (top agent) của Asiana airlines, Korean airlines và đường
-                                            bay đi Hàn quốc của Vietnam airlines trong 15 năm liên tục. Chúng tôi đã được chọn là đại lý
-                                            tốt nhất của Bamboo Airlines vào năm 2019 và sẽ tiếp tục cung cấp dịch vụ tốt nhất cho khách
-                                            hàng của chúng tôi.</p>
-                
-                                        <p>Chúng tôi hân hạnh là đại lý cung cấp dịch vụ Vé máy bay và du lịch cho hơn 3000 khách hàng
-                                            thường xuyên và các tổ chức: Lotte hotel, Lotte E&amp;C, Hyundai Aluminum, Samsung Welstory,
-                                            Đại sứ quán Hàn quốc, trường quốc tế Hàn quốc tại Hà nội, Dongyang E&amp;C</p>
-                
-                                        <p>Công ty có Bộ phận Phòng vé tại Mỹ Đình – Hà Nôi quy mô 25 nhân viên năng động phục vụ 24/7,
-                                            hotline ngoài giờ mọi thời điểm theo tiêu chí Tư vấn chính xác, Hướng dẫn tận tình. Và đội
-                                            ngũ nhân viên giao vé làm việc liên tục.</p>
-                
-                                        <p>Công ty tổ chức Du lịch Trong nước và Quốc tế Daiminh Travel trụ sở tại Mỹ Đình Hà Nội</p>
-                                        <p>Các Tour Desks tại các Khách sạn 5 sao như Lotte Hotel Liễu Giai và Sheraton Hotel Tây Hồ,
-                                        </p>
-                                        <p>Công ty TnH Lawfirm chuyên trợ giúp pháp lý và hoạt động đầu tư.</p>
-                
-                                        <h4>Liên lạc với công ty: </h4>
-                                        <ol>
-                                            <li>Trụ sở: Daiminh Trading, Services and Tourism Co.,Ltd </li>
-                                            <li>Add: Lot 118, TT3, My Dinh 1, Nam Tu Liem, Hanoi </li>
-                                            <li>Tel: 024-5623777/778</li>
-                                            <li>Fax: 024-5623772</li>
-                                            <li>Hotline: +84 (0)93 604 1996</li>
-                                        </ol>
-                                    </div>
-                                </div>
-                
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- >>>>!About Dabook.vn -->
         </div>
         <!-- >>>>!Wrapper body -->
 
@@ -1305,11 +930,10 @@
         </footer>
         <!-- >>>>!End footer -->
 
-
         <!-- Sticky element -->
         <div class="component__contact">
             <div class="btn-group-vertical">
-                <button class="btn btn-primary custom__btn__up border-bottom animated fadeIn" id="scroll__top"
+                <button class="btn btn-primary custom__btn__up border-bottom" id="scroll__top"
                     onclick="topFunction()"><i class="fas fa-angle-double-up"></i></button>
                 <button class="btn btn-primary custom__btn__contact"><i class="fas fa-headset"></i></button>
             </div>
