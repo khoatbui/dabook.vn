@@ -190,3 +190,13 @@ $(document).ready(function() {
     }
   );
 });
+
+
+// ======RANGE=========
+
+// Without JQuery
+var slider = new Slider('#ideparture__checkin__time', {});
+var slider = new Slider('#ideparture__checkout__time', {});
+var slider = new Slider('#iarrived__checkin__time', {});
+var slider = new Slider('#iarrived__checkout__time', {});
+var slider = new Slider('#i__filter__price', {});

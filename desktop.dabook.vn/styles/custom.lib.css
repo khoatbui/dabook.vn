@@ -68,3 +68,23 @@
       transform: translate3d(0, 0, 0);
     }
   }
+
+  /*---------- SLIDER-------------- */
+  .slider.slider-horizontal{
+    width: 100% !important;
+  }
+  .slider-track-low, .slider-track-high{
+    background-color: #e2e6ea !important;
+  }
+  .slider-selection{
+    background-color: #0065b8 !important;
+    background-image: none !important;
+  }
+  .slider-handle{
+    background-color: #0065b8 !important;
+    background-image: none !important;
+  }
+  .slider.slider-horizontal .slider-track{
+    height: 3px !important;
+    margin-top: -2px !important;
+  }
