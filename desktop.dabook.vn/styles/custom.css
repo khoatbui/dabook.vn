@@ -1,9 +1,20 @@
+@font-face {
+  font-family: Roboto;
+  src: url('../fonts/roboto/Roboto-Regular.ttf');
+}
 /* ===============GENERAL=============== */
 html {
   scroll-behavior: smooth;
+  font-family: 'Roboto', sans-serif !important;
 }
-.custom__background--main {
+body{
+  font-family: 'Roboto', sans-serif !important;
+}
+.custom__background--main,.bg-primary,.btn-primary {
   background-color: #0065b8 !important;
+}
+.text-primary {
+  color: #0065b8 !important;
 }
 .custom__background--second {
   background-color: #ffcc00 !important;
@@ -85,7 +96,12 @@ html {
 .text__wrap--nowrap {
   white-space: nowrap;
 }
-
+.text__threeline{
+  line-height: 1.6em;
+  max-height: 4.8em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 /* ---------------Font color----------------- */
 h1,
 h2,
@@ -143,6 +159,12 @@ h5.h6 {
 .is-hidden {
   visibility: hidden;
 }
+/* ---------------Checkbox---------- */
+
+/* -----------------Width height------ */
+.w-90{
+  width: 90% !important;
+}
 /* ===============HEADER=============== */
 .custom__navlogo {
   height: 50px;
@@ -177,7 +199,7 @@ h5.h6 {
   min-width: 90px;
 }
 .custom__nav .nav-link.active {
-  color: #007bff !important;
+  color: #0065b8 !important;
 }
 /* ===============BODY================== */
 .wrapper__body {
@@ -251,8 +273,11 @@ h5.h6 {
   justify-content: center;
   align-items: center;
 }
-.component__booking__sticky {
+.component__booking__sticky{
   display: none;
+  z-index: 100;
+}
+.component__booking__static{
   z-index: 100;
 }
 /* --------------Top destination----------- */
