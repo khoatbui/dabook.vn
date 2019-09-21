@@ -222,6 +222,12 @@ h5.h6 {
   background-size: cover;
   min-height: 600px;
 }
+.component__booking__background--400 {
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 400px;
+}
 .custom__dropdown__btn:active,
 .custom__dropdown__btn:focus {
   border-color: none !important;
