@@ -341,6 +341,7 @@ h5.h6 {
 /* ---------Flight deal---------- */
 .flightdeal__card {
   overflow: hidden;
+  width: 48%;
 }
 .flightdeal__card__brand {
   position: absolute;

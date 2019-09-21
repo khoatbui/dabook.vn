@@ -1,6 +1,6 @@
 // ==============INITIAL================
 $('.owl__topdes').owlCarousel({
-  items: 5,
+  items: 2,
   loop: true,
   margin: 10,
   merge: true,
@@ -21,7 +21,7 @@ $('.owl__topdes').owlCarousel({
   ],
 });
 $('.owl__favoritedes').owlCarousel({
-  items: 5,
+  items: 2,
   loop: true,
   margin: 10,
   merge: true,
@@ -42,7 +42,7 @@ $('.owl__favoritedes').owlCarousel({
   ],
 });
 $('.owl__todaypro').owlCarousel({
-  items: 3,
+  items: 2,
   loop: true,
   margin: 10,
   merge: true,
