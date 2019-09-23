@@ -426,3 +426,8 @@ h5.h6 {
   height: 50px;
   width: 50px;
 }
+
+/* ========DROPDOWN OUTER HIDE */
+.dropdown-menu--outerhide {
+  display: block !important
+}

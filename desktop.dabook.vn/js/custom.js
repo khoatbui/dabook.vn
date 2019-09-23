@@ -120,26 +120,7 @@ $('#booking__checkout__sticky').flatpickr({
 });
 
 // ====SCROLL TOP==========
-$(document).ready(function() {
-  $('a').on('click', function(event) {
-    if (this.hash !== '') {
-      event.preventDefault();
-      var hash = this.hash;
-
-      $('html, body').animate(
-        {
-          scrollTop: $(hash).offset().top,
-        },
-        800,
-        function() {
-          window.location.hash = hash;
-        }
-      );
-    }
-  });
-});
 scrollTopBtn = document.getElementById('scroll__top');
-bookingSticky = document.getElementById('icomponent__booking__sticky');
 window.onscroll = function() {
   scrollFunction();
 };
@@ -148,14 +129,6 @@ function scrollFunction() {
     scrollTopBtn.style.display = 'block';
   } else {
     scrollTopBtn.style.display = 'none';
-  }
-  if (
-    bookingSticky != null &&
-    (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700)
-  ) {
-    bookingSticky.style.display = 'block';
-  } else {
-    bookingSticky.style.display = 'none';
   }
 }
 function topFunction() {
@@ -191,27 +164,102 @@ $(document).ready(function() {
   );
 });
 
+// ======DROPDOWN OUTER HIDER=======
+$('.dropdown--outerhide > .dropdown-toggle').bind('click', function() {
+  if ($('.dropdown-menu--outerhide').hasClass('hide')) {
+    $('.dropdown-menu--outerhide')
+      .addClass('show')
+      .removeClass('hide');
+  } else {
+    $('.dropdown-menu--outerhide')
+      .addClass('hide')
+      .removeClass('show');
+  }
+});
+$('.dropdown__close__btn').on('click',function(){
+  $('.dropdown-menu--outerhide')
+      .addClass('hide')
+      .removeClass('show');
+});
+$(".dropdown-menu--outerhide").click(function(e) {
+  e.stopPropagation();
+});
+$(document).click(function() {
+  $(".dropdown-menu--outerhide") .addClass('hide')
+  .removeClass('show');
+});
 
-// ======RANGE=========
+// =============CHANGE GUEST QTY===================
+function changeAdultByPlus(targetInputFrontId, targetInputId) {
+  var targetInput = $(targetInputId);
+  var currentValue = parseInt(targetInput.val());
+  var targetInputFront = $(targetInputFrontId);
+  targetInputFront.text(currentValue + 1);
+  targetInput.val(currentValue + 1);
+}
+function changeAdultByMinus(targetInputFrontId, targetInputId) {
+  var targetInput = $(targetInputId);
+  var currentValue = parseInt(targetInput.val());
+  if (currentValue === 0) {
+    $(this).prop('disabled', true);
+    return;
+  } else {
+    $(this).prop('disabled', false);
+    var targetInputFront = $(targetInputFrontId);
+    targetInputFront.text(currentValue - 1);
+    targetInput.val(currentValue - 1);
+  }
+}
+function computedTotalAdult(targetAdultId,adultId,childId,infantId){
+  var total =parseInt($(adultId).val()) + parseInt($(childId).val()) + parseInt($(infantId).val());
+  $(targetAdultId).text(total + ' hanh khach');
+} 
+$('#isearch__infant__btnminus').on('click', function() {
+  changeAdultByMinus('#isearch__infant--front', '#isearch__infant');
+  computedTotalAdult('#isearch__guest','#isearch__infant','#isearch__child','#isearch__adult');
+});
+$('#isearch__infant__btnplus').on('click', function() {
+  changeAdultByPlus('#isearch__infant--front', '#isearch__infant');
+  computedTotalAdult('#isearch__guest','#isearch__infant','#isearch__child','#isearch__adult');
+});
+$('#isearch__child__btnminus').on('click', function() {
+  changeAdultByMinus('#isearch__child--front', '#isearch__child');
+  computedTotalAdult('#isearch__guest','#isearch__infant','#isearch__child','#isearch__adult');
+});
+$('#isearch__child__btnplus').on('click', function() {
+  changeAdultByPlus('#isearch__child--front', '#isearch__child');
+  computedTotalAdult('#isearch__guest','#isearch__infant','#isearch__child','#isearch__adult');
+});
+$('#isearch__adult__btnminus').on('click', function() {
+  changeAdultByMinus('#isearch__adult--front', '#isearch__adult');
+  computedTotalAdult('#isearch__guest','#isearch__infant','#isearch__child','#isearch__adult');
+});
+$('#isearch__adult__btnplus').on('click', function() {
+  changeAdultByPlus('#isearch__adult--front', '#isearch__adult');
+  computedTotalAdult('#isearch__guest','#isearch__infant','#isearch__child','#isearch__adult');
+});
 
-// Without JQuery
-var slider__departure__checkin = new Slider('#ideparture__checkin__time', {tooltip: 'always'});
-slider__departure__checkin.on("slide", function(sliderValue) {
-	document.getElementById("ideparture__checkin__value").textContent = moment(sliderValue[0].toString(),"HH").format('HH:mm') + ' - ' + moment(sliderValue[1].toString(),"HH").format('HH:mm');;
+$('#isearch__sticky__infant__btnminus').on('click', function() {
+  changeAdultByMinus('#isearch__sticky__infant--front', '#isearch__sticky__infant');
+  computedTotalAdult('#isearch__sticky__guest','#isearch__sticky__infant','#isearch__sticky__child','#isearch__sticky__adult');
 });
-var slider__departure__checkout = new Slider('#ideparture__checkout__time', {tooltip: 'always'});
-slider__departure__checkout.on("slide", function(sliderValue) {
-	document.getElementById("ideparture__checkout__value").textContent = moment(sliderValue[0].toString(),"HH").format('HH:mm') + ' - ' + moment(sliderValue[1].toString(),"HH").format('HH:mm');;
+$('#isearch__sticky__infant__btnplus').on('click', function() {
+  changeAdultByPlus('#isearch__sticky__infant--front', '#isearch__sticky__infant');
+  computedTotalAdult('#isearch__sticky__guest','#isearch__sticky__infant','#isearch__sticky__child','#isearch__sticky__adult');
 });
-var slider__arrived__checkin = new Slider('#iarrived__checkin__time', {tooltip: 'always'});
-slider__arrived__checkin.on("slide", function(sliderValue) {
-	document.getElementById("iarrived__checkin__value").textContent = moment(sliderValue[0].toString(),"HH").format('HH:mm') + ' - ' + moment(sliderValue[1].toString(),"HH").format('HH:mm');;
+$('#isearch__sticky__child__btnminus').on('click', function() {
+  changeAdultByMinus('#isearch__sticky__child--front', '#isearch__sticky__child');
+  computedTotalAdult('#isearch__sticky__guest','#isearch__sticky__infant','#isearch__sticky__child','#isearch__sticky__adult');
 });
-var slider__arrived__checkout = new Slider('#iarrived__checkout__time', {tooltip: 'always'});
-slider__arrived__checkout.on("slide", function(sliderValue) {
-	document.getElementById("iarrived__checkout__value").textContent = moment(sliderValue[0].toString(),"HH").format('HH:mm') + ' - ' + moment(sliderValue[1].toString(),"HH").format('HH:mm');
+$('#isearch__sticky__child__btnplus').on('click', function() {
+  changeAdultByPlus('#isearch__sticky__child--front', '#isearch__sticky__child');
+  computedTotalAdult('#isearch__sticky__guest','#isearch__sticky__infant','#isearch__sticky__child','#isearch__sticky__adult');
 });
-var slider__filter__price = new Slider('#i__filter__price', {tooltip: 'always'});
-slider__filter__price.on("slide", function(sliderValue) {
-	document.getElementById("i__filter__price__value").textContent =new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(sliderValue[0]) + ' - ' + new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(sliderValue[1]);
+$('#isearch__sticky__adult__btnminus').on('click', function() {
+  changeAdultByMinus('#isearch__sticky__adult--front', '#isearch__sticky__adult');
+  computedTotalAdult('#isearch__sticky__guest','#isearch__sticky__infant','#isearch__sticky__child','#isearch__sticky__adult');
+});
+$('#isearch__sticky__adult__btnplus').on('click', function() {
+  changeAdultByPlus('#isearch__sticky__adult--front', '#isearch__sticky__adult');
+  computedTotalAdult('#isearch__sticky__guest','#isearch__sticky__infant','#isearch__sticky__child','#isearch__sticky__adult');
 });

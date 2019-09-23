@@ -277,6 +277,10 @@ h5.h6 {
   display: none;
   z-index: 100;
 }
+.component__booking__relative{
+  position: relative;
+  z-index: 100;
+}
 .component__booking__static{
   z-index: 100;
 }
@@ -424,4 +428,14 @@ h5.h6 {
 .goodread__social__img {
   height: 50px;
   width: 50px;
+}
+/* ========DROPDOWN OUTER HIDE */
+.dropdown-menu--outerhide {
+  display: block !important
+}
+.dropdown-menu--outerhide.show{
+  display: block !important;
+}
+.dropdown-menu--outerhide.hide{
+  display: none !important;
 }

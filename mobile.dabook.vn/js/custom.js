@@ -191,27 +191,34 @@ $(document).ready(function() {
   );
 });
 
+// ======MODIFY ADULT-CHILD=======
+ function changeAdultByPlus(targetInputFrontId,targetInputId){
+   var targetInput= document.getElementById (targetInputId);
+   var currentValue = targetInput.value;
+   var targetInputFront= document.getElementById (targetInputFrontId);
+   targetInputFront.value = currentValue + 1;
+   targetInput.value = currentValue + 1;
+ }
+ function changeAdultByMinus(targetInputFrontId,targetInputId){
+  var targetInput= document.getElementById (targetInputId);
+  var currentValue = targetInput.value;
+  var targetInputFront= document.getElementById (targetInputFrontId);
+  targetInputFront.value = currentValue - 1;
+  targetInput.value = currentValue - 1;
+}
+document.getElementById('isearch__infant__btnminus').addEventListener('click',function(){changeAdultByMinus('isearch__infant--front,isearch__infant')});
+document.getElementById('isearch__infant__btnplus').addEventListener('click',function(){changeAdultByPlus('isearch__infant--front,isearch__infant')});
+document.getElementById('isearch__child__btnminus').addEventListener('click',function(){changeAdultByMinus('isearch__child--front,isearch__child')});
+document.getElementById('isearch__child__btnplus').addEventListener('click',function(){changeAdultByPlus('isearch__child--front,isearch__child')});
+document.getElementById('isearch__adult__btnminus').addEventListener('click',function(){changeAdultByMinus('isearch__adult--front,isearch__adult')});
+document.getElementById('isearch__adult__btnplus').addEventListener('click',function(){changeAdultByPlus('isearch__adult--front,isearch__adult')});
 
-// ======RANGE=========
-
-// Without JQuery
-var slider__departure__checkin = new Slider('#ideparture__checkin__time', {tooltip: 'always'});
-slider__departure__checkin.on("slide", function(sliderValue) {
-	document.getElementById("ideparture__checkin__value").textContent = moment(sliderValue[0].toString(),"HH").format('HH:mm') + ' - ' + moment(sliderValue[1].toString(),"HH").format('HH:mm');;
-});
-var slider__departure__checkout = new Slider('#ideparture__checkout__time', {tooltip: 'always'});
-slider__departure__checkout.on("slide", function(sliderValue) {
-	document.getElementById("ideparture__checkout__value").textContent = moment(sliderValue[0].toString(),"HH").format('HH:mm') + ' - ' + moment(sliderValue[1].toString(),"HH").format('HH:mm');;
-});
-var slider__arrived__checkin = new Slider('#iarrived__checkin__time', {tooltip: 'always'});
-slider__arrived__checkin.on("slide", function(sliderValue) {
-	document.getElementById("iarrived__checkin__value").textContent = moment(sliderValue[0].toString(),"HH").format('HH:mm') + ' - ' + moment(sliderValue[1].toString(),"HH").format('HH:mm');;
-});
-var slider__arrived__checkout = new Slider('#iarrived__checkout__time', {tooltip: 'always'});
-slider__arrived__checkout.on("slide", function(sliderValue) {
-	document.getElementById("iarrived__checkout__value").textContent = moment(sliderValue[0].toString(),"HH").format('HH:mm') + ' - ' + moment(sliderValue[1].toString(),"HH").format('HH:mm');
-});
-var slider__filter__price = new Slider('#i__filter__price', {tooltip: 'always'});
-slider__filter__price.on("slide", function(sliderValue) {
-	document.getElementById("i__filter__price__value").textContent =new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(sliderValue[0]) + ' - ' + new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(sliderValue[1]);
-});
+$('.dropdown--outerhide > .dropdown-toggle').addEventListener('click',function(){
+  console.log('ab');
+  if ($('.dropdown-menu--outerhide').hasClass('hide')) {
+    $('.dropdown-menu--outerhide').addClass('show').removeClass('hide')
+  }
+  else {
+    $('.dropdown-menu--outerhide').addClass('hide').removeClass('show')
+  }
+})
