@@ -220,13 +220,13 @@ h5.h6 {
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 600px;
+  min-height: 300px;
 }
 .component__booking__background--400 {
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 400px;
+  min-height: 300px;
 }
 .custom__dropdown__btn:active,
 .custom__dropdown__btn:focus {
@@ -277,12 +277,16 @@ h5.h6 {
   display: none;
   z-index: 100;
 }
+.component__booking__relative{
+  position: relative;
+  z-index: 100;
+}
 .component__booking__static{
   z-index: 100;
 }
 /* --------------Top destination----------- */
 .topdes__card {
-  height: 250px;
+  height: 150px;
   background-repeat: no-repeat;
 }
 .topdes__card__child {
@@ -341,7 +345,7 @@ h5.h6 {
 /* ---------Flight deal---------- */
 .flightdeal__card {
   overflow: hidden;
-  width: 48%;
+  width: 48%
 }
 .flightdeal__card__brand {
   position: absolute;
@@ -401,7 +405,9 @@ h5.h6 {
 
 /* =============GOODREAD LIST============== */
 .goodreadlist__card {
-  width: 30%;
+  width: 100%;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 .goodreadlist__card__img {
   height: 180px;
@@ -426,8 +432,13 @@ h5.h6 {
   height: 50px;
   width: 50px;
 }
-
 /* ========DROPDOWN OUTER HIDE */
 .dropdown-menu--outerhide {
   display: block !important
+}
+.dropdown-menu--outerhide.show{
+  display: block !important;
+}
+.dropdown-menu--outerhide.hide{
+  display: none !important;
 }

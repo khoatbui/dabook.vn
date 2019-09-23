@@ -42,7 +42,7 @@ $('.owl__favoritedes').owlCarousel({
   ],
 });
 $('.owl__todaypro').owlCarousel({
-  items: 2,
+  items: 1,
   loop: true,
   margin: 10,
   merge: true,
@@ -102,44 +102,52 @@ $('.owl__favoritedeslist').owlCarousel({
   },
 });
 
-$('#booking__checkin').flatpickr({
+// ========DATETIME PICKER=================
+var booking__checkin = flatpickr('#booking__checkin', {
   minDate: 'today',
   dateFormat: 'Y-m-d',
-});
-$('#booking__checkout').flatpickr({
-  minDate: 'today',
-  dateFormat: 'Y-m-d',
-});
-$('#booking__checkin__sticky').flatpickr({
-  minDate: 'today',
-  dateFormat: 'Y-m-d',
-});
-$('#booking__checkout__sticky').flatpickr({
-  minDate: 'today',
-  dateFormat: 'Y-m-d',
+  onChange: function(selectedDates, dateStr, instance) {
+    booking__checkin__sticky.setDate(selectedDates, true, 'Y-m-d');
+    booking__checkout.set('minDate',flatpickr.formatDate(new Date(selectedDates), "Y-m-d"));
+  },
 });
 
+var booking__checkout = flatpickr('#booking__checkout', {
+  minDate: 'today',
+  dateFormat: 'Y-m-d',
+  inline:true,
+  onChange: function(selectedDates, dateStr, instance) {
+    booking__checkout__sticky.setDate(selectedDates, true, 'Y-m-d');
+  },
+});
+var booking__checkin__sticky = flatpickr('#booking__checkin__sticky', {
+  minDate: 'today',
+  dateFormat: 'Y-m-d',
+  onClose: function(selectedDates, dateStr, instance) {
+    booking__checkin.setDate(selectedDates, true, 'Y-m-d');
+    booking__checkout__sticky.set('minDate',flatpickr.formatDate(new Date(selectedDates), "Y-m-d"));
+  },
+});
+var booking__checkout__sticky = flatpickr('#booking__checkout__sticky', {
+  minDate: 'today',
+  dateFormat: 'Y-m-d',
+  onClose: function(selectedDates, dateStr, instance) {
+    booking__checkout.setDate(selectedDates, true, 'Y-m-d');
+  },
+});
+var booking__checkin__relative = flatpickr('#booking__checkin__relative', {
+  minDate: 'today',
+  dateFormat: 'Y-m-d',
+  onChange: function(selectedDates, dateStr, instance) {
+    booking__checkout__relative.set('minDate',flatpickr.formatDate(new Date(selectedDates), "Y-m-d"));
+  },
+});
+var booking__checkout__relative = flatpickr('#booking__checkout__relative', {
+  minDate: $('#booking__checkout').val(),
+  dateFormat: 'Y-m-d',
+});
 // ====SCROLL TOP==========
-$(document).ready(function() {
-  $('a').on('click', function(event) {
-    if (this.hash !== '') {
-      event.preventDefault();
-      var hash = this.hash;
-
-      $('html, body').animate(
-        {
-          scrollTop: $(hash).offset().top,
-        },
-        800,
-        function() {
-          window.location.hash = hash;
-        }
-      );
-    }
-  });
-});
 scrollTopBtn = document.getElementById('scroll__top');
-bookingSticky = document.getElementById('icomponent__booking__sticky');
 window.onscroll = function() {
   scrollFunction();
 };
@@ -148,14 +156,6 @@ function scrollFunction() {
     scrollTopBtn.style.display = 'block';
   } else {
     scrollTopBtn.style.display = 'none';
-  }
-  if (
-    bookingSticky != null &&
-    (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700)
-  ) {
-    bookingSticky.style.display = 'block';
-  } else {
-    bookingSticky.style.display = 'none';
   }
 }
 function topFunction() {
@@ -191,34 +191,437 @@ $(document).ready(function() {
   );
 });
 
-// ======MODIFY ADULT-CHILD=======
- function changeAdultByPlus(targetInputFrontId,targetInputId){
-   var targetInput= document.getElementById (targetInputId);
-   var currentValue = targetInput.value;
-   var targetInputFront= document.getElementById (targetInputFrontId);
-   targetInputFront.value = currentValue + 1;
-   targetInput.value = currentValue + 1;
- }
- function changeAdultByMinus(targetInputFrontId,targetInputId){
-  var targetInput= document.getElementById (targetInputId);
-  var currentValue = targetInput.value;
-  var targetInputFront= document.getElementById (targetInputFrontId);
-  targetInputFront.value = currentValue - 1;
-  targetInput.value = currentValue - 1;
-}
-document.getElementById('isearch__infant__btnminus').addEventListener('click',function(){changeAdultByMinus('isearch__infant--front,isearch__infant')});
-document.getElementById('isearch__infant__btnplus').addEventListener('click',function(){changeAdultByPlus('isearch__infant--front,isearch__infant')});
-document.getElementById('isearch__child__btnminus').addEventListener('click',function(){changeAdultByMinus('isearch__child--front,isearch__child')});
-document.getElementById('isearch__child__btnplus').addEventListener('click',function(){changeAdultByPlus('isearch__child--front,isearch__child')});
-document.getElementById('isearch__adult__btnminus').addEventListener('click',function(){changeAdultByMinus('isearch__adult--front,isearch__adult')});
-document.getElementById('isearch__adult__btnplus').addEventListener('click',function(){changeAdultByPlus('isearch__adult--front,isearch__adult')});
-
-$('.dropdown--outerhide > .dropdown-toggle').addEventListener('click',function(){
-  console.log('ab');
+// ======DROPDOWN OUTER HIDER=======
+$('.dropdown--outerhide > .dropdown-toggle').bind('click', function() {
   if ($('.dropdown-menu--outerhide').hasClass('hide')) {
-    $('.dropdown-menu--outerhide').addClass('show').removeClass('hide')
+    $('.dropdown-menu--outerhide')
+      .addClass('show')
+      .removeClass('hide');
+  } else {
+    $('.dropdown-menu--outerhide')
+      .addClass('hide')
+      .removeClass('show');
   }
-  else {
-    $('.dropdown-menu--outerhide').addClass('hide').removeClass('show')
+});
+$('.dropdown__close__btn').on('click', function() {
+  $('.dropdown-menu--outerhide')
+    .addClass('hide')
+    .removeClass('show');
+});
+$('.dropdown-menu--outerhide').click(function(e) {
+  e.stopPropagation();
+});
+$(document).click(function() {
+  $('.dropdown-menu--outerhide')
+    .addClass('hide')
+    .removeClass('show');
+});
+
+// =============CHANGE GUEST QTY===================
+function changeAdultByPlus(targetInputFrontId, targetInputId) {
+  var targetInput = $(targetInputId);
+  var currentValue = parseInt(targetInput.val());
+  var targetInputFront = $(targetInputFrontId);
+  targetInputFront.text(currentValue + 1);
+  targetInput.val(currentValue + 1);
+}
+function changeAdultByMinus(targetInputFrontId, targetInputId, minimumValue) {
+  var targetInput = $(targetInputId);
+  var currentValue = parseInt(targetInput.val());
+  if (currentValue === minimumValue) {
+    $(this).prop('disabled', true);
+    return;
+  } else {
+    $(this).prop('disabled', false);
+    var targetInputFront = $(targetInputFrontId);
+    targetInputFront.text(currentValue - 1);
+    targetInput.val(currentValue - 1);
   }
-})
+}
+function computedTotalAdult(targetAdultId, adultId, childId, infantId) {
+  var total =
+    parseInt($(adultId).val()) +
+    parseInt($(childId).val()) +
+    parseInt($(infantId).val());
+  $(targetAdultId).text(total + ' hanh khach');
+}
+function syncAdult(targetInputFrontId, targetInputId, syncSourceId) {
+  var syncValue = parseInt($(syncSourceId).val());
+  $(targetInputId).val(syncValue);
+  $(targetInputFrontId).text(syncValue);
+}
+$('#isearch__infant__btnminus').on('click', function() {
+  changeAdultByMinus('#isearch__infant--front', '#isearch__infant', 0);
+  computedTotalAdult(
+    '#isearch__guest',
+    '#isearch__infant',
+    '#isearch__child',
+    '#isearch__adult'
+  );
+  syncAdult(
+    '#isearch__sticky__infant--front',
+    '#isearch__sticky__infant',
+    '#isearch__infant'
+  );
+  computedTotalAdult(
+    '#isearch__sticky__guest',
+    '#isearch__sticky__infant',
+    '#isearch__sticky__child',
+    '#isearch__sticky__adult'
+  );
+});
+$('#isearch__infant__btnplus').on('click', function() {
+  changeAdultByPlus('#isearch__infant--front', '#isearch__infant');
+  computedTotalAdult(
+    '#isearch__guest',
+    '#isearch__infant',
+    '#isearch__child',
+    '#isearch__adult'
+  );
+  syncAdult(
+    '#isearch__sticky__infant--front',
+    '#isearch__sticky__infant',
+    '#isearch__infant'
+  );
+  computedTotalAdult(
+    '#isearch__sticky__guest',
+    '#isearch__sticky__infant',
+    '#isearch__sticky__child',
+    '#isearch__sticky__adult'
+  );
+});
+$('#isearch__child__btnminus').on('click', function() {
+  changeAdultByMinus('#isearch__child--front', '#isearch__child', 0);
+  computedTotalAdult(
+    '#isearch__guest',
+    '#isearch__infant',
+    '#isearch__child',
+    '#isearch__adult'
+  );
+  syncAdult(
+    '#isearch__sticky__child--front',
+    '#isearch__sticky__child',
+    '#isearch__child'
+  );
+  computedTotalAdult(
+    '#isearch__sticky__guest',
+    '#isearch__sticky__infant',
+    '#isearch__sticky__child',
+    '#isearch__sticky__adult'
+  );
+});
+$('#isearch__child__btnplus').on('click', function() {
+  changeAdultByPlus('#isearch__child--front', '#isearch__child');
+  computedTotalAdult(
+    '#isearch__guest',
+    '#isearch__infant',
+    '#isearch__child',
+    '#isearch__adult'
+  );
+  syncAdult(
+    '#isearch__sticky__child--front',
+    '#isearch__sticky__child',
+    '#isearch__child'
+  );
+  computedTotalAdult(
+    '#isearch__sticky__guest',
+    '#isearch__sticky__infant',
+    '#isearch__sticky__child',
+    '#isearch__sticky__adult'
+  );
+});
+$('#isearch__adult__btnminus').on('click', function() {
+  changeAdultByMinus('#isearch__adult--front', '#isearch__adult', 1);
+  computedTotalAdult(
+    '#isearch__guest',
+    '#isearch__infant',
+    '#isearch__child',
+    '#isearch__adult'
+  );
+  syncAdult(
+    '#isearch__sticky__adult--front',
+    '#isearch__sticky__adult',
+    '#isearch__adult'
+  );
+  computedTotalAdult(
+    '#isearch__sticky__guest',
+    '#isearch__sticky__infant',
+    '#isearch__sticky__child',
+    '#isearch__sticky__adult'
+  );
+});
+$('#isearch__adult__btnplus').on('click', function() {
+  changeAdultByPlus('#isearch__adult--front', '#isearch__adult');
+  computedTotalAdult(
+    '#isearch__guest',
+    '#isearch__infant',
+    '#isearch__child',
+    '#isearch__adult'
+  );
+  syncAdult(
+    '#isearch__sticky__adult--front',
+    '#isearch__sticky__adult',
+    '#isearch__adult'
+  );
+  computedTotalAdult(
+    '#isearch__sticky__guest',
+    '#isearch__sticky__infant',
+    '#isearch__sticky__child',
+    '#isearch__sticky__adult'
+  );
+});
+// ----------------------
+
+$('#isearch__sticky__infant__btnminus').on('click', function() {
+  changeAdultByMinus(
+    '#isearch__sticky__infant--front',
+    '#isearch__sticky__infant',
+    0
+  );
+  computedTotalAdult(
+    '#isearch__sticky__guest',
+    '#isearch__sticky__infant',
+    '#isearch__sticky__child',
+    '#isearch__sticky__adult'
+  );
+  syncAdult(
+    '#isearch__infant--front',
+    '#isearch__infant',
+    '#isearch__sticky__infant'
+  );
+  computedTotalAdult(
+    '#isearch__guest',
+    '#isearch__infant',
+    '#isearch__child',
+    '#isearch__adult'
+  );
+});
+$('#isearch__sticky__infant__btnplus').on('click', function() {
+  changeAdultByPlus(
+    '#isearch__sticky__infant--front',
+    '#isearch__sticky__infant'
+  );
+  computedTotalAdult(
+    '#isearch__sticky__guest',
+    '#isearch__sticky__infant',
+    '#isearch__sticky__child',
+    '#isearch__sticky__adult'
+  );
+  syncAdult(
+    '#isearch__infant--front',
+    '#isearch__infant',
+    '#isearch__sticky__infant'
+  );
+  computedTotalAdult(
+    '#isearch__guest',
+    '#isearch__infant',
+    '#isearch__child',
+    '#isearch__adult'
+  );
+});
+$('#isearch__sticky__child__btnminus').on('click', function() {
+  changeAdultByMinus(
+    '#isearch__sticky__child--front',
+    '#isearch__sticky__child',
+    0
+  );
+  computedTotalAdult(
+    '#isearch__sticky__guest',
+    '#isearch__sticky__infant',
+    '#isearch__sticky__child',
+    '#isearch__sticky__adult'
+  );
+  syncAdult(
+    '#isearch__child--front',
+    '#isearch__child',
+    '#isearch__sticky__child'
+  );
+  computedTotalAdult(
+    '#isearch__guest',
+    '#isearch__infant',
+    '#isearch__child',
+    '#isearch__adult'
+  );
+});
+$('#isearch__sticky__child__btnplus').on('click', function() {
+  changeAdultByPlus(
+    '#isearch__sticky__child--front',
+    '#isearch__sticky__child'
+  );
+  computedTotalAdult(
+    '#isearch__sticky__guest',
+    '#isearch__sticky__infant',
+    '#isearch__sticky__child',
+    '#isearch__sticky__adult'
+  );
+  syncAdult(
+    '#isearch__child--front',
+    '#isearch__child',
+    '#isearch__sticky__child'
+  );
+  computedTotalAdult(
+    '#isearch__guest',
+    '#isearch__infant',
+    '#isearch__child',
+    '#isearch__adult'
+  );
+});
+$('#isearch__sticky__adult__btnminus').on('click', function() {
+  changeAdultByMinus(
+    '#isearch__sticky__adult--front',
+    '#isearch__sticky__adult',
+    1
+  );
+  computedTotalAdult(
+    '#isearch__sticky__guest',
+    '#isearch__sticky__infant',
+    '#isearch__sticky__child',
+    '#isearch__sticky__adult'
+  );
+  syncAdult(
+    '#isearch__adult--front',
+    '#isearch__adult',
+    '#isearch__sticky__adult'
+  );
+  computedTotalAdult(
+    '#isearch__guest',
+    '#isearch__infant',
+    '#isearch__child',
+    '#isearch__adult'
+  );
+});
+$('#isearch__sticky__adult__btnplus').on('click', function() {
+  changeAdultByPlus(
+    '#isearch__sticky__adult--front',
+    '#isearch__sticky__adult'
+  );
+  computedTotalAdult(
+    '#isearch__sticky__guest',
+    '#isearch__sticky__infant',
+    '#isearch__sticky__child',
+    '#isearch__sticky__adult'
+  );
+  syncAdult(
+    '#isearch__adult--front',
+    '#isearch__adult',
+    '#isearch__sticky__adult'
+  );
+  computedTotalAdult(
+    '#isearch__guest',
+    '#isearch__infant',
+    '#isearch__child',
+    '#isearch__adult'
+  );
+});
+
+// ----------------------
+
+$('#isearch__relative__infant__btnminus').on('click', function() {
+  changeAdultByMinus(
+    '#isearch__relative__infant--front',
+    '#isearch__relative__infant',
+    0
+  );
+  computedTotalAdult(
+    '#isearch__relative__guest',
+    '#isearch__relative__infant',
+    '#isearch__relative__child',
+    '#isearch__relative__adult'
+  );
+});
+$('#isearch__relative__infant__btnplus').on('click', function() {
+  changeAdultByPlus(
+    '#isearch__relative__infant--front',
+    '#isearch__relative__infant'
+  );
+  computedTotalAdult(
+    '#isearch__relative__guest',
+    '#isearch__relative__infant',
+    '#isearch__relative__child',
+    '#isearch__relative__adult'
+  );
+});
+$('#isearch__relative__child__btnminus').on('click', function() {
+  changeAdultByMinus(
+    '#isearch__relative__child--front',
+    '#isearch__relative__child',
+    0
+  );
+  computedTotalAdult(
+    '#isearch__relative__guest',
+    '#isearch__relative__infant',
+    '#isearch__relative__child',
+    '#isearch__relative__adult'
+  );
+});
+$('#isearch__relative__child__btnplus').on('click', function() {
+  changeAdultByPlus(
+    '#isearch__relative__child--front',
+    '#isearch__relative__child'
+  );
+  computedTotalAdult(
+    '#isearch__relative__guest',
+    '#isearch__relative__infant',
+    '#isearch__relative__child',
+    '#isearch__relative__adult'
+  );
+});
+$('#isearch__relative__adult__btnminus').on('click', function() {
+  changeAdultByMinus(
+    '#isearch__relative__adult--front',
+    '#isearch__relative__adult',
+    1
+  );
+  computedTotalAdult(
+    '#isearch__relative__guest',
+    '#isearch__relative__infant',
+    '#isearch__relative__child',
+    '#isearch__relative__adult'
+  );
+});
+$('#isearch__relative__adult__btnplus').on('click', function() {
+  changeAdultByPlus(
+    '#isearch__relative__adult--front',
+    '#isearch__relative__adult'
+  );
+  computedTotalAdult(
+    '#isearch__relative__guest',
+    '#isearch__relative__infant',
+    '#isearch__relative__child',
+    '#isearch__relative__adult'
+  );
+});
+
+function selectLocation(triggerButton, siblingElementId, targetInputId) {
+  var selectLocationValue = triggerButton
+    .parent()
+    .prev()
+    .text()
+    .trim();
+  $(targetInputId).val(selectLocationValue);
+}
+
+$('.select__sticky__departure__btn').on('click', function() {
+  selectLocation(
+    $(this),
+    '.departure__sticky__item',
+    '#booking__sticky__depature'
+  );
+  selectLocation($(this), '.departure__sticky__item', '#booking__depature');
+});
+$('.select__sticky__arrived__btn').on('click', function() {
+  selectLocation(
+    $(this),
+    '.arrived__sticky__item',
+    '#booking__sticky__arrived'
+  );
+  selectLocation($(this), '.arrived__sticky__item', '#booking__arrived');
+});
+$('.select__departure__btn').on('click', function() {
+  selectLocation($(this), '.departure__item', '#booking__sticky__depature');
+  selectLocation($(this), '.departure__item', '#booking__depature');
+});
+$('.select__arrived__btn').on('click', function() {
+  selectLocation($(this), '.arrived__item', '#booking__sticky__arrived');
+  selectLocation($(this), '.arrived__item', '#booking__arrived');
+});

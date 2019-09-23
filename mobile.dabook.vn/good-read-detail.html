@@ -245,12 +245,12 @@
                                             </div>
                                         </div>
                                         <div class="col-4 mp--none">
-                                            <div class="dropdown">
-                                                <a class="btn btn-white btn-sm dropdown-toggle custom__dropdown__btn font-weight-bold" href="#" role="button" id="dropdown__class" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <div class="dropdown dropdown--outerhide">
+                                                <a class="btn btn-white btn-sm dropdown-toggle custom__dropdown__btn font-weight-bold" href="#" role="button" id="isearch__guest" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                     1 Hanh khach
                                                 </a>
-
-                                                <div class="dropdown-menu dropdown-menu-right dropdown__guest__card shadow border-0 border__radius--10 text__size--x09 animated fadeInDown" aria-labelledby="dropdown__class">
+        
+                                                <div class="dropdown-menu dropdown-menu--outerhide hide dropdown-menu-right dropdown__guest__card shadow border-0 border__radius--10 text__size--x09 animated fadeInDown" aria-labelledby="isearch__guest">
                                                     <div class="card border-0 text__size--x08">
                                                         <div class="card-body pb-0">
                                                             <div class="row m-0 p-0 pb-1 d-flex justify-content-between align-items-center">
@@ -258,13 +258,14 @@
                                                                     Người lớn
                                                                 </div>
                                                                 <div class="col-2 p-0 m-0">
-                                                                    <button class="btn btn-light custom__btn--guestchange text-center"><i class="fas fa-minus p-0 m-0"></i></button>
+                                                                    <button class="btn btn-light custom__btn--guestchange text-center" id="isearch__adult__btnminus"><i class="fas fa-minus p-0 m-0"></i></button>
                                                                 </div>
                                                                 <div class="col-2 p-0 m-0 text-center">
-                                                                    <span class="font-weight-bold">2</span>
+                                                                    <span id="isearch__adult--front" class="font-weight-bold">1</span>
+                                                                    <input type="number" class="is-hidden position-absolute" name="isearch__adult" id="isearch__adult" value="1">
                                                                 </div>
                                                                 <div class="col-2 p-0 m-0">
-                                                                    <button class="btn btn-light custom__btn--guestchange text-primary text-center"><i class="fas fa-plus p-0 m-0"></i></button>
+                                                                    <button class="btn btn-light custom__btn--guestchange text-primary text-center"  id="isearch__adult__btnplus"><i class="fas fa-plus p-0 m-0"></i></button>
                                                                 </div>
                                                             </div>
                                                             <div class="row m-0 p-0 pb-1 d-flex justify-content-between align-items-center">
@@ -272,13 +273,14 @@
                                                                     Trẻ em
                                                                 </div>
                                                                 <div class="col-2 p-0 m-0">
-                                                                    <button class="btn btn-light custom__btn--guestchange text-center"><i class="fas fa-minus p-0 m-0"></i></button>
+                                                                    <button class="btn btn-light custom__btn--guestchange text-center" id="isearch__child__btnminus"><i class="fas fa-minus p-0 m-0"></i></button>
                                                                 </div>
                                                                 <div class="col-2 p-0 m-0 text-center">
-                                                                    <span class="font-weight-bold">2</span>
+                                                                    <span id="isearch__child--front" class="font-weight-bold">0</span>
+                                                                    <input type="number" class="is-hidden position-absolute" name="isearch__child" id="isearch__child" value="0">
                                                                 </div>
                                                                 <div class="col-2 p-0 m-0">
-                                                                    <button class="btn btn-light custom__btn--guestchange text-primary text-center"><i class="fas fa-plus p-0 m-0"></i></button>
+                                                                    <button class="btn btn-light custom__btn--guestchange text-primary text-center" id="isearch__child__btnplus"><i class="fas fa-plus p-0 m-0"></i></button>
                                                                 </div>
                                                             </div>
                                                             <div class="row m-0 p-0 pb-1 d-flex justify-content-between align-items-center">
@@ -286,18 +288,19 @@
                                                                     Trẻ sơ sinh
                                                                 </div>
                                                                 <div class="col-2 p-0 m-0">
-                                                                    <button class="btn btn-light custom__btn--guestchange text-center"><i class="fas fa-minus p-0 m-0"></i></button>
+                                                                    <button class="btn btn-light custom__btn--guestchange text-center" id="isearch__infant__btnminus"><i class="fas fa-minus p-0 m-0"></i></button>
                                                                 </div>
                                                                 <div class="col-2 p-0 m-0 text-center">
-                                                                    <span class="font-weight-bold">2</span>
+                                                                    <span id="isearch__infant--front" class="font-weight-bold">0</span>
+                                                                    <input type="number" class="is-hidden position-absolute" name="isearch__infant" id="isearch__infant" value="0">
                                                                 </div>
                                                                 <div class="col-2 p-0 m-0">
-                                                                    <button class="btn btn-light custom__btn--guestchange text-primary text-center"><i class="fas fa-plus p-0 m-0"></i></button>
+                                                                    <button class="btn btn-light custom__btn--guestchange text-primary text-center" id="isearch__infant__btnplus"><i class="fas fa-plus p-0 m-0"></i></button>
                                                                 </div>
                                                             </div>
                                                             <div class="row m-0 py-2 border-top">
                                                                 <div class="col-12 p-0 m-0 text-right">
-                                                                    <button class="btn btn-sm btn-light text-primary">Done</button>
+                                                                    <button class="btn btn-sm btn-light text-primary dropdown__close__btn">Done</button>
                                                                 </div>
                                                             </div>
                                                         </div>

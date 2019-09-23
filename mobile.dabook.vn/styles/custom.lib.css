@@ -12,12 +12,9 @@
   z-index: 100;
   transform: translateY(-50%);
   display: flex;
-  min-width: 100%;
+  width: 100%;
   justify-content: space-between;
   left: 0px;
-}
-.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot{
-  background-color: #FFF !important;
 }
 .owl-prev,
 .owl-next {
