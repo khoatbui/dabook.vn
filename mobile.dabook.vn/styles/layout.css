@@ -1,0 +1,5 @@
+/* ==========FIXED COMPONENT============= */
+.component__fixed{
+    position: fixed;
+    bottom: 30px;
+}

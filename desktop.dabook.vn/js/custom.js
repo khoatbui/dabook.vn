@@ -190,31 +190,77 @@ $(document).ready(function() {
   );
 });
 
-// ======DROPDOWN OUTER HIDER=======
-$('.dropdown--outerhide > .dropdown-toggle').bind('click', function() {
-  if ($('.dropdown-menu--outerhide').hasClass('hide')) {
-    $('.dropdown-menu--outerhide')
+// ======DROPDOWN OUTER HIDER  modify 2019-24-09=======
+$('.dropdown__guest > .dropdown-toggle').bind('click', function() {
+  if ($('.dropdown__guest__card').hasClass('hide')) {
+    $('.dropdown__guest__card')
       .addClass('show')
       .removeClass('hide');
   } else {
-    $('.dropdown-menu--outerhide')
+    $('.dropdown__guest__card')
       .addClass('hide')
       .removeClass('show');
   }
 });
+$('.dropdown__departure > #dropdown__departure').bind('click', function() {
+  if ($('.dropdown__departure__card').hasClass('hide')) {
+    $('.dropdown__departure__card')
+      .addClass('show')
+      .removeClass('hide');
+  } else {
+    $('.dropdown__departure__card')
+      .addClass('hide')
+      .removeClass('show');
+  }
+});
+$('#booking__departure').keyup(function(){
+  if ($('#booking__departure').val().length>0) {
+    $('.search__departure').addClass('show').removeClass('hide')
+    $('.default__departure').addClass('hide').removeClass('show')
+  }
+  else{
+    $('.default__departure').addClass('show').removeClass('hide')
+    $('.search__departure').addClass('hide').removeClass('show')
+  }
+})
+$('.dropdown__arrived > #dropdown__arrived').bind('click', function() {
+  if ($('.dropdown__arrived__card').hasClass('hide')) {
+    $('.dropdown__arrived__card')
+      .addClass('show')
+      .removeClass('hide');
+  } else {
+    $('.dropdown__arrived__card')
+      .addClass('hide')
+      .removeClass('show');
+  }
+});
+$('#booking__arrived').keyup(function(){
+  if ($('#booking__arrived').val().length>0) {
+    $('.search__arrived').addClass('show').removeClass('hide')
+    $('.default__arrived').addClass('hide').removeClass('show')
+  }
+  else{
+    $('.default__arrived').addClass('show').removeClass('hide')
+    $('.search__arrived').addClass('hide').removeClass('show')
+  }
+})
 $('.dropdown__close__btn').on('click', function() {
   $('.dropdown-menu--outerhide')
     .addClass('hide')
     .removeClass('show');
 });
-$('.dropdown-menu--outerhide').click(function(e) {
-  e.stopPropagation();
-});
-$(document).click(function() {
-  $('.dropdown-menu--outerhide')
-    .addClass('hide')
+$(document).mouseup(function (e)
+                    {
+  var container = $(".dropdown-menu--outerhide"); // YOUR CONTAINER SELECTOR
+
+  if (!container.is(e.target) // if the target of the click isn't the container...
+      && container.has(e.target).length === 0) // ... nor a descendant of the container
+  {
+    container.addClass('hide')
     .removeClass('show');
+  }
 });
+
 
 // =============CHANGE GUEST QTY===================
 function changeAdultByPlus(targetInputFrontId, targetInputId) {
@@ -604,9 +650,9 @@ $('.select__sticky__departure__btn').on('click', function() {
   selectLocation(
     $(this),
     '.departure__sticky__item',
-    '#booking__sticky__depature'
+    '#booking__sticky__departure'
   );
-  selectLocation($(this), '.departure__sticky__item', '#booking__depature');
+  selectLocation($(this), '.departure__sticky__item', '#booking__departure');
 });
 $('.select__sticky__arrived__btn').on('click', function() {
   selectLocation(
@@ -617,8 +663,8 @@ $('.select__sticky__arrived__btn').on('click', function() {
   selectLocation($(this), '.arrived__sticky__item', '#booking__arrived');
 });
 $('.select__departure__btn').on('click', function() {
-  selectLocation($(this), '.departure__item', '#booking__sticky__depature');
-  selectLocation($(this), '.departure__item', '#booking__depature');
+  selectLocation($(this), '.departure__item', '#booking__sticky__departure');
+  selectLocation($(this), '.departure__item', '#booking__departure');
 });
 $('.select__arrived__btn').on('click', function() {
   selectLocation($(this), '.arrived__item', '#booking__sticky__arrived');

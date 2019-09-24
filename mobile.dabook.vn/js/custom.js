@@ -6,7 +6,10 @@ $('.owl__topdes').owlCarousel({
   merge: true,
   nav: true,
   dots: false,
+  autoplay: true,
   lazyLoad: true,
+  autoplayTimeout: 2000,
+  autoplayHoverPause: true,
   responsive: {
     678: {
       mergeFit: true,
@@ -605,9 +608,9 @@ $('.select__sticky__departure__btn').on('click', function() {
   selectLocation(
     $(this),
     '.departure__sticky__item',
-    '#booking__sticky__depature'
+    '#booking__sticky__departure'
   );
-  selectLocation($(this), '.departure__sticky__item', '#booking__depature');
+  selectLocation($(this), '.departure__sticky__item', '#booking__departure');
 });
 $('.select__sticky__arrived__btn').on('click', function() {
   selectLocation(
@@ -618,8 +621,8 @@ $('.select__sticky__arrived__btn').on('click', function() {
   selectLocation($(this), '.arrived__sticky__item', '#booking__arrived');
 });
 $('.select__departure__btn').on('click', function() {
-  selectLocation($(this), '.departure__item', '#booking__sticky__depature');
-  selectLocation($(this), '.departure__item', '#booking__depature');
+  selectLocation($(this), '.departure__item', '#booking__sticky__departure');
+  selectLocation($(this), '.departure__item', '#booking__departure');
 });
 $('.select__arrived__btn').on('click', function() {
   selectLocation($(this), '.arrived__item', '#booking__sticky__arrived');

@@ -165,6 +165,18 @@ h5.h6 {
 .w-90{
   width: 90% !important;
 }
+.h-400 {
+  height: 400px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+/* -----------Show hide------- */
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
 /* ===============HEADER=============== */
 .custom__navlogo {
   height: 50px;
@@ -240,21 +252,26 @@ h5.h6 {
   background-color: #fff;
   z-index: 2;
 }
-.dropdown__depature__card {
+.dropdown__departure__card {
   top: 70px !important;
-  margin: 0 0.8rem;
-  width: 190%;
-  border-top-left-radius: 0 !important;
-  border-top-right-radius: 0 !important;
+  width: 200%;
+}
+.dropdown__departure__card__sticky{
+  top: 40px !important;
+  width: 250%;
 }
 .dropdown__arrived__card {
   top: 70px !important;
   right: 0 !important;
+  transform: translate(50%,-50%) !important;
   left: auto !important;
-  margin: 0 0.8rem;
-  width: 190%;
-  border-top-left-radius: 0 !important;
-  border-top-right-radius: 0 !important;
+  width: 200%;
+}
+.dropdown__arrived__card__sticky {
+  top: 40px !important;
+  right: 0 !important;
+  left: auto !important;
+  width: 250%;
 }
 .result__item:hover {
   background-color: #f3f7fc;

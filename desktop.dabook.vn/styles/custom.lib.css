@@ -95,3 +95,19 @@
   height: 3px !important;
   margin-top: -2px !important;
 }
+
+
+.location__nav__link{
+  background-color: #FFF !important;
+  color :#0065b8;
+  border:none;
+  border-bottom: 2px solid #FFF;
+  border-radius: 0 !important;
+  position: relative;
+}
+.location__nav__link::after{
+  content: "";
+  position: absolute;
+  right: -10px;
+  background-color: #0065b8;
+}
