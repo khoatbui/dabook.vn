@@ -1,4 +1,9 @@
 // ==============INITIAL================
+$(function() {  
+  $("body").niceScroll({
+    scrollspeed: 10,
+  });
+});
 $('.owl__topdes').owlCarousel({
   items: 5,
   loop: true,
