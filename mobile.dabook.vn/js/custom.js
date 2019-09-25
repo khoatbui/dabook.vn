@@ -109,6 +109,7 @@ $('.owl__favoritedeslist').owlCarousel({
 var booking__checkin = flatpickr('#booking__checkin', {
   minDate: 'today',
   dateFormat: 'Y-m-d',
+  inline:true,
   onChange: function(selectedDates, dateStr, instance) {
     booking__checkin__sticky.setDate(selectedDates, true, 'Y-m-d');
     booking__checkout.set('minDate',flatpickr.formatDate(new Date(selectedDates), "Y-m-d"));
@@ -149,22 +150,7 @@ var booking__checkout__relative = flatpickr('#booking__checkout__relative', {
   minDate: $('#booking__checkout').val(),
   dateFormat: 'Y-m-d',
 });
-// ====SCROLL TOP==========
-scrollTopBtn = document.getElementById('scroll__top');
-window.onscroll = function() {
-  scrollFunction();
-};
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    scrollTopBtn.style.display = 'block';
-  } else {
-    scrollTopBtn.style.display = 'none';
-  }
-}
-function topFunction() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}
+
 
 // ========CHANGE DATA MERGE ON HOVER========
 $(document).ready(function() {

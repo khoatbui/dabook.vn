@@ -25,6 +25,9 @@ body{
 .custom__background--four {
   background-color: #f3f7fc !important;
 }
+.custom__background--light{
+  background-color: #ECF1FD !important;
+}
 /* --------------Margin padding--------- */
 .mp--none {
   margin: 0;
@@ -117,7 +120,7 @@ h5.h6 {
   color: #35405a;
 }
 .text-white-muted {
-  color: #ddd;
+  color: #dedede;
 }
 
 /* -----------------Border----------------- */
@@ -200,10 +203,17 @@ HOMEPAGE
   font-size: 0.9rem;
   padding: 0 !important;
 }
+.booking__input:hover,.booking__input:active,.booking__input:focus{
+  background-color: #0065b8;
+  color: #FFF;
+}
 /* Top destination*/
 .topdes__card {
   height: 150px;
   background-repeat: no-repeat;
+}
+.topdes__card .card-title{
+  margin: 0 !important;
 }
 .topdes__card__child {
   background-repeat: no-repeat;
@@ -279,4 +289,40 @@ HOMEPAGE
   width: 50px;
   height: 50px;
   border-radius: 50%;
+}
+.custom__searchflight__btn{
+  width: 100%;
+  padding: 0.8rem 0 !important;
+}
+.way__btn{
+  flex-grow: 1;
+}
+
+/* =============SEARCH PAGE============= */
+/* Class modal */
+.modal__content__class{
+  width: 250px !important;
+  margin: 0 auto;
+}
+.modal__content__guest{
+  width: 350px !important;
+  margin: 0 auto;
+}
+
+/* Guest modal */
+.custom__btn--guestchange{
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  font-size: 0.8rem !important;
+  line-height: 6px;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.custom__btn--plus{
+  border:1px solid #0065b8;
+}
+.custom__btn--minus{
+  border:1px solid #1b2e4a;
 }

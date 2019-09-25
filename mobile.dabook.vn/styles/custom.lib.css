@@ -95,3 +95,10 @@
   height: 3px !important;
   margin-top: -2px !important;
 }
+
+
+/* ==========Icheck========= */
+[class*="icheck-material"]>input[type="radio"]:first-child:checked+label::after, [class*="icheck-material"]>input[type="radio"]:first-child:checked+input[type="hidden"]+label::after{
+  top:4px !important;
+  left:4px !important;
+}

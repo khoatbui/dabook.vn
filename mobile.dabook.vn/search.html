@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/custom.css">
     <link rel="stylesheet" href="assets/flatpickr/flatpickr.min.css">
+    <link rel="stylesheet" href="assets/icheck/icheck-material.min.css">
     <title>dabook.vn an online booking platform where flight tickets, tours and travel services are good value</title>
     <!-- Hotjar Tracking Code for http://dabook.vn/ -->
     <script>
@@ -29,7 +30,7 @@
 </head>
 
 <body>
-    <div class="wrapper">
+    <div class="wrapper pb-4 mb-4">
         <div class="wrapper__booking bg-primary p-2">
             <!-- ↓↓ component__booking-->
             <div class="component__back mp--none">
@@ -39,12 +40,12 @@
             </div>
             <!-- ↑↑ component__booking-->
             <!-- ↓↓ component__booking-->
-            <div class="component__booking mp--none my-4">
-                <div class="row mp--none p-3">
-                    <div class="col-12 mp--none">
-                        <h2 class="text-white text__size--x13"> Search Flights</h2>
+            <div class="component__booking mp--none p-3">
+                <div class="row mp--none">
+                    <div class="col-12 mp--none mb-3">
+                        <h2 class="text-white text__size--x14"> Search Flights</h2>
                     </div>
-                    <div class="col-2 mp--none d-flex justify-content-start align-items-end">
+                    <!-- <div class="col-2 mp--none d-flex justify-content-start align-items-end">
                         <i class="fas fa-plane-departure text-white  text__size--x09"></i>
                     </div>
                     <div class="col-10 mp--none">
@@ -71,58 +72,255 @@
                             <input type="email" class="form-control booking__input" id="ibooking__departure"
                                 aria-describedby="emailHelp" value="[HAN] Ha Noi, Viet Nam">
                         </div>
+                    </div> -->
+                </div>
+                <div class="row mp--none">
+                    <div class="col-2 mp--none d-flex flex-column align-items-start justify-content-around">
+                        <i class="fas fa-plane-departure text-white  text__size--x08"></i>
+                        <div class=" d-flex flex-column justify-content-center align-items-start p-2">
+                            <i class="fas fa-ellipsis-v text-white"></i>
+                            <i class="fas fa-ellipsis-v text-white"></i>
+                            <i class="fas fa-ellipsis-v text-white"></i>
+                        </div>
+                        <i class="fas fa-plane-arrival text-white  text__size--x08"></i>
+                    </div>
+                    <div class="col-10 mp--none">
+                        <div class="form-group mp--none mb-4">
+                            <label for="ibooking__departure"
+                                class="mp--none text__size--x06 text-white-muted">Departure</label>
+                            <input type="email" class="form-control booking__input text__size--x08"
+                                id="ibooking__departure" aria-describedby="emailHelp" value="HAN - Ha Noi, Viet Nam">
+                        </div>
+                        <div class="form-group mp--none mt-4">
+                            <label for="ibooking__departure"
+                                class="mp--none text__size--x06 text-white-muted">Arriver</label>
+                            <input type="email" class="form-control booking__input text__size--x08"
+                                id="ibooking__departure" aria-describedby="emailHelp" value="HAN - Ha Noi, Viet Nam">
+                        </div>
                     </div>
                 </div>
             </div>
             <!-- ↑↑ component__booking-->
 
-
         </div>
-        <!-- ↓↓ topdestination__component -->
-        <div class="component__topdes py-4 my-4">
-            <div class="container">
-                <div class="row mp--none">
-                    <div class="col-12 mp--none mb-2">
-                        <h4>Top cac diem den noi tieng</h4>
+
+        <!-- ↓↓ component__booking-->
+        <div class="component__booking mp--none p-3">
+            <div class="row mp--none my-2 mb-4">
+                <div class="col-12 mp--none">
+                    <div class="d-flex bg-light custom__background--light justify-content-between align-items-center w-100 border__radius--100"
+                        role="group" aria-label="way">
+                        <button type="button" class="btn btn-primary border__radius--100 text__size--x08 way__btn">Round
+                            trip</button>
+                        <button type="button"
+                            class="btn btn-light custom__background--light border__radius--100 text-primary text__size--x08 way__btn">One
+                            way</button>
+                        <button type="button"
+                            class="btn btn-light custom__background--light border__radius--100 text-primary text__size--x08 way__btn">Multi
+                            city</button>
                     </div>
                 </div>
-                <div class="row mp--none">
-                    <div class="col-12 mp--none">
-                        <div class="owl-carousel owl__topdes owl-theme">
-                            <div class="item" data-merge="1">
-                                <div class="card topdes__card border__radius--10 overflow--hidden">
-                                    <div class="topdes__card__child"
-                                        style="background-image:url('images/destination/danang.jpg');"></div>
-                                    <div class="custom__ovelap__body">
-                                        <h5 class="card-title">Da nang</h5>
+            </div>
+            <div class="row mp--none my-2">
+                <div class="col-6 mp--none pr-2">
+                    <div class="form-group custom__background--light" data-toggle="modal"
+                    data-target="#booking__departuretime__modal">
+                        <label for="ibooking__departure"
+                            class="mp--none text__size--x06 mp--none text-muted px-2">DEPARTURE</label>
+                        <input type="email"
+                            class="form-control custom__background--light text-primary border-0 text__size--x08"
+                            id="ibooking__departure" aria-describedby="emailHelp" value="2019-09-19">
+                    </div>
+                    <!-- Modal class -->
+                    <div class="modal fade" id="booking__departuretime__modal" tabindex="-1" role="dialog"
+                        aria-labelledby="booking__departuretime__modalTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered mx-4 modal-sm" role="document">
+                            <div class="modal-content border__radius--none">
+                                <div class="modal-body text__size--x09">
+                                    <div class="row">
+                                            <input type="text" class="form-control border-0 text__size--x09"
+                                            id="booking__checkin" aria-describedby="basic-addon3" placeholder="Checkin" style="visibility: hidden;">
                                     </div>
                                 </div>
-                            </div>
-                            <div class="item" data-merge="1">
-                                <div class="card topdes__card border__radius--10 overflow--hidden">
-                                    <div class="topdes__card__child"
-                                        style="background-image:url('images/destination/hochiminh.jpg');"></div>
-                                    <div class="custom__ovelap__body">
-                                        <h5 class="card-title">Hochiminh city</h5>
-                                    </div>
+                                <div class="modal-footer py-2">
+                                    <button type="button" class="btn btn-white text-primary btn-sm"
+                                        data-dismiss="modal">Done</button>
                                 </div>
                             </div>
-                            <div class="item" data-merge="1">
-                                <div class="card topdes__card border__radius--10 overflow--hidden">
-                                    <div class="topdes__card__child"
-                                        style="background-image:url('images/destination/hoian.jpg');"></div>
-                                    <div class="custom__ovelap__body">
-                                        <h5 class="card-title">Hoian</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 mp--none pl-2">
+                    <div class="form-group custom__background--light" data-toggle="modal"
+                    data-target="#booking__arrivedtime__modal">
+                        <label for="ibooking__departure" class="mp--none text__size--x06 mp--none text-muted px-2">RETURN</label>
+                        <input type="email"
+                            class="form-control custom__background--light text-primary border-0 text__size--x08"
+                            id="ibooking__departure" aria-describedby="emailHelp" value="2019-09-19">
+                    </div>
+                     <!-- Modal class -->
+                     <div class="modal fade" id="booking__arrivedtime__modal" tabindex="-1" role="dialog"
+                     aria-labelledby="booking__arrivedtime__modalTitle" aria-hidden="true">
+                     <div class="modal-dialog modal-dialog-centered mx-4 modal-sm" role="document">
+                         <div class="modal-content border__radius--none">
+                             <div class="modal-body text__size--x09">
+                                 <div class="row">
+                                        <input type="text" class="form-control border-0 text__size--x09"
+                                        id="booking__checkout" aria-describedby="basic-addon3"
+                                        placeholder="Checkout" style="visibility: hidden;">
+                                     
+                                 </div>
+                             </div>
+                             <div class="modal-footer py-2">
+                                 <button type="button" class="btn btn-white text-primary btn-sm"
+                                     data-dismiss="modal">Done</button>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                </div>
+            </div>
+            <div class="row mp--none my-2">
+                <div class="col-12 mp--none">
+                    <div class="form-group custom__background--light" data-toggle="modal"
+                        data-target="#booking__guest__modal">
+                        <label for="ibooking__departure" class="mp--none text__size--x06 mp--none text-muted px-2">GUEST</label>
+                        <input type="email"
+                            class="form-control custom__background--light text-primary border-0 text__size--x08"
+                            id="ibooking__departure" aria-describedby="emailHelp"
+                            value="2 Adults, 1 Childrens, 0 Infant">
+                    </div>
+                    <!-- Modal class -->
+                    <div class="modal fade" id="booking__guest__modal" tabindex="-1" role="dialog"
+                        aria-labelledby="booking__guest__modalTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered mx-4 modal-sm" role="document">
+                            <div class="modal-content border__radius--none modal__content__guest">
+                                <div class="modal-body text__size--x09">
+                                    <div class="row mp--none my-3 d-flex justify-content-between align-items-center">
+                                        <div class="col-2 mp--none text-center">
+                                            <button
+                                                class="btn btn-light custom__btn--guestchange text-center custom__btn--minus"
+                                                id="isearch__adult__btnminus"><i
+                                                    class="fas fa-minus p-0 m-0"></i></button>
+                                        </div>
+                                        <div class="col-8 mp--none text-center d-flex align-items-center justify-content-center">
+                                            <div>
+                                            <div class="text-primary font-weight-bold"> <span id="isearch__adult--front"
+                                                    class="font-weight-bold">1</span><span> Người lớn</span></div>
+                                            <div>
+                                                <p class="text__size--x06 mp--none text-muted">(+18 year old)</p>
+                                            </div>
+                                            <input type="number" class="is-hidden position-absolute"
+                                                name="isearch__adult" id="isearch__adult" value="1">
+                                            </div>
+                                        </div>
+                                        <div class="col-2 mp--none text-center">
+                                            <button
+                                                class="btn btn-light custom__btn--guestchange text-primary text-center custom__btn--plus"
+                                                id="isearch__adult__btnplus"><i
+                                                    class="fas fa-plus p-0 m-0"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="row mp--none my-3 d-flex justify-content-between align-items-center">
+                                        <div class="col-2 p-0 m-0 text-center">
+                                            <button
+                                                class="btn btn-light custom__btn--guestchange text-center custom__btn--minus"
+                                                id="isearch__child__btnminus"><i
+                                                    class="fas fa-minus p-0 m-0"></i></button>
+                                        </div>
+                                        <div class="col-8 mp--none text-center d-flex align-items-center justify-content-center">
+                                                <div>
+                                            <div class="text-primary font-weight-bold"> <span id="isearch__child--front"
+                                                    class="font-weight-bold">0</span><span> Trẻ em</span></div>
+                                            <div>
+                                                <p class="text__size--x06 mp--none text-muted">( 2 - 11 years old)</p>
+                                            </div>
+                                            <input type="number" class="is-hidden position-absolute"
+                                                name="isearch__child" id="isearch__child" value="0">
+                                                </div>
+                                        </div>
+                                        <div class="col-2 p-0 m-0 text-center">
+                                            <button
+                                                class="btn btn-light custom__btn--guestchange text-primary text-center custom__btn--plus"
+                                                id="isearch__child__btnplus"><i
+                                                    class="fas fa-plus p-0 m-0"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="row mp--none my-3 d-flex justify-content-between align-items-center">
+                                        <div class="col-2 p-0 m-0 text-center">
+                                            <button
+                                                class="btn btn-light custom__btn--guestchange text-center custom__btn--minus"
+                                                id="isearch__infant__btnminus"><i
+                                                    class="fas fa-minus p-0 m-0"></i></button>
+                                        </div>
+                                        <div class="col-8 mp--none text-center d-flex align-items-center justify-content-center">
+                                                <div>
+                                            <div class="text-primary font-weight-bold"> <span id="isearch__infant--front"
+                                                    class="font-weight-bold">0</span><span> Trẻ sơ sinh</span></div>
+                                            <div>
+                                                <p class="text__size--x06 mp--none text-muted">(Less than 2 years)</p>
+                                            </div>
+                                            <input type="number" class="is-hidden position-absolute"
+                                                name="isearch__infant" id="isearch__infant" value="0">
+                                                </div>
+                                        </div>
+                                        <div class="col-2 p-0 m-0 text-center">
+                                            <button
+                                                class="btn btn-light custom__btn--guestchange text-primary text-center custom__btn--plus"
+                                                id="isearch__infant__btnplus"><i
+                                                    class="fas fa-plus p-0 m-0"></i></button>
+                                        </div>
                                     </div>
                                 </div>
+                                <div class="modal-footer py-2">
+                                    <button type="button" class="btn btn-white text-primary btn-sm"
+                                        data-dismiss="modal">Done</button>
+                                </div>
                             </div>
-                            <div class="item" data-merge="1">
-                                <div class="card topdes__card border__radius--10 overflow--hidden">
-                                    <div class="topdes__card__child"
-                                        style="background-image:url('images/destination/mucangchai.jpg');"></div>
-                                    <div class="custom__ovelap__body">
-                                        <h5 class="card-title">Mu cang chai</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mp--none my-2">
+                <div class="col-12 mp--none">
+                    <div class="form-group custom__background--light" data-toggle="modal"
+                        data-target="#booking__class__modal">
+                        <label for="ibooking__departure" class="mp--none text__size--x06 mp--none text-muted px-2">CLASS</label>
+                        <input type="email"
+                            class="form-control custom__background--light text-primary border-0 text__size--x08"
+                            id="ibooking__departure" aria-describedby="emailHelp" value="Business">
+                    </div>
+                    <!-- Modal class -->
+                    <div class="modal fade" id="booking__class__modal" tabindex="-1" role="dialog"
+                        aria-labelledby="booking__class__modalTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered mx-4 modal-sm" role="document">
+                            <div class="modal-content border__radius--none modal__content__class">
+                                <div class="modal-body text__size--x09">
+                                    <div class="row">
+
+                                        <div class="col-12">
+                                            <div class="icheck-material-blue">
+                                                <input type="radio" id="economic" name="class" checked />
+                                                <label for="economic">Economic</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="icheck-material-blue">
+                                                <input type="radio" id="business" name="class" />
+                                                <label for="business">Business</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="icheck-material-blue">
+                                                <input type="radio" id="firstclass" name="class" />
+                                                <label for="firstclass">FirstClass</label>
+                                            </div>
+                                        </div>
                                     </div>
+                                </div>
+                                <div class="modal-footer py-2">
+                                    <button type="button" class="btn btn-white text-primary btn-sm"
+                                        data-dismiss="modal">Done</button>
                                 </div>
                             </div>
                         </div>
@@ -130,246 +328,20 @@
                 </div>
             </div>
         </div>
-        <!-- ↑↑ End topdestination__component -->
-
-        <!-- ↓↓ Today promotion -->
-        <div class="component__todaypromotion py-4 my-4">
-            <div class="container">
-                <div class="row mp--none">
-                    <div class="col-12 mp--none mb-2">
-                        <h4>Uu dai moi ngay</h4>
-                    </div>
-                </div>
-                <div class="row mp--none">
-                    <div class="col-12 mp--none">
-                        <div class="owl-carousel owl__todaypro owl-theme">
-                            <div class="item">
-                                <div class="card todaypromo__card border__radius--10 overflow--hidden">
-                                    <div class="todaypromo__card__child"
-                                        style="background-image:url('images/promote/airasean.jpg');"></div>
-                                    <div class="custom__ovelap__body">
-                                        <h5 class="card-title text__size--x09">
-                                            <i class="fas fa-hourglass-half"></i> 2019/28/09
-                                        </h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item" data-merge="1">
-                                <div class="card todaypromo__card border__radius--10 overflow--hidden">
-                                    <div class="todaypromo__card__child"
-                                        style="background-image:url('images/promote/vinpearl.jpg');"></div>
-                                    <div class="custom__ovelap__body">
-                                        <h5 class="card-title text__size--x09">
-                                            <i class="fas fa-hourglass-half"></i> 2019/28/09
-                                        </h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item" data-merge="1">
-                                <div class="card todaypromo__card border__radius--10 overflow--hidden">
-                                    <div class="todaypromo__card__child"
-                                        style="background-image:url('images/promote/vietjet.jpg');"></div>
-                                    <div class="custom__ovelap__body">
-                                        <h5 class="card-title text__size--x09">
-                                            <i class="fas fa-hourglass-half"></i> 2019/28/09
-                                        </h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item" data-merge="1">
-                                <div class="card todaypromo__card border__radius--10 overflow--hidden">
-                                    <div class="todaypromo__card__child"
-                                        style="background-image:url('images/promote/vietnamairlines.jpg');"></div>
-                                    <div class="custom__ovelap__body">
-                                        <h5 class="card-title text__size--x09">
-                                            <i class="fas fa-hourglass-half"></i> 2019/28/09
-                                        </h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item" data-merge="1">
-                                <div class="card todaypromo__card border__radius--10 overflow--hidden">
-                                    <div class="todaypromo__card__child"
-                                        style="background-image:url('images/promote/flc.jpg');"></div>
-                                    <div class="custom__ovelap__body">
-                                        <h5 class="card-title text__size--x09">
-                                            <i class="fas fa-hourglass-half"></i> 2019/28/09
-                                        </h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- ↑↑ Today promotion -->
-
-        <!-- ↓↓ Flight promotion -->
-        <div class="component__flightdeal py-4 my-4">
-            <div class="container">
-                <div class="row mp--none">
-                    <div class="col-12 mp--none mb-2">
-                        <h4>Top cac chuyen bay uu dai</h4>
-                    </div>
-                </div>
-                <div class="row mp--none">
-                    <div class="col-12 mp--none d-flex justify-content-between align-items-center flex-wrap">
-                        <div class="card flightdeal__card cursor--pointer shadow border-0 border__radius--10 my-2">
-                            <div class="flightdeal__card__brand">
-                                <img class="flightdeal__card__logo" src="images/brand/logo-vietnam-airlines.png" alt="">
-                            </div>
-                            <div class="row m-2">
-                                <div class="col-12 border-bottom py-1">
-                                    <p class=" text-muted text__size--x07 m-0">from Ha Noi</p>
-                                    <h5>Suwon</h5>
-                                    <p class="m-0 text-muted text__size--x07"><span>25 JAN</span> <i
-                                            class="fas fa-exchange-alt"></i> <span>27 JAN</span></p>
-                                </div>
-                                <div class="col-12 py-1 text-muted text__size--x07">
-                                    TU <span class="font-weight-bold text-success text__size--x1">1.890.266 d</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card flightdeal__card cursor--pointer shadow border-0 border__radius--10 my-2">
-                            <div class="flightdeal__card__brand">
-                                <img class="flightdeal__card__logo" src="images/brand/AirAsia.png" alt="">
-                            </div>
-                            <div class="row m-2">
-                                <div class="col-12 border-bottom py-1">
-                                    <p class=" text-muted text__size--x07 m-0">from Ha Noi</p>
-                                    <h5>Suwon</h5>
-                                    <p class="m-0 text-muted text__size--x07"><span>25 JAN</span> <i
-                                            class="fas fa-exchange-alt"></i> <span>27 JAN</span></p>
-                                </div>
-                                <div class="col-12 py-1 text-muted text__size--x07">
-                                    TU <span class="font-weight-bold text-success text__size--x1">1.890.266 d</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card flightdeal__card cursor--pointer shadow border-0 border__radius--10 my-2">
-                            <div class="flightdeal__card__brand">
-                                <img class="flightdeal__card__logo" src="images/brand/logo-vietnam-airlines.png" alt="">
-                            </div>
-                            <div class="row m-2">
-                                <div class="col-12 border-bottom py-1">
-                                    <p class=" text-muted text__size--x07 m-0">from Ha Noi</p>
-                                    <h5>Suwon</h5>
-                                    <p class="m-0 text-muted text__size--x07"><span>25 JAN</span> <i
-                                            class="fas fa-exchange-alt"></i> <span>27 JAN</span></p>
-                                </div>
-                                <div class="col-12 py-1 text-muted text__size--x07">
-                                    TU <span class="font-weight-bold text-success text__size--x1">1.890.266 d</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card flightdeal__card cursor--pointer shadow border-0 border__radius--10 my-2">
-                            <div class="flightdeal__card__brand">
-                                <img class="flightdeal__card__logo" src="images/brand/Jetstar-logo.jpg" alt="">
-                            </div>
-                            <div class="row m-2">
-                                <div class="col-12 border-bottom py-1">
-                                    <p class=" text-muted text__size--x07 m-0">from Ha Noi</p>
-                                    <h5>Suwon</h5>
-                                    <p class="m-0 text-muted text__size--x07"><span>25 JAN</span> <i
-                                            class="fas fa-exchange-alt"></i> <span>27 JAN</span></p>
-                                </div>
-                                <div class="col-12 py-1 text-muted text__size--x07">
-                                    TU <span class="font-weight-bold text-success text__size--x1">1.890.266 d</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card flightdeal__card cursor--pointer shadow border-0 border__radius--10 my-2">
-                            <div class="flightdeal__card__brand">
-                                <img class="flightdeal__card__logo" src="images/brand/vietjet-logo.png" alt="">
-                            </div>
-                            <div class="row m-2">
-                                <div class="col-12 border-bottom py-1">
-                                    <p class=" text-muted text__size--x07 m-0">from Ha Noi</p>
-                                    <h5>Suwon</h5>
-                                    <p class="m-0 text-muted text__size--x07"><span>25 JAN</span> <i
-                                            class="fas fa-exchange-alt"></i> <span>27 JAN</span></p>
-                                </div>
-                                <div class="col-12 py-1 text-muted text__size--x07">
-                                    TU <span class="font-weight-bold text-success text__size--x1">1.890.266 d</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card flightdeal__card cursor--pointer shadow border-0 border__radius--10 my-2">
-                            <div class="flightdeal__card__brand">
-                                <img class="flightdeal__card__logo" src="images/brand/AirAsia.png" alt="">
-                            </div>
-                            <div class="row m-2">
-                                <div class="col-12 border-bottom py-1">
-                                    <p class=" text-muted text__size--x07 m-0">from Ha Noi</p>
-                                    <h5>Suwon</h5>
-                                    <p class="m-0 text-muted text__size--x07"><span>25 JAN</span> <i
-                                            class="fas fa-exchange-alt"></i> <span>27 JAN</span></p>
-                                </div>
-                                <div class="col-12 py-1 text-muted text__size--x07">
-                                    TU <span class="font-weight-bold text-success text__size--x1">1.890.266 d</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card flightdeal__card cursor--pointer shadow border-0 border__radius--10 my-2">
-                            <div class="flightdeal__card__brand">
-                                <img class="flightdeal__card__logo" src="images/brand/logo-vietnam-airlines.png" alt="">
-                            </div>
-                            <div class="row m-2">
-                                <div class="col-12 border-bottom py-1">
-                                    <p class=" text-muted text__size--x07 m-0">from Ha Noi</p>
-                                    <h5>Suwon</h5>
-                                    <p class="m-0 text-muted text__size--x07"><span>25 JAN</span> <i
-                                            class="fas fa-exchange-alt"></i> <span>27 JAN</span></p>
-                                </div>
-                                <div class="col-12 py-1 text-muted text__size--x07">
-                                    TU <span class="font-weight-bold text-success text__size--x1">1.890.266 d</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card flightdeal__card cursor--pointer shadow border-0 border__radius--10 my-2">
-                            <div class="flightdeal__card__brand">
-                                <img class="flightdeal__card__logo" src="images/brand/logo-vietnam-airlines.png" alt="">
-                            </div>
-                            <div class="row m-2">
-                                <div class="col-12 border-bottom py-1">
-                                    <p class=" text-muted text__size--x07 m-0">from Ha Noi</p>
-                                    <h5>Suwon</h5>
-                                    <p class="m-0 text-muted text__size--x07"><span>25 JAN</span> <i
-                                            class="fas fa-exchange-alt"></i> <span>27 JAN</span></p>
-                                </div>
-                                <div class="col-12 py-1 text-muted text__size--x07">
-                                    TU <span class="font-weight-bold text-success text__size--x1">1.890.266 d</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card flightdeal__card cursor--pointer shadow border-0 border__radius--10 my-2">
-                            <div class="flightdeal__card__brand">
-                                <img class="flightdeal__card__logo" src="images/brand/logo-vietnam-airlines.png" alt="">
-                            </div>
-                            <div class="row m-2">
-                                <div class="col-12 border-bottom py-1">
-                                    <p class=" text-muted text__size--x07 m-0">from Ha Noi</p>
-                                    <h5>Suwon</h5>
-                                    <p class="m-0 text-muted text__size--x07"><span>25 JAN</span> <i
-                                            class="fas fa-exchange-alt"></i> <span>27 JAN</span></p>
-                                </div>
-                                <div class="col-12 py-1 text-muted text__size--x07">
-                                    TU <span class="font-weight-bold text-success text__size--x1">1.890.266 d</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- ↑↑ Flight promotion -->
+        <!-- ↑↑ component__booking-->
 
         <!-- ↓↓ component__fixed -->
         <div class="component__fixed w-100 d-flex justify-content-center align-items-center">
-            <button class="btn btn-primary custom__letstart__btn shadow-lg border__radius--100">
-                <i class="fas fa-arrow-right"></i>
-            </button>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <button
+                            class="btn btn-primary custom__searchflight__btn shadow-lg border__radius--5 cursor--pointer text__size--x09">
+                            SEARCH FLIGHT
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- ↑↑ End component__fixed -->
     </div>

@@ -1,9 +1,5 @@
 // ==============INITIAL================
-$(function() {  
-  $("body").niceScroll({
-    scrollspeed: 10,
-  });
-});
+
 $('.owl__topdes').owlCarousel({
   items: 5,
   loop: true,
@@ -113,7 +109,10 @@ var booking__checkin = flatpickr('#booking__checkin', {
   dateFormat: 'Y-m-d',
   onChange: function(selectedDates, dateStr, instance) {
     booking__checkin__sticky.setDate(selectedDates, true, 'Y-m-d');
-    booking__checkout.set('minDate',flatpickr.formatDate(new Date(selectedDates), "Y-m-d"));
+    booking__checkout.set(
+      'minDate',
+      flatpickr.formatDate(new Date(selectedDates), 'Y-m-d')
+    );
   },
 });
 
@@ -129,7 +128,10 @@ var booking__checkin__sticky = flatpickr('#booking__checkin__sticky', {
   dateFormat: 'Y-m-d',
   onClose: function(selectedDates, dateStr, instance) {
     booking__checkin.setDate(selectedDates, true, 'Y-m-d');
-    booking__checkout__sticky.set('minDate',flatpickr.formatDate(new Date(selectedDates), "Y-m-d"));
+    booking__checkout__sticky.set(
+      'minDate',
+      flatpickr.formatDate(new Date(selectedDates), 'Y-m-d')
+    );
   },
 });
 var booking__checkout__sticky = flatpickr('#booking__checkout__sticky', {
@@ -143,7 +145,10 @@ var booking__checkin__relative = flatpickr('#booking__checkin__relative', {
   minDate: 'today',
   dateFormat: 'Y-m-d',
   onChange: function(selectedDates, dateStr, instance) {
-    booking__checkout__relative.set('minDate',flatpickr.formatDate(new Date(selectedDates), "Y-m-d"));
+    booking__checkout__relative.set(
+      'minDate',
+      flatpickr.formatDate(new Date(selectedDates), 'Y-m-d')
+    );
   },
 });
 var booking__checkout__relative = flatpickr('#booking__checkout__relative', {
@@ -218,16 +223,23 @@ $('.dropdown__departure > #dropdown__departure').bind('click', function() {
       .removeClass('show');
   }
 });
-$('#booking__departure').keyup(function(){
-  if ($('#booking__departure').val().length>0) {
-    $('.search__departure').addClass('show').removeClass('hide')
-    $('.default__departure').addClass('hide').removeClass('show')
+$('#booking__departure').keyup(function() {
+  if ($('#booking__departure').val().length > 0) {
+    $('.search__departure')
+      .addClass('show')
+      .removeClass('hide');
+    $('.default__departure')
+      .addClass('hide')
+      .removeClass('show');
+  } else {
+    $('.default__departure')
+      .addClass('show')
+      .removeClass('hide');
+    $('.search__departure')
+      .addClass('hide')
+      .removeClass('show');
   }
-  else{
-    $('.default__departure').addClass('show').removeClass('hide')
-    $('.search__departure').addClass('hide').removeClass('show')
-  }
-})
+});
 $('.dropdown__arrived > #dropdown__arrived').bind('click', function() {
   if ($('.dropdown__arrived__card').hasClass('hide')) {
     $('.dropdown__arrived__card')
@@ -239,33 +251,40 @@ $('.dropdown__arrived > #dropdown__arrived').bind('click', function() {
       .removeClass('show');
   }
 });
-$('#booking__arrived').keyup(function(){
-  if ($('#booking__arrived').val().length>0) {
-    $('.search__arrived').addClass('show').removeClass('hide')
-    $('.default__arrived').addClass('hide').removeClass('show')
+$('#booking__arrived').keyup(function() {
+  if ($('#booking__arrived').val().length > 0) {
+    $('.search__arrived')
+      .addClass('show')
+      .removeClass('hide');
+    $('.default__arrived')
+      .addClass('hide')
+      .removeClass('show');
+  } else {
+    $('.default__arrived')
+      .addClass('show')
+      .removeClass('hide');
+    $('.search__arrived')
+      .addClass('hide')
+      .removeClass('show');
   }
-  else{
-    $('.default__arrived').addClass('show').removeClass('hide')
-    $('.search__arrived').addClass('hide').removeClass('show')
-  }
-})
+});
 $('.dropdown__close__btn').on('click', function() {
+  console.log('click');
   $('.dropdown-menu--outerhide')
     .addClass('hide')
     .removeClass('show');
 });
-$(document).mouseup(function (e)
-                    {
-  var container = $(".dropdown-menu--outerhide"); // YOUR CONTAINER SELECTOR
+$(document).mouseup(function(e) {
+  var container = $('.dropdown-menu--outerhide'); // YOUR CONTAINER SELECTOR
 
-  if (!container.is(e.target) // if the target of the click isn't the container...
-      && container.has(e.target).length === 0) // ... nor a descendant of the container
-  {
-    container.addClass('hide')
-    .removeClass('show');
+  if (
+    !container.is(e.target) && // if the target of the click isn't the container...
+    container.has(e.target).length === 0
+  ) {
+    // ... nor a descendant of the container
+    container.addClass('hide').removeClass('show');
   }
 });
-
 
 // =============CHANGE GUEST QTY===================
 function changeAdultByPlus(targetInputFrontId, targetInputId) {
@@ -650,7 +669,26 @@ function selectLocation(triggerButton, siblingElementId, targetInputId) {
     .trim();
   $(targetInputId).val(selectLocationValue);
 }
-
+function getSelectDefaultLocation(triggerButton) {
+  var selectLocationValue = triggerButton
+    .parent()
+    .prev()
+    .text()
+    .trim();
+  var code = selectLocationValue.substring(
+    selectLocationValue.lastIndexOf('[') + 1,
+    selectLocationValue.lastIndexOf(']')
+  );
+  var name = selectLocationValue.substring(
+    selectLocationValue.lastIndexOf(']') + 1,
+    selectLocationValue.lastIndexOf(',')
+  );
+  console.log(code);
+  return {
+    code: code,
+    name: name,
+  };
+}
 $('.select__sticky__departure__btn').on('click', function() {
   selectLocation(
     $(this),
@@ -674,4 +712,16 @@ $('.select__departure__btn').on('click', function() {
 $('.select__arrived__btn').on('click', function() {
   selectLocation($(this), '.arrived__item', '#booking__sticky__arrived');
   selectLocation($(this), '.arrived__item', '#booking__arrived');
+});
+
+// ======================
+$('.default__arrived .select__arrived__btn').on('click', function() {
+  var value = getSelectDefaultLocation($(this));
+  console.log(value);
+  seletedLocationV2('arrived', value.code, value.name);
+});
+$('.default__departure .select__departure__btn').on('click', function() {
+  var value = getSelectDefaultLocation($(this));
+  console.log(value);
+  seletedLocationV2('arrived', value.code, value.name);
 });
