@@ -74,7 +74,38 @@
     transform: translate3d(0, 0, 0);
   }
 }
-
+.flatpickr-calendar{
+  width: 100% !important;
+}
+.flatpickr-day.selected{
+  background-color: #ffcc00 !important;
+  color: #0064D2 !important;
+}
+.flatpickr-month{
+  background-color: #0064D2 !important;
+  color: #FFF !important;
+}
+.flatpickr-months{
+display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px !important;
+    width: 100% !important;
+}
+.flatpickr-months .flatpickr-prev-month, .flatpickr-months .flatpickr-next-month{
+  position: static !important;
+  background-color: #0064D2 !important;
+  color: #FFF;
+  display: flex;
+}
+.flatpickr-calendar.arrowTop:before{
+  display: none !important;
+}
+.flatpickr-day.selected{
+  border-radius: 50% !important;
+  position: relative;
+  z-index: 2;
+}
 /*---------- SLIDER-------------- */
 .slider.slider-horizontal {
   width: 100% !important;

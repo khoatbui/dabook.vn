@@ -110,6 +110,8 @@ var booking__checkin = flatpickr('#booking__checkin', {
   minDate: 'today',
   dateFormat: 'Y-m-d',
   inline: true,
+  nextArrow: '<i class="fas fa-chevron-right" style="color:#FFF"></i>',
+  prevArrow: '<i class="fas fa-chevron-left" style="color:#FFF"></i>',
   onChange: function(selectedDates, dateStr, instance) {
     booking__checkin__sticky.setDate(selectedDates, true, 'Y-m-d');
     booking__checkout.set(
@@ -120,9 +122,12 @@ var booking__checkin = flatpickr('#booking__checkin', {
 });
 
 var booking__checkout = flatpickr('#booking__checkout', {
+  mode: 'range',
   minDate: 'today',
   dateFormat: 'Y-m-d',
   inline: true,
+  nextArrow: '<i class="fas fa-chevron-right" style="color:#FFF"></i>',
+  prevArrow: '<i class="fas fa-chevron-left" style="color:#FFF"></i>',
   onChange: function(selectedDates, dateStr, instance) {
     booking__checkout__sticky.setDate(selectedDates, true, 'Y-m-d');
   },
@@ -621,4 +626,16 @@ $('.select__departure__btn').on('click', function() {
 $('.select__arrived__btn').on('click', function() {
   selectLocation($(this), '.arrived__item', '#booking__sticky__arrived');
   selectLocation($(this), '.arrived__item', '#booking__arrived');
+});
+
+// ============BACK HISTORY=============
+function back() {
+  window.history.back();
+}
+$('.back__btn').on('click', back);
+$('.nav__flight').on('click', function() {
+  window.location.href = 'search.html';
+});
+$('.search__btn').on('click', function() {
+  window.location.href = 'booking.html';
 });

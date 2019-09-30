@@ -1,342 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/owlcarousel/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/owlcarousel/assets/owl.theme.default.min.css">
-    <link rel="stylesheet" href="assets/animated/animate.css">
-    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="styles/custom.lib.css">
-    <link rel="stylesheet" href="styles/layout.css">
-    <link rel="stylesheet" href="styles/custom.css">
-    <link rel="stylesheet" href="assets/flatpickr/flatpickr.min.css">
-    <title>dabook.vn an online booking platform where flight tickets, tours and travel services are good value</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="assets/owlcarousel/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/owlcarousel/assets/owl.theme.default.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/animated/animate.css" />
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="styles/custom.lib.css" />
+    <link rel="stylesheet" href="styles/layout.css" />
+    <link rel="stylesheet" href="styles/custom.css" />
+    <link rel="stylesheet" href="assets/flatpickr/flatpickr.min.css" />
+    <title>
+      dabook.vn an online booking platform where flight tickets, tours and
+      travel services are good value
+    </title>
     <!-- Hotjar Tracking Code for http://dabook.vn/ -->
     <script>
-        (function (h, o, t, j, a, r) {
-            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
-            h._hjSettings = { hjid: 1491380, hjsv: 6 };
-            a = o.getElementsByTagName('head')[0];
-            r = o.createElement('script'); r.async = 1;
-            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-            a.appendChild(r);
-        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+      (function(h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function() {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 1491380, hjsv: 6 };
+        a = o.getElementsByTagName('head')[0];
+        r = o.createElement('script');
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
     </script>
-</head>
+  </head>
 
-<body>
-    <div class="wrapper">
-        <!-- ↓↓ -->
-        <div class="component__booking opac__background mb-3rem">
-            
-        </div>
-        <div class="component__booking--sticky sticky--top">
-            <div class="card shadow border__radius--10 position-relative">
-                <div class="row mp--none p-4">
-                    <div class="col-5 pl-1 text-left">
-                        <h5 class="font-weight-bold text__size--x1 mp--none">HAN</h5>
-                        <h6 class=" text__size--x08 mp--none">Ha Noi</h6>
-                        <p class="text__size--x06 mp--none text-muted">15 Sept 2019</p>
-                        <!-- <div class="form-group mp--none" data-toggle="modal" data-target="#booking__departure__modal">
-                                        <label for="ibooking__departure" class="mp--none text__size--x06 text-white-muted"> DEPARTURE</label>
-                                        <input type="email" class="form-control booking__input--white text__size--x08" id="ibooking__departure" aria-describedby="emailHelp" value="HAN - Ha Noi, VietNam">
-                                    </div> -->
-                    </div>
-                    <div class="col-2 mp--none text-center">
-                        <i class="fas fa-plane text__size--x15 text-muted"></i>
-                    </div>
-                    <div class="col-5 pr-1 text-right">
-                        <h5 class="font-weight-bold text__size--x1 mp--none">HAN</h5>
-                        <h6 class=" text__size--x08 mp--none">Ha Noi</h6>
-                        <p class="text__size--x06 mp--none text-muted">15 Sept 2019</p>
-                        <!-- <div class="form-group mp--none" data-toggle="modal" data-target="#booking__arrived__modal">
-                                        <label for="ibooking__arrived" class="mp--none text__size--x06 text-white-muted">ARRIVER</label>
-                                        <input type="email" class="form-control booking__input--white text__size--x08" id="ibooking__arrived" aria-describedby="emailHelp" value="SAG - HoChiMinh, VietNam">
-                                    </div> -->
-                    </div>
-                </div>
-                <div class="row mp--none py-2">
-                    <div class="col-12 mp--none text-center">
-                        <button class="btn px-4 shadow-lg custom__background--second text-white border__radius--100 booking__btnsearch__sticky">
-                            Search
-                        </button>
-                    </div>
-                </div>
+  <body>
+    <div class="wrapper mb-40">
+      <!-- ↓↓ Header-->
+      <div class="header__component">
+        <!-- ↓↓ Header-->
+        <div class="header__component--header">
+          <div
+            class="row mp--none d-flex justify-content-around align-items-center px-3 bg-primary"
+          >
+            <div class="col-6 mp--none text-left">
+              <h1>
+                <img
+                  class="header__logo"
+                  src="images/logo/logo_dabook_white.jpg"
+                  alt=""
+                />
+              </h1>
             </div>
+            <div class="col-6 mp--none text-right">
+              <button
+                class="text__size--x07 text-white btn btn-sm custom__background--second border__radius--100"
+              >
+                LOGIN
+              </button>
+            </div>
+          </div>
         </div>
-        <!-- ↑↑  -->
-        <!-- ↓↓ topdestination__component -->
-        <div class="component__topdes py-4 my-4">
-            <div class="container">
-                <div class="row mp--none">
-                    <div class="col-12 mp--none mb-2">
-                        <h4>Top cac diem den noi tieng</h4>
-                    </div>
-                </div>
-                <div class="row mp--none">
-                    <div class="col-12 mp--none">
-                        <div class="owl-carousel owl__topdes owl-theme">
-                            <div class="item" data-merge="1">
-                                <div class="card topdes__card border__radius--10 overflow--hidden">
-                                    <div class="topdes__card__child" style="background-image:url('images/destination/danang.jpg');"></div>
-                                    <div class="custom__ovelap__body">
-                                        <h5 class="card-title text__size--x09">Da nang</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item" data-merge="1">
-                                <div class="card topdes__card border__radius--10 overflow--hidden">
-                                    <div class="topdes__card__child" style="background-image:url('images/destination/hochiminh.jpg');"></div>
-                                    <div class="custom__ovelap__body">
-                                        <h5 class="card-title text__size--x09">Hochiminh</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item" data-merge="1">
-                                <div class="card topdes__card border__radius--10 overflow--hidden">
-                                    <div class="topdes__card__child" style="background-image:url('images/destination/hoian.jpg');"></div>
-                                    <div class="custom__ovelap__body">
-                                        <h5 class="card-title text__size--x09">Hoian</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item" data-merge="1">
-                                <div class="card topdes__card border__radius--10 overflow--hidden">
-                                    <div class="topdes__card__child" style="background-image:url('images/destination/mucangchai.jpg');"></div>
-                                    <div class="custom__ovelap__body">
-                                        <h5 class="card-title text__size--x09">Mu cang chai</h5>
-                                    </div>
-                                </div>
-                            </div>
+        <!-- ↑↑ Header -->
+        <!-- ↓↓ Promotion-->
+        <div class="header__component--promotion">
+          <div class="header__component--background bg-primary"></div>
+          <!-- <div class="owl-carousel owl__bookingbg owl-theme">
+                    <div class="item">
+                        <div class="component__booking__background"
+                            style="background-image:url('images/background/bg_03.jpg');">
                         </div>
                     </div>
-                </div>
-            </div>
+                    <div class="item">
+                        <div class="component__booking__background"
+                            style="background-image:url('images/background/bg_02.jpg');">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="component__booking__background"
+                            style="background-image:url('images/background/bg_01.jpg');">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="component__booking__background"
+                            style="background-image:url('images/background/bg_04.jpg');">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="component__booking__background"
+                            style="background-image:url('images/background/bg_05.jpg');">
+                        </div>
+                    </div>
+                </div> -->
         </div>
-        <!-- ↑↑ End topdestination__component -->
+        <!-- ↑↑ Promotion -->
+      </div>
+      <!-- ↑↑ Header -->
 
-        <!-- ↓↓ Today promotion -->
-        <div class="component__todaypromotion py-4 my-4">
-            <div class="container">
-                <div class="row mp--none">
-                    <div class="col-12 mp--none mb-2">
-                        <h4>Uu dai moi ngay</h4>
-                    </div>
-                </div>
-                <div class="row mp--none">
-                    <div class="col-12 mp--none">
-                        <div class="owl-carousel owl__todaypro owl-theme">
-                            <div class="item">
-                                <div class="card todaypromo__card border__radius--10 overflow--hidden">
-                                    <div class="todaypromo__card__child" style="background-image:url('images/promote/airasean.jpg');"></div>
-                                    <div class="custom__ovelap__body">
-                                        <h5 class="card-title text__size--x09 text__size--x09">
-                                            <i class="fas fa-hourglass-half"></i> 2019/28/09
-                                        </h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item" data-merge="1">
-                                <div class="card todaypromo__card border__radius--10 overflow--hidden">
-                                    <div class="todaypromo__card__child" style="background-image:url('images/promote/vinpearl.jpg');"></div>
-                                    <div class="custom__ovelap__body">
-                                        <h5 class="card-title text__size--x09 text__size--x09">
-                                            <i class="fas fa-hourglass-half"></i> 2019/28/09
-                                        </h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item" data-merge="1">
-                                <div class="card todaypromo__card border__radius--10 overflow--hidden">
-                                    <div class="todaypromo__card__child" style="background-image:url('images/promote/vietjet.jpg');"></div>
-                                    <div class="custom__ovelap__body">
-                                        <h5 class="card-title text__size--x09 text__size--x09">
-                                            <i class="fas fa-hourglass-half"></i> 2019/28/09
-                                        </h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item" data-merge="1">
-                                <div class="card todaypromo__card border__radius--10 overflow--hidden">
-                                    <div class="todaypromo__card__child" style="background-image:url('images/promote/vietnamairlines.jpg');"></div>
-                                    <div class="custom__ovelap__body">
-                                        <h5 class="card-title text__size--x09 text__size--x09">
-                                            <i class="fas fa-hourglass-half"></i> 2019/28/09
-                                        </h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item" data-merge="1">
-                                <div class="card todaypromo__card border__radius--10 overflow--hidden">
-                                    <div class="todaypromo__card__child" style="background-image:url('images/promote/flc.jpg');"></div>
-                                    <div class="custom__ovelap__body">
-                                        <h5 class="card-title text__size--x09 text__size--x09">
-                                            <i class="fas fa-hourglass-half"></i> 2019/28/09
-                                        </h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <!-- ↓↓ Navigation-->
+      <div class="navigation__component">
+        <div class="row mp--none px-3 mt-4">
+          <div class="col-12 mp--none mb-2">
+            <h2 class="text__size--x1 font-weight-bold">
+              Hey you, where do you go?
+            </h2>
+          </div>
         </div>
-        <!-- ↑↑ Today promotion -->
+        <div class="row mp--none mb-4">
+          <div
+            class="col-12  mp--none d-flex justify-content-center align-items-center flex-wrap"
+          >
+            <div
+              class="card custom__navicard shadow d-flex justify-content-center align-items-center border__radius--10 border-0 m-1 nav__flight"
+            >
+              <img
+                class="custom__navicard__icon--x2"
+                src="images/icons/airplane.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="card custom__navicard shadow d-flex justify-content-center align-items-center border__radius--10 border-0 m-1 nav__flight"
+            >
+              <img
+                class="custom__navicard__icon"
+                src="images/icons/suitcase.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="card custom__navicard shadow d-flex justify-content-center align-items-center border__radius--10 border-0 m-1 nav__car"
+            >
+              <img
+                class="custom__navicard__icon--x2"
+                src="images/icons/car.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="card custom__navicard shadow d-flex justify-content-center align-items-center border__radius--10 border-0 m-1 nav__visa"
+            >
+              <img
+                class="custom__navicard__icon"
+                src="images/icons/passport.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="card custom__navicard shadow d-flex justify-content-center align-items-center border__radius--10 border-0 m-1  nav__flight"
+            >
+              <img
+                class="custom__navicard__icon"
+                src="images/icons/destination.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="card custom__navicard shadow d-flex justify-content-center align-items-center border__radius--10 border-0 m-1 nav__hotel"
+            >
+              <img
+                class="custom__navicard__icon--x2"
+                src="images/icons/hotel.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ↑↑ Navigation -->
 
-        <!-- ↓↓ Flight promotion -->
-        <div class="component__flightdeal py-4 my-4">
-            <div class="container">
-                <div class="row mp--none">
-                    <div class="col-12 mp--none mb-2">
-                        <h4>Top cac chuyen bay uu dai</h4>
-                    </div>
-                </div>
-                <div class="row mp--none">
-                    <div class="col-12 mp--none d-flex justify-content-between align-items-center flex-wrap">
-                        <div class="card flightdeal__card cursor--pointer shadow border-0 border__radius--10 my-2">
-                            <div class="flightdeal__card__brand">
-                                <img class="flightdeal__card__logo" src="images/brand/logo-vietnam-airlines.png" alt="">
-                            </div>
-                            <div class="row m-2">
-                                <div class="col-12 border-bottom py-1">
-                                    <p class=" text-muted text__size--x07 m-0">from Ha Noi</p>
-                                    <h5>Suwon</h5>
-                                    <p class="m-0 text-muted text__size--x07"><span>25 JAN</span> <i class="fas fa-exchange-alt"></i> <span>27 JAN</span></p>
-                                </div>
-                                <div class="col-12 py-1 text-muted text__size--x07">
-                                    TU <span class="font-weight-bold text-success text__size--x1">1.890.266 d</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card flightdeal__card cursor--pointer shadow border-0 border__radius--10 my-2">
-                            <div class="flightdeal__card__brand">
-                                <img class="flightdeal__card__logo" src="images/brand/AirAsia.png" alt="">
-                            </div>
-                            <div class="row m-2">
-                                <div class="col-12 border-bottom py-1">
-                                    <p class=" text-muted text__size--x07 m-0">from Ha Noi</p>
-                                    <h5>Suwon</h5>
-                                    <p class="m-0 text-muted text__size--x07"><span>25 JAN</span> <i class="fas fa-exchange-alt"></i> <span>27 JAN</span></p>
-                                </div>
-                                <div class="col-12 py-1 text-muted text__size--x07">
-                                    TU <span class="font-weight-bold text-success text__size--x1">1.890.266 d</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card flightdeal__card cursor--pointer shadow border-0 border__radius--10 my-2">
-                            <div class="flightdeal__card__brand">
-                                <img class="flightdeal__card__logo" src="images/brand/logo-vietnam-airlines.png" alt="">
-                            </div>
-                            <div class="row m-2">
-                                <div class="col-12 border-bottom py-1">
-                                    <p class=" text-muted text__size--x07 m-0">from Ha Noi</p>
-                                    <h5>Suwon</h5>
-                                    <p class="m-0 text-muted text__size--x07"><span>25 JAN</span> <i class="fas fa-exchange-alt"></i> <span>27 JAN</span></p>
-                                </div>
-                                <div class="col-12 py-1 text-muted text__size--x07">
-                                    TU <span class="font-weight-bold text-success text__size--x1">1.890.266 d</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card flightdeal__card cursor--pointer shadow border-0 border__radius--10 my-2">
-                            <div class="flightdeal__card__brand">
-                                <img class="flightdeal__card__logo" src="images/brand/Jetstar-logo.jpg" alt="">
-                            </div>
-                            <div class="row m-2">
-                                <div class="col-12 border-bottom py-1">
-                                    <p class=" text-muted text__size--x07 m-0">from Ha Noi</p>
-                                    <h5>Suwon</h5>
-                                    <p class="m-0 text-muted text__size--x07"><span>25 JAN</span> <i class="fas fa-exchange-alt"></i> <span>27 JAN</span></p>
-                                </div>
-                                <div class="col-12 py-1 text-muted text__size--x07">
-                                    TU <span class="font-weight-bold text-success text__size--x1">1.890.266 d</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card flightdeal__card cursor--pointer shadow border-0 border__radius--10 my-2">
-                            <div class="flightdeal__card__brand">
-                                <img class="flightdeal__card__logo" src="images/brand/vietjet-logo.png" alt="">
-                            </div>
-                            <div class="row m-2">
-                                <div class="col-12 border-bottom py-1">
-                                    <p class=" text-muted text__size--x07 m-0">from Ha Noi</p>
-                                    <h5>Suwon</h5>
-                                    <p class="m-0 text-muted text__size--x07"><span>25 JAN</span> <i class="fas fa-exchange-alt"></i> <span>27 JAN</span></p>
-                                </div>
-                                <div class="col-12 py-1 text-muted text__size--x07">
-                                    TU <span class="font-weight-bold text-success text__size--x1">1.890.266 d</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card flightdeal__card cursor--pointer shadow border-0 border__radius--10 my-2">
-                            <div class="flightdeal__card__brand">
-                                <img class="flightdeal__card__logo" src="images/brand/AirAsia.png" alt="">
-                            </div>
-                            <div class="row m-2">
-                                <div class="col-12 border-bottom py-1">
-                                    <p class=" text-muted text__size--x07 m-0">from Ha Noi</p>
-                                    <h5>Suwon</h5>
-                                    <p class="m-0 text-muted text__size--x07"><span>25 JAN</span> <i class="fas fa-exchange-alt"></i> <span>27 JAN</span></p>
-                                </div>
-                                <div class="col-12 py-1 text-muted text__size--x07">
-                                    TU <span class="font-weight-bold text-success text__size--x1">1.890.266 d</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card flightdeal__card cursor--pointer shadow border-0 border__radius--10 my-2">
-                            <div class="flightdeal__card__brand">
-                                <img class="flightdeal__card__logo" src="images/brand/logo-vietnam-airlines.png" alt="">
-                            </div>
-                            <div class="row m-2">
-                                <div class="col-12 border-bottom py-1">
-                                    <p class=" text-muted text__size--x07 m-0">from Ha Noi</p>
-                                    <h5>Suwon</h5>
-                                    <p class="m-0 text-muted text__size--x07"><span>25 JAN</span> <i class="fas fa-exchange-alt"></i> <span>27 JAN</span></p>
-                                </div>
-                                <div class="col-12 py-1 text-muted text__size--x07">
-                                    TU <span class="font-weight-bold text-success text__size--x1">1.890.266 d</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card flightdeal__card cursor--pointer shadow border-0 border__radius--10 my-2">
-                            <div class="flightdeal__card__brand">
-                                <img class="flightdeal__card__logo" src="images/brand/logo-vietnam-airlines.png" alt="">
-                            </div>
-                            <div class="row m-2">
-                                <div class="col-12 border-bottom py-1">
-                                    <p class=" text-muted text__size--x07 m-0">from Ha Noi</p>
-                                    <h5>Suwon</h5>
-                                    <p class="m-0 text-muted text__size--x07"><span>25 JAN</span> <i class="fas fa-exchange-alt"></i> <span>27 JAN</span></p>
-                                </div>
-                                <div class="col-12 py-1 text-muted text__size--x07">
-                                    TU <span class="font-weight-bold text-success text__size--x1">1.890.266 d</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card flightdeal__card cursor--pointer shadow border-0 border__radius--10 my-2">
-                            <div class="flightdeal__card__brand">
-                                <img class="flightdeal__card__logo" src="images/brand/logo-vietnam-airlines.png" alt="">
-                            </div>
-                            <div class="row m-2">
-                                <div class="col-12 border-bottom py-1">
-                                    <p class=" text-muted text__size--x07 m-0">from Ha Noi</p>
-                                    <h5>Suwon</h5>
-                                    <p class="m-0 text-muted text__size--x07"><span>25 JAN</span> <i class="fas fa-exchange-alt"></i> <span>27 JAN</span></p>
-                                </div>
-                                <div class="col-12 py-1 text-muted text__size--x07">
-                                    TU <span class="font-weight-bold text-success text__size--x1">1.890.266 d</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <!-- ↓↓ Topdest-->
+      <div class="component__topdes pb-4 mb-4">
+        <div class="row mp--none px-3 mt-4">
+          <div class="col-12 mp--none mb-2">
+            <h2 class="text__size--x1 font-weight-bold">Top destination</h2>
+          </div>
         </div>
-        <!-- ↑↑ Flight promotion -->
+        <div class="row mp--none px-3">
+          <div class="col-12 mp--none">
+            <div class="owl-carousel owl__topdes owl-theme">
+              <div class="item" data-merge="1">
+                <div
+                  class="card topdes__card border__radius--10 overflow--hidden"
+                >
+                  <div
+                    class="topdes__card__child"
+                    style="background-image:url('images/destination/danang.jpg');"
+                  ></div>
+                  <div class="custom__ovelap__body">
+                    <h5 class="card-title text__size--x09">Da nang</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="item" data-merge="1">
+                <div
+                  class="card topdes__card border__radius--10 overflow--hidden"
+                >
+                  <div
+                    class="topdes__card__child"
+                    style="background-image:url('images/destination/hochiminh.jpg');"
+                  ></div>
+                  <div class="custom__ovelap__body">
+                    <h5 class="card-title text__size--x09">Hochiminh city</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="item" data-merge="1">
+                <div
+                  class="card topdes__card border__radius--10 overflow--hidden"
+                >
+                  <div
+                    class="topdes__card__child"
+                    style="background-image:url('images/destination/hoian.jpg');"
+                  ></div>
+                  <div class="custom__ovelap__body">
+                    <h5 class="card-title text__size--x09">Hoian</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="item" data-merge="1">
+                <div
+                  class="card topdes__card border__radius--10 overflow--hidden"
+                >
+                  <div
+                    class="topdes__card__child"
+                    style="background-image:url('images/destination/mucangchai.jpg');"
+                  ></div>
+                  <div class="custom__ovelap__body">
+                    <h5 class="card-title text__size--x09">Mu cang chai</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ↑↑ Topdest -->
+
+      <!-- ↓↓ Top flight promotion-->
+      <!-- ↑↑ Top flight promotion -->
+
+      <!-- ↓↓ Navibar-->
+      <div class="navibar__component w-100 mp--none">
+        <ul
+          class="navibar d-flex justify-content-around align-items-center list__style--none w-100 mp--none py-2"
+        >
+          <li class="text-center navibar__item active">
+            <i class="fas fa-home"></i>
+            <p class="mp--none text__size--x09">Home</p>
+          </li>
+          <li class="text-center navibar__item">
+            <i class="far fa-heart"></i>
+            <p class="mp--none text__size--x09">Favorite</p>
+          </li>
+          <li class="text-center navibar__item">
+            <i class="fas fa-list-ul"></i>
+            <p class="mp--none text__size--x09">MyOrder</p>
+          </li>
+          <li class="text-center navibar__item">
+            <i class="far fa-user-circle"></i>
+            <p class="mp--none text__size--x09">
+              Profile
+            </p>
+          </li>
+        </ul>
+      </div>
+      <!-- ↑↑ Navibar -->
     </div>
     <script src="assets/jquery/jquery.min.js"></script>
     <script src="assets/jquery/popper.min.js"></script>
@@ -344,6 +284,5 @@
     <script src="assets/owlcarousel/owl.carousel.min.js"></script>
     <script src="assets/flatpickr/flatpickr.min.js"></script>
     <script src="js/custom.js"></script>
-</body>
-
+  </body>
 </html>
