@@ -1,6 +1,6 @@
 // ==============INITIAL================
 $('.owl__topdes').owlCarousel({
-  items: 2,
+  items: 3,
   loop: true,
   margin: 10,
   merge: true,
@@ -109,17 +109,20 @@ $('.owl__favoritedeslist').owlCarousel({
 var booking__checkin = flatpickr('#booking__checkin', {
   minDate: 'today',
   dateFormat: 'Y-m-d',
-  inline:true,
+  inline: true,
   onChange: function(selectedDates, dateStr, instance) {
     booking__checkin__sticky.setDate(selectedDates, true, 'Y-m-d');
-    booking__checkout.set('minDate',flatpickr.formatDate(new Date(selectedDates), "Y-m-d"));
+    booking__checkout.set(
+      'minDate',
+      flatpickr.formatDate(new Date(selectedDates), 'Y-m-d')
+    );
   },
 });
 
 var booking__checkout = flatpickr('#booking__checkout', {
   minDate: 'today',
   dateFormat: 'Y-m-d',
-  inline:true,
+  inline: true,
   onChange: function(selectedDates, dateStr, instance) {
     booking__checkout__sticky.setDate(selectedDates, true, 'Y-m-d');
   },
@@ -129,7 +132,10 @@ var booking__checkin__sticky = flatpickr('#booking__checkin__sticky', {
   dateFormat: 'Y-m-d',
   onClose: function(selectedDates, dateStr, instance) {
     booking__checkin.setDate(selectedDates, true, 'Y-m-d');
-    booking__checkout__sticky.set('minDate',flatpickr.formatDate(new Date(selectedDates), "Y-m-d"));
+    booking__checkout__sticky.set(
+      'minDate',
+      flatpickr.formatDate(new Date(selectedDates), 'Y-m-d')
+    );
   },
 });
 var booking__checkout__sticky = flatpickr('#booking__checkout__sticky', {
@@ -143,14 +149,16 @@ var booking__checkin__relative = flatpickr('#booking__checkin__relative', {
   minDate: 'today',
   dateFormat: 'Y-m-d',
   onChange: function(selectedDates, dateStr, instance) {
-    booking__checkout__relative.set('minDate',flatpickr.formatDate(new Date(selectedDates), "Y-m-d"));
+    booking__checkout__relative.set(
+      'minDate',
+      flatpickr.formatDate(new Date(selectedDates), 'Y-m-d')
+    );
   },
 });
 var booking__checkout__relative = flatpickr('#booking__checkout__relative', {
   minDate: $('#booking__checkout').val(),
   dateFormat: 'Y-m-d',
 });
-
 
 // ========CHANGE DATA MERGE ON HOVER========
 $(document).ready(function() {

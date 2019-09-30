@@ -689,6 +689,11 @@ function getSelectDefaultLocation(triggerButton) {
     name: name,
   };
 }
+function closeDropdrownMenu() {
+  $('.dropdown-menu--outerhide')
+    .removeClass('show')
+    .addClass('hide');
+}
 $('.select__sticky__departure__btn').on('click', function() {
   selectLocation(
     $(this),
@@ -696,6 +701,7 @@ $('.select__sticky__departure__btn').on('click', function() {
     '#booking__sticky__departure'
   );
   selectLocation($(this), '.departure__sticky__item', '#booking__departure');
+  closeDropdrownMenu();
 });
 $('.select__sticky__arrived__btn').on('click', function() {
   selectLocation(
@@ -704,24 +710,27 @@ $('.select__sticky__arrived__btn').on('click', function() {
     '#booking__sticky__arrived'
   );
   selectLocation($(this), '.arrived__sticky__item', '#booking__arrived');
+  closeDropdrownMenu();
 });
 $('.select__departure__btn').on('click', function() {
   selectLocation($(this), '.departure__item', '#booking__sticky__departure');
   selectLocation($(this), '.departure__item', '#booking__departure');
+  closeDropdrownMenu();
 });
 $('.select__arrived__btn').on('click', function() {
   selectLocation($(this), '.arrived__item', '#booking__sticky__arrived');
   selectLocation($(this), '.arrived__item', '#booking__arrived');
+  closeDropdrownMenu();
 });
 
 // ======================
 $('.default__arrived .select__arrived__btn').on('click', function() {
   var value = getSelectDefaultLocation($(this));
-  console.log(value);
   seletedLocationV2('arrived', value.code, value.name);
+  closeDropdrownMenu();
 });
 $('.default__departure .select__departure__btn').on('click', function() {
   var value = getSelectDefaultLocation($(this));
-  console.log(value);
   seletedLocationV2('arrived', value.code, value.name);
+  closeDropdrownMenu();
 });
