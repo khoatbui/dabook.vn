@@ -3,3 +3,128 @@
     position: fixed;
     bottom: 30px;
 }
+
+.header__logo{
+    height: 30px;
+}
+.header__component--promotion{
+    overflow: hidden;
+}
+.header__component--background{
+    min-height: 250px;
+    width: 150%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    margin:0 auto;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.component__booking__background{
+    height: 200px;  
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.custom__navicard__icon{
+    height: 50px;
+    width: 50px; 
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+}
+.custom__navicard__icon--x2{
+    height: 60px;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+}
+.custom__navicard{
+    position: relative;
+    overflow: hidden;
+    width: 90px;
+    height: 90px;
+}
+.custom__navicard::after {
+    content: ' ';
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #C3D5F5;
+    z-index: -0;
+    opacity: 0.2;
+}
+.navibar__component{
+    position: fixed;
+    bottom: 0;
+    z-index: 100;
+    background-color: #FFF;
+}
+.navibar__item.active{
+    color: #0064D2;
+    font-weight: bold;
+}
+.mb-40{
+    margin-bottom: 40px;
+}
+.booking__card{
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width:90%;
+}
+.booking__from__control{
+    border-bottom: 1px solid #dee2ee
+}
+.booking__form__label{
+    margin:0;
+}
+.booking__form__input{
+    border:none;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding-left: 0.4rem;
+}
+.booking__form__input:active,.booking__form__input:hover,.booking__form__input:focus{
+    background-color: #FFF;
+    border:0;
+    outline: none;
+}
+.forward__component{
+    position: absolute;
+    right: 0;
+    bottom: -18px;
+}
+.forward__component i{
+    transform: rotate(90deg);
+}
+.routrip__component{
+    position: absolute;
+    right: 0;
+    top:50%;
+    transform: translateY(-50%)
+}
+.modal-dialog-bottom{
+    position: absolute !important;
+    bottom: 0;
+    width: 100%;
+    margin: 0 !important;
+}
+.modal-dialog-full{
+    width: 100%;
+    height: 100%;
+    margin: 0 !important;
+    padding:0 !important;
+}
+.form-control.flatpickr-input{
+    position: absolute;
+}
+.flatpickr-calendar{
+    border-radius: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}

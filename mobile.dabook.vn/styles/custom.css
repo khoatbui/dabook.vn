@@ -9,16 +9,17 @@ html {
 }
 body {
   font-family: 'Roboto', sans-serif !important;
+  color: #1b2e4a;
 }
 .custom__background--main,
 .bg-primary,
 .btn-primary {
-  background-color: #0065b8 !important;
+  background-color: #0064D2 !important;
 }
 .text-primary {
-  color: #0065b8 !important;
+  color: #0064D2 !important;
 }
-.custom__background--second {
+.custom__background--second,.btn-warning {
   background-color: #ffcc00 !important;
 }
 .custom__background--three {
@@ -68,6 +69,10 @@ body {
 .border__radius__right--100 {
   border-top-right-radius: 100px;
   border-bottom-right-radius: 100px;
+}
+.border__radius__top--10{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px
 }
 .border__radius--10 {
   border-radius: 10px;
@@ -152,6 +157,9 @@ h5.h6 {
 .border__style--dash {
   border-style: dashed;
 }
+.border__bottom--dash {
+  border-bottom:1px dashed #dee2ee;
+}
 
 /* ----------Cursor----------- */
 .cursor--pointer {
@@ -193,7 +201,69 @@ h5.h6 {
 .is-hidden {
   visibility: hidden;
 }
-/* ---------------Checkbox---------- */
+/* ---------------Switch---------- */
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 1px;
+  bottom: 1px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #0064D2;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #0064D2;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(12px);
+  -ms-transform: translateX(12px);
+  transform: translateX(12px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
 
 /* -----------------Width height------ */
 .w-90 {
@@ -201,6 +271,12 @@ h5.h6 {
 }
 .w-30px {
   width: 30px;
+}
+.h-200{
+  height: 200px;
+}
+.h-400{
+  height: 400px;
 }
 /*-----------------DROPDOWN OUTER HIDE----------------- */
 .dropdown-menu--outerhide {
@@ -223,10 +299,10 @@ HOMEPAGE
 }
 .btn__back--primary {
   background: transparent;
-  color: #0065b8;
+  color: #0064D2;
 }
 .booking__input {
-  background-color: #0065b8;
+  background-color: #0064D2;
   color: #fff;
   border: none;
   border-bottom: 1px solid #fff;
@@ -236,7 +312,7 @@ HOMEPAGE
 }
 .booking__input--white {
   background-color: #fff;
-  color: #0065b8;
+  color: #0064D2;
   border: none;
   border-bottom: 1px solid #fff;
   border-radius: 0;
@@ -246,7 +322,7 @@ HOMEPAGE
 .booking__input:hover,
 .booking__input:active,
 .booking__input:focus {
-  background-color: #0065b8;
+  background-color: #0064D2;
   color: #fff;
 }
 /* Top destination*/
@@ -377,15 +453,11 @@ HOMEPAGE
 .default-departure .nav-item .nav-link,
 .default-arrived .nav-item .nav-link {
   border: none !important;
-  border-radius: 100px;
-  color: #0065b8;
+  color: #0064D2;
 }
 .default-departure .nav-item .nav-link.active,
 .default-arrived .nav-item .nav-link.active {
-  border: none !important;
-  border-radius: 100px;
-  background-color: #0065b8;
-  color: #fff;
+  border-bottom:1px solid #0064D2 !important;
 }
 /* Class modal */
 .modal__content__class {
@@ -408,7 +480,7 @@ HOMEPAGE
   margin: 0;
 }
 .custom__btn--plus {
-  border: 1px solid #0065b8;
+  border: 1px solid #0064D2;
 }
 .custom__btn--minus {
   border: 1px solid #1b2e4a;

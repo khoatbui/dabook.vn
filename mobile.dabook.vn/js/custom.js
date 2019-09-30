@@ -1,6 +1,6 @@
 // ==============INITIAL================
 $('.owl__topdes').owlCarousel({
-  items: 2,
+  items: 3,
   loop: true,
   margin: 10,
   merge: true,
@@ -110,6 +110,8 @@ var booking__checkin = flatpickr('#booking__checkin', {
   minDate: 'today',
   dateFormat: 'Y-m-d',
   inline:true,
+  nextArrow:'<i class="fas fa-chevron-right" style="color:#FFF"></i>',
+  prevArrow:'<i class="fas fa-chevron-left" style="color:#FFF"></i>',
   onChange: function(selectedDates, dateStr, instance) {
     booking__checkin__sticky.setDate(selectedDates, true, 'Y-m-d');
     booking__checkout.set('minDate',flatpickr.formatDate(new Date(selectedDates), "Y-m-d"));
@@ -117,9 +119,12 @@ var booking__checkin = flatpickr('#booking__checkin', {
 });
 
 var booking__checkout = flatpickr('#booking__checkout', {
+  mode:'range',
   minDate: 'today',
   dateFormat: 'Y-m-d',
   inline:true,
+  nextArrow:'<i class="fas fa-chevron-right" style="color:#FFF"></i>',
+  prevArrow:'<i class="fas fa-chevron-left" style="color:#FFF"></i>',
   onChange: function(selectedDates, dateStr, instance) {
     booking__checkout__sticky.setDate(selectedDates, true, 'Y-m-d');
   },
