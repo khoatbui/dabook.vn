@@ -128,3 +128,28 @@
     box-shadow: none !important;
     border: none !important;
 }
+
+
+/* ============BOOKING PAGE */
+/* Filter component */
+.filter__component{
+    position: fixed;
+    bottom: 0;
+    padding:2rem;
+    width: 100%;
+}
+
+
+/* Result component */
+.result__card{
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width:100%;
+    min-height: 800px;
+}
+.result__brand__logo{
+    width: 15px;
+    margin-right: 0.2rem;
+}

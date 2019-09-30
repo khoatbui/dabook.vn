@@ -619,3 +619,16 @@ $('.select__arrived__btn').on('click', function() {
   selectLocation($(this), '.arrived__item', '#booking__sticky__arrived');
   selectLocation($(this), '.arrived__item', '#booking__arrived');
 });
+
+
+// ============BACK HISTORY=============
+function back(){
+  window.history.back();
+}
+$('.back__btn').on('click',back);
+$('.nav__flight').on('click',function(){
+  window.location.href = 'search.html';
+})
+$('.search__btn').on('click',function(){
+  window.location.href = 'booking.html';
+})
