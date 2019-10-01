@@ -648,3 +648,6 @@ $('.result__departure__item').on('click', function() {
 $('.select__return__btn').on('click', function() {
   window.location.href = 'confirm.html';
 });
+$('.result__arrived__item').on('click', function() {
+  window.location.href = 'confirm.html';
+});

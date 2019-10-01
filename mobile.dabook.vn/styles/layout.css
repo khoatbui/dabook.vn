@@ -208,3 +208,10 @@
     left: 0;
     z-index: 100;
 }
+.payment__action__component{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 0.5rem 0;
+}

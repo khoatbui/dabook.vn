@@ -296,6 +296,40 @@ input:checked + .slider:before {
 .h-400{
   height: 400px;
 }
+/* Custom input */
+.custom__input__group{
+  position: relative;
+}
+.custom__label{
+  position: absolute;
+  background-color:#FFF;
+  padding:0 2px;
+  top: -10px;
+  left: 10px;
+  color: gray;
+  font-size: 0.7rem;
+}
+.custom__icon{
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translate(-50%,-50%);
+  color: #0064D2;
+}
+.custom__input{
+  border-radius: 5px;
+  padding:10px;
+  padding-left: 40px;
+  border:1px solid #dedede;
+  width: 100%
+}
+.custom__input:hover,.custom__input:active,.custom__input:focus{
+  border:1px solid #0064D2;
+  outline: none;
+}
+.custom__input:focus .custom__label,.custom__input:active .custom__label,.custom__input:hover .custom__label{
+  color: #0064D2 !important;
+}
 /*-----------------DROPDOWN OUTER HIDE----------------- */
 .dropdown-menu--outerhide {
   display: block !important;
