@@ -7,10 +7,12 @@ html {
   scroll-behavior: smooth;
   font-family: 'Roboto', sans-serif !important;
 }
-body{
+body {
   font-family: 'Roboto', sans-serif !important;
 }
-.custom__background--main,.bg-primary,.btn-primary {
+.custom__background--main,
+.bg-primary,
+.btn-primary {
   background-color: #0065b8 !important;
 }
 .text-primary {
@@ -96,7 +98,7 @@ body{
 .text__wrap--nowrap {
   white-space: nowrap;
 }
-.text__threeline{
+.text__threeline {
   line-height: 1.6em;
   max-height: 4.8em;
   text-overflow: ellipsis;
@@ -162,7 +164,7 @@ h5.h6 {
 /* ---------------Checkbox---------- */
 
 /* -----------------Width height------ */
-.w-90{
+.w-90 {
   width: 90% !important;
 }
 .h-400 {
@@ -256,14 +258,14 @@ h5.h6 {
   top: 70px !important;
   width: 200%;
 }
-.dropdown__departure__card__sticky{
+.dropdown__departure__card__sticky {
   top: 40px !important;
   width: 250%;
 }
 .dropdown__arrived__card {
   top: 70px !important;
   right: 0 !important;
-  transform: translate(50%,-50%) !important;
+  transform: translate(50%, -50%) !important;
   left: auto !important;
   width: 200%;
 }
@@ -290,15 +292,15 @@ h5.h6 {
   justify-content: center;
   align-items: center;
 }
-.component__booking__sticky{
+.component__booking__sticky {
   display: none;
   z-index: 100;
 }
-.component__booking__relative{
+.component__booking__relative {
   position: relative;
   z-index: 100;
 }
-.component__booking__static{
+.component__booking__static {
   z-index: 100;
 }
 /* --------------Top destination----------- */
@@ -362,6 +364,12 @@ h5.h6 {
 /* ---------Flight deal---------- */
 .flightdeal__card {
   overflow: hidden;
+  flex-grow: 1;
+  width: 23%;
+  max-width: 24%;
+}
+.flightdeal__card--left {
+  flex-grow: 10;
 }
 .flightdeal__card__brand {
   position: absolute;
@@ -448,11 +456,11 @@ h5.h6 {
 }
 /* ========DROPDOWN OUTER HIDE */
 .dropdown-menu--outerhide {
-  display: block !important
-}
-.dropdown-menu--outerhide.show{
   display: block !important;
 }
-.dropdown-menu--outerhide.hide{
+.dropdown-menu--outerhide.show {
+  display: block !important;
+}
+.dropdown-menu--outerhide.hide {
   display: none !important;
 }
