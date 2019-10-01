@@ -26,7 +26,7 @@ body {
   background-color: #1b2e4a !important;
 }
 .custom__background--four {
-  background-color: #f3f7fc !important;
+  background-color: #F5F5F9 !important;
 }
 .custom__background--light {
   background-color: #ecf1fd !important;
@@ -36,6 +36,9 @@ body {
 }
 .custom__color--three {
   color: #35405a !important;
+}
+.custom__color--four{
+  color: #dee2ee !important;
 }
 /* --------------Margin padding--------- */
 .mp--none {
@@ -77,6 +80,10 @@ body {
 .border__radius--20 {
   border-radius: 20px;
 }
+.border__radius__top--20{
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px
+}
 .border__radius--10 {
   border-radius: 10px;
 }
@@ -109,6 +116,12 @@ body {
 }
 .text__size--x06 {
   font-size: 0.6rem;
+}
+.text__size--x05 {
+  font-size: 0.5rem;
+}
+.text__size--x04 {
+  font-size: 0.4rem;
 }
 .text__size--x1 {
   font-size: 1rem;
@@ -228,7 +241,6 @@ h5.h6 {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -274,6 +286,9 @@ input:checked + .slider:before {
 }
 .w-30px {
   width: 30px;
+}
+.h-120{
+  height: 200px;
 }
 .h-200{
   height: 200px;
@@ -497,4 +512,45 @@ HOMEPAGE
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+}
+
+/* Stepper */
+.stepper-item{
+  width: 20px;
+  height: 20px;
+  line-height: 12px;
+  text-align: center;
+  border-radius: 50%;
+}
+.stepper-group.active span{
+  color: #0064D2;
+}
+.stepper-group .badge{
+  background-color: #f8f9fa;
+}
+.stepper-group.active .badge{
+  background-color: #ffcc00;
+}
+.stepper-group{
+  margin: 0 10px 0 0;
+  position: relative;
+  z-index: 2;
+  background:transparent;
+}
+.stepper-group span{
+  color: #dedede;
+  font-size: 0.8rem;
+  text-align: center;
+}
+.stepper{
+  position: relative;
+}
+.stepper::after{
+  content: ' ';
+  width: 100%;
+  height: 2px;
+  background-color: #dedede;
+  position: absolute;
+  top: 50%;
+  z-index:0;
 }

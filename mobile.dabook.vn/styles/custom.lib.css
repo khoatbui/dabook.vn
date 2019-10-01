@@ -1,6 +1,6 @@
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
-  background-color: #0065b8 !important;
+  background-color: #0064D2 !important;
 }
 /* ==============CAROUSE======== */
 .owl-carousel {
@@ -115,11 +115,11 @@ display: flex;
   background-color: #e2e6ea !important;
 }
 .slider-selection {
-  background-color: #0065b8 !important;
+  background-color: #0064D2 !important;
   background-image: none !important;
 }
 .slider-handle {
-  background-color: #0065b8 !important;
+  background-color: #0064D2 !important;
   background-image: none !important;
 }
 .slider.slider-horizontal .slider-track {
