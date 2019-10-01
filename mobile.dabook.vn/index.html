@@ -1,288 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
-    <link
-      rel="stylesheet"
-      href="assets/owlcarousel/assets/owl.carousel.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="assets/owlcarousel/assets/owl.theme.default.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/animated/animate.css" />
-    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css" />
-    <link rel="stylesheet" href="styles/custom.lib.css" />
-    <link rel="stylesheet" href="styles/layout.css" />
-    <link rel="stylesheet" href="styles/custom.css" />
-    <link rel="stylesheet" href="assets/flatpickr/flatpickr.min.css" />
-    <title>
-      dabook.vn an online booking platform where flight tickets, tours and
-      travel services are good value
-    </title>
-    <!-- Hotjar Tracking Code for http://dabook.vn/ -->
-    <script>
-      (function(h, o, t, j, a, r) {
-        h.hj =
-          h.hj ||
-          function() {
-            (h.hj.q = h.hj.q || []).push(arguments);
-          };
-        h._hjSettings = { hjid: 1491380, hjsv: 6 };
-        a = o.getElementsByTagName('head')[0];
-        r = o.createElement('script');
-        r.async = 1;
-        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-        a.appendChild(r);
-      })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
-    </script>
-  </head>
 
-  <body>
-    <div class="wrapper mb-40">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/owlcarousel/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="assets/owlcarousel/assets/owl.theme.default.min.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/animated/animate.css" />
+  <link rel="stylesheet" href="assets/fontawesome/css/all.min.css" />
+  <link rel="stylesheet" href="styles/custom.lib.css" />
+  <link rel="stylesheet" href="styles/layout.css" />
+  <link rel="stylesheet" href="styles/custom.css" />
+  <link rel="stylesheet" href="assets/flatpickr/flatpickr.min.css" />
+  <title>
+    dabook.vn an online booking platform where flight tickets, tours and
+    travel services are good value
+  </title>
+  <!-- Hotjar Tracking Code for http://dabook.vn/ -->
+  <script>
+    (function (h, o, t, j, a, r) {
+      h.hj =
+        h.hj ||
+        function () {
+          (h.hj.q = h.hj.q || []).push(arguments);
+        };
+      h._hjSettings = { hjid: 1491380, hjsv: 6 };
+      a = o.getElementsByTagName('head')[0];
+      r = o.createElement('script');
+      r.async = 1;
+      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+  </script>
+</head>
+
+<body>
+  <div class="wrapper mb-40">
+    <!-- ↓↓ Header-->
+    <div class="header__component position-relative">
       <!-- ↓↓ Header-->
-      <div class="header__component">
-        <!-- ↓↓ Header-->
-        <div class="header__component--header">
-          <div
-            class="row mp--none d-flex justify-content-around align-items-center px-3 bg-primary"
-          >
-            <div class="col-6 mp--none text-left">
-              <h1>
-                <img
-                  class="header__logo"
-                  src="images/logo/logo_dabook_white.jpg"
-                  alt=""
-                />
-              </h1>
-            </div>
-            <div class="col-6 mp--none text-right">
-              <button
-                class="text__size--x07 text-white btn btn-sm custom__background--second border__radius--100"
-              >
-                LOGIN
-              </button>
-            </div>
+      <div class="header__component--header">
+        <div class="row mp--none d-flex justify-content-around align-items-center px-3 bg-primary">
+          <div class="col-6 mp--none text-left">
+            <h1>
+              <img class="header__logo" src="images/logo/logo_dabook_white.jpg" alt="" />
+            </h1>
+          </div>
+          <div class="col-6 mp--none text-right">
+            <button class="text__size--x07 text-white btn btn-sm custom__background--second border__radius--100">
+              LOGIN
+            </button>
           </div>
         </div>
-        <!-- ↑↑ Header -->
-        <!-- ↓↓ Promotion-->
-        <div class="header__component--promotion">
-          <div class="header__component--background bg-primary"></div>
-          <!-- <div class="owl-carousel owl__bookingbg owl-theme">
-                    <div class="item">
-                        <div class="component__booking__background"
-                            style="background-image:url('images/background/bg_03.jpg');">
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="component__booking__background"
-                            style="background-image:url('images/background/bg_02.jpg');">
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="component__booking__background"
-                            style="background-image:url('images/background/bg_01.jpg');">
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="component__booking__background"
-                            style="background-image:url('images/background/bg_04.jpg');">
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="component__booking__background"
-                            style="background-image:url('images/background/bg_05.jpg');">
-                        </div>
-                    </div>
-                </div> -->
-        </div>
-        <!-- ↑↑ Promotion -->
       </div>
       <!-- ↑↑ Header -->
+      <!-- ↓↓ Promotion-->
+      <div class="header__component--promotion mb-4rem">
+        <div class="header__component--background bg-primary position-relative">
+          <!-- ↓↓ component__booking-->
+          <div class="card shadow border-0 home__booking__card border__radius--10">
+            <div class="card-body">
+              <div class="row mp--none">
+                <div class="col-12 mp--none booking__from__control border__bottom--dash position-relative">
+                  <label for="from" class="text__size--x06 text-muted booking__form__label">From</label>
+                  <div class="form-group" data-toggle="modal" data-target="#booking__departure__modal">
+                    <i class="fas fa-plane-departure text-primary booking__form__icon"></i>
+                    <input class="booking__form__input" type="text" name="from" id="" value="Hanoi (HAN)">
+                  </div>
+                  <div class="forward__component">
+                    <button class="btn btn-sm border__radius--100 border bg-white text-primary cursor-pointer">
+                      <i class="fas fa-exchange-alt text-primary booking__form__icon"></i>
 
-      <!-- ↓↓ Navigation-->
-      <div class="navigation__component">
-        <div class="row mp--none px-3 mt-4">
-          <div class="col-12 mp--none mb-2">
-            <h2 class="text__size--x1 font-weight-bold">
-              Hey you, where do you go?
-            </h2>
-          </div>
-        </div>
-        <div class="row mp--none mb-4">
-          <div
-            class="col-12  mp--none d-flex justify-content-center align-items-center flex-wrap"
-          >
-            <div
-              class="card custom__navicard shadow d-flex justify-content-center align-items-center border__radius--10 border-0 m-1 nav__flight"
-            >
-              <img
-                class="custom__navicard__icon--x2"
-                src="images/icons/airplane.png"
-                alt=""
-              />
-            </div>
-            <div
-              class="card custom__navicard shadow d-flex justify-content-center align-items-center border__radius--10 border-0 m-1 nav__flight"
-            >
-              <img
-                class="custom__navicard__icon"
-                src="images/icons/suitcase.png"
-                alt=""
-              />
-            </div>
-            <div
-              class="card custom__navicard shadow d-flex justify-content-center align-items-center border__radius--10 border-0 m-1 nav__car"
-            >
-              <img
-                class="custom__navicard__icon--x2"
-                src="images/icons/car.png"
-                alt=""
-              />
-            </div>
-            <div
-              class="card custom__navicard shadow d-flex justify-content-center align-items-center border__radius--10 border-0 m-1 nav__visa"
-            >
-              <img
-                class="custom__navicard__icon"
-                src="images/icons/passport.png"
-                alt=""
-              />
-            </div>
-            <div
-              class="card custom__navicard shadow d-flex justify-content-center align-items-center border__radius--10 border-0 m-1  nav__flight"
-            >
-              <img
-                class="custom__navicard__icon"
-                src="images/icons/destination.png"
-                alt=""
-              />
-            </div>
-            <div
-              class="card custom__navicard shadow d-flex justify-content-center align-items-center border__radius--10 border-0 m-1 nav__hotel"
-            >
-              <img
-                class="custom__navicard__icon--x2"
-                src="images/icons/hotel.png"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- ↑↑ Navigation -->
-
-      <!-- ↓↓ Topdest-->
-      <div class="component__topdes pb-4 mb-4">
-        <div class="row mp--none px-3 mt-4">
-          <div class="col-12 mp--none mb-2">
-            <h2 class="text__size--x1 font-weight-bold">Top destination</h2>
-          </div>
-        </div>
-        <div class="row mp--none px-3">
-          <div class="col-12 mp--none">
-            <div class="owl-carousel owl__topdes owl-theme">
-              <div class="item" data-merge="1">
-                <div
-                  class="card topdes__card border__radius--10 overflow--hidden"
-                >
-                  <div
-                    class="topdes__card__child"
-                    style="background-image:url('images/destination/danang.jpg');"
-                  ></div>
-                  <div class="custom__ovelap__body">
-                    <h5 class="card-title text__size--x09">Da nang</h5>
+                    </button>
                   </div>
                 </div>
-              </div>
-              <div class="item" data-merge="1">
-                <div
-                  class="card topdes__card border__radius--10 overflow--hidden"
-                >
-                  <div
-                    class="topdes__card__child"
-                    style="background-image:url('images/destination/hochiminh.jpg');"
-                  ></div>
-                  <div class="custom__ovelap__body">
-                    <h5 class="card-title text__size--x09">Hochiminh city</h5>
+                <div class="col-12 mp--none booking__from__control">
+                  <label for="from" class="text__size--x06 text-muted booking__form__label">To</label>
+                  <div class="form-group" data-toggle="modal" data-target="#booking__departure__modal">
+                    <i class="fas fa-plane-arrival text-primary booking__form__icon"></i>
+                    <input class="booking__form__input" type="text" name="from" id="" value="Hanoi (HAN)">
                   </div>
                 </div>
+                <!-- <div class="col-12 mp--none booking__from__control position-relative">
+                          <label for="from" class="text__size--x06 text-muted booking__form__label">Departure</label>
+                          <div class="form-group" data-toggle="modal" data-target="#booking__departuretime__modal">
+                              <i class="far fa-calendar-alt text-primary booking__form__icon"></i>
+                              <input class="booking__form__input" type="text" name="from" id=""
+                                  value="Wed, 09 Oct 2019">
+                          </div>
+                          <div class="routrip__component d-flex flex-column justify-content-end align-items-end">
+                              <span class="text__size--x06 text-muted mb-1"> IsRountrip ?</span>
+                              <label class="switch">
+                                  <input type="checkbox">
+                                  <span class="slider round"></span>
+                              </label>
+                          </div>
+                      </div>
+                      <div class="col-12 mp--none booking__from__control">
+                          <label for="from" class="text__size--x06 text-muted booking__form__label">Return</label>
+                          <div class="form-group" data-toggle="modal" data-target="#booking__arrivedtime__modal">
+                              <i class="far fa-calendar-alt text-primary booking__form__icon"></i>
+                              <input class="booking__form__input" type="text" name="from" id=""
+                                  value="Wed, 09 Oct 2019">
+                          </div>
+                      </div>
+                      <div class="col-12 mp--none booking__from__control">
+                          <label for="from" class="text__size--x06 text-muted booking__form__label">Passenger</label>
+                          <div class="form-group" data-toggle="modal" data-target="#booking__passenger__modal">
+                              <i class="fas fa-user-check text-primary booking__form__icon"></i>
+                              <input class="booking__form__input" type="text" name="from" id="" value="1 Adult">
+                          </div>
+                      </div>
+                      <div class="col-12 mp--none booking__from__control">
+                          <label for="from" class="text__size--x06 text-muted booking__form__label">Cabin
+                              Class</label>
+                          <div class="form-group" data-toggle="modal" data-target="#booking__class__modal">
+                              <i class="fas fa-chair text-primary booking__form__icon"></i>
+                              <input class="booking__form__input" type="text" name="from" id="" value="First Class">
+                          </div>
+                      </div> -->
               </div>
-              <div class="item" data-merge="1">
-                <div
-                  class="card topdes__card border__radius--10 overflow--hidden"
-                >
-                  <div
-                    class="topdes__card__child"
-                    style="background-image:url('images/destination/hoian.jpg');"
-                  ></div>
-                  <div class="custom__ovelap__body">
-                    <h5 class="card-title text__size--x09">Hoian</h5>
-                  </div>
-                </div>
-              </div>
-              <div class="item" data-merge="1">
-                <div
-                  class="card topdes__card border__radius--10 overflow--hidden"
-                >
-                  <div
-                    class="topdes__card__child"
-                    style="background-image:url('images/destination/mucangchai.jpg');"
-                  ></div>
-                  <div class="custom__ovelap__body">
-                    <h5 class="card-title text__size--x09">Mu cang chai</h5>
-                  </div>
+              <div class="row mp--none my-2 mt-4">
+                <div class="col-12 mp--none">
+                  <button
+                    class="btn btn-warning w-100 border__radius--100 text-primary text__size--x08 font-weight-bold search__btn">SEARCH
+                    FLIGHT</button>
                 </div>
               </div>
             </div>
           </div>
+          <!-- ↑↑ End component__booking -->
         </div>
       </div>
-      <!-- ↑↑ Topdest -->
-
-      <!-- ↓↓ Top flight promotion-->
-      <!-- ↑↑ Top flight promotion -->
-
-      <!-- ↓↓ Navibar-->
-      <div class="navibar__component w-100 mp--none">
-        <ul
-          class="navibar d-flex justify-content-around align-items-center list__style--none w-100 mp--none py-2"
-        >
-          <li class="text-center navibar__item active">
-            <i class="fas fa-home"></i>
-            <p class="mp--none text__size--x09">Home</p>
-          </li>
-          <li class="text-center navibar__item">
-            <i class="far fa-heart"></i>
-            <p class="mp--none text__size--x09">Favorite</p>
-          </li>
-          <li class="text-center navibar__item">
-            <i class="fas fa-list-ul"></i>
-            <p class="mp--none text__size--x09">MyOrder</p>
-          </li>
-          <li class="text-center navibar__item">
-            <i class="far fa-user-circle"></i>
-            <p class="mp--none text__size--x09">
-              Profile
-            </p>
-          </li>
-        </ul>
+      <div class="sticky__search__action">
+        <button class="sticky__search__btn shadow btn">
+          <i class="fas fa-plane-departure"></i>
+        </button>
       </div>
-      <!-- ↑↑ Navibar -->
+      <!-- ↑↑ Promotion -->
     </div>
-    <script src="assets/jquery/jquery.min.js"></script>
-    <script src="assets/jquery/popper.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/owlcarousel/owl.carousel.min.js"></script>
-    <script src="assets/flatpickr/flatpickr.min.js"></script>
-    <script src="js/custom.js"></script>
-  </body>
+    <!-- ↑↑ Header -->
+
+    <!-- ↓↓ Navigation-->
+    <div class="navigation__component">
+      <div class="row mp--none px-3 mt-4">
+        <div class="col-12 mp--none mb-2">
+          <h2 class="text__size--x1 font-weight-bold">
+            Hey you, where do you go?
+          </h2>
+        </div>
+      </div>
+      <div class="row mp--none mb-4">
+        <div class="col-12  mp--none d-flex justify-content-center align-items-center flex-wrap">
+          <div
+            class="card custom__navicard shadow d-flex justify-content-center align-items-center border__radius--10 border-0 m-1 nav__flight">
+            <img class="custom__navicard__icon--x2" src="images/icons/airplane.png" alt="" />
+          </div>
+          <div
+            class="card custom__navicard shadow d-flex justify-content-center align-items-center border__radius--10 border-0 m-1 nav__flight">
+            <img class="custom__navicard__icon" src="images/icons/suitcase.png" alt="" />
+          </div>
+          <div
+            class="card custom__navicard shadow d-flex justify-content-center align-items-center border__radius--10 border-0 m-1 nav__car">
+            <img class="custom__navicard__icon--x2" src="images/icons/car.png" alt="" />
+          </div>
+          <div
+            class="card custom__navicard shadow d-flex justify-content-center align-items-center border__radius--10 border-0 m-1 nav__visa">
+            <img class="custom__navicard__icon" src="images/icons/passport.png" alt="" />
+          </div>
+          <div
+            class="card custom__navicard shadow d-flex justify-content-center align-items-center border__radius--10 border-0 m-1  nav__flight">
+            <img class="custom__navicard__icon" src="images/icons/destination.png" alt="" />
+          </div>
+          <div
+            class="card custom__navicard shadow d-flex justify-content-center align-items-center border__radius--10 border-0 m-1 nav__hotel">
+            <img class="custom__navicard__icon--x2" src="images/icons/hotel.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ↑↑ Navigation -->
+
+    <!-- ↓↓ Topdest-->
+    <div class="component__topdes pb-4 mb-4">
+      <div class="row mp--none px-3 mt-4">
+        <div class="col-12 mp--none mb-2">
+          <h2 class="text__size--x1 font-weight-bold">Top destination</h2>
+        </div>
+      </div>
+      <div class="row mp--none px-3">
+        <div class="col-12 mp--none">
+          <div class="owl-carousel owl__topdes owl-theme">
+            <div class="item" data-merge="1">
+              <div class="card topdes__card border__radius--10 overflow--hidden">
+                <div class="topdes__card__child" style="background-image:url('images/destination/danang.jpg');"></div>
+                <div class="custom__ovelap__body">
+                  <h5 class="card-title text__size--x09">Da nang</h5>
+                </div>
+              </div>
+            </div>
+            <div class="item" data-merge="1">
+              <div class="card topdes__card border__radius--10 overflow--hidden">
+                <div class="topdes__card__child" style="background-image:url('images/destination/hochiminh.jpg');">
+                </div>
+                <div class="custom__ovelap__body">
+                  <h5 class="card-title text__size--x09">Hochiminh city</h5>
+                </div>
+              </div>
+            </div>
+            <div class="item" data-merge="1">
+              <div class="card topdes__card border__radius--10 overflow--hidden">
+                <div class="topdes__card__child" style="background-image:url('images/destination/hoian.jpg');"></div>
+                <div class="custom__ovelap__body">
+                  <h5 class="card-title text__size--x09">Hoian</h5>
+                </div>
+              </div>
+            </div>
+            <div class="item" data-merge="1">
+              <div class="card topdes__card border__radius--10 overflow--hidden">
+                <div class="topdes__card__child" style="background-image:url('images/destination/mucangchai.jpg');">
+                </div>
+                <div class="custom__ovelap__body">
+                  <h5 class="card-title text__size--x09">Mu cang chai</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ↑↑ Topdest -->
+
+    <!-- ↓↓ Top flight promotion-->
+    <!-- ↑↑ Top flight promotion -->
+
+    <!-- ↓↓ Navibar-->
+    <div class="navibar__component w-100 mp--none">
+      <ul class="navibar d-flex justify-content-around align-items-center list__style--none w-100 mp--none py-2">
+        <li class="text-center navibar__item active">
+          <i class="fas fa-home"></i>
+          <p class="mp--none text__size--x09">Home</p>
+        </li>
+        <li class="text-center navibar__item">
+          <i class="far fa-heart"></i>
+          <p class="mp--none text__size--x09">Favorite</p>
+        </li>
+        <li class="text-center navibar__item">
+          <i class="fas fa-list-ul"></i>
+          <p class="mp--none text__size--x09">MyOrder</p>
+        </li>
+        <li class="text-center navibar__item">
+          <i class="far fa-user-circle"></i>
+          <p class="mp--none text__size--x09">
+            Profile
+          </p>
+        </li>
+      </ul>
+    </div>
+    <!-- ↑↑ Navibar -->
+  </div>
+  <script src="assets/jquery/jquery.min.js"></script>
+  <script src="assets/jquery/popper.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/owlcarousel/owl.carousel.min.js"></script>
+  <script src="assets/flatpickr/flatpickr.min.js"></script>
+  <script src="js/custom.js"></script>
+</body>
+
 </html>

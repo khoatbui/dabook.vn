@@ -639,3 +639,15 @@ $('.nav__flight').on('click', function() {
 $('.search__btn').on('click', function() {
   window.location.href = 'booking.html';
 });
+$('.select__departure__btn').on('click', function() {
+  window.location.href = 'booking_return.html';
+});
+$('.result__departure__item').on('click', function() {
+  window.location.href = 'booking_return.html';
+});
+$('.select__return__btn').on('click', function() {
+  window.location.href = 'confirm.html';
+});
+$('.result__arrived__item').on('click', function() {
+  window.location.href = 'confirm.html';
+});
