@@ -192,6 +192,18 @@
 .tiket__detail .nav-item .nav-link.active {
   border-bottom: 1px solid #0064d2 !important;
 }
+.custom__nav .nav-item {
+  flex-grow: 1;
+}
+.custom__nav .nav-item .nav-link {
+  border: none !important;
+  color: #0064d2;
+  padding-left: 0;
+}
+
+.custom__nav .nav-item .nav-link.active {
+  border-bottom: 1px solid #0064d2 !important;
+}
 .ticket__detail__body {
   height: 120px;
   overflow: hidden;
@@ -249,6 +261,7 @@
 }
 
 /* ======MY ORDER========== */
-.order__status{
-  
+.filter__order.active{
+  background-color: #0064d2 !important;
+  color: #FFF !important;
 }

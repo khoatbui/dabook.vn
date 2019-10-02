@@ -56,8 +56,36 @@
         </div>
         <!-- ↓↓ result__component-->
         <div class="result__component mp--none p-3 h-400">
-            <div class="card border-0 result__card border__radius--none overflow--hidden py-4 my-4">
+            <div class="card border-0 result__card border__radius--none overflow--hidden my-4">
                 <div class="card-body p-2">
+                    <div class="row mp--none mb-4">
+                        <div class="col-12 mp--none d-flex justify-content-between align-items-stretch">
+                            <div class="card border-0 shadow bg-white mp--none m-1 text-primary filter__order active">
+                                <div class="card-body text__size--x07 d-flex flex-column justify-content-center align-items-center">
+                                    <i class="fas fa-shield-alt text__size--x1"></i>
+                                    <span>Paymming</span>
+                                </div>
+                            </div>
+                            <div class="card border-0 shadow bg-white mp--none m-1 text-primary filter__order">
+                                    <div class="card-body text__size--x07 d-flex flex-column justify-content-center align-items-center">
+                                        <i class="fas fa-check-double text__size--x1"></i>
+                                        <span>Completed</span>
+                                    </div>
+                                </div>
+                                <div class="card border-0 shadow bg-white mp--none m-1 text-primary filter__order">
+                                        <div class="card-body text__size--x07 d-flex flex-column justify-content-center align-items-center">
+                                            <i class="fas fa-ban text__size--x1"></i>
+                                            <span>Cancelation</span>
+                                        </div>
+                                    </div>
+                                    <div class="card border-0 shadow bg-white mp--none m-1 text-primary filter__order">
+                                            <div class="card-body text__size--x07 d-flex flex-column justify-content-center align-items-center">
+                                                <i class="fas fa-backspace text__size--x1"></i>
+                                                <span>Refund</span>
+                                            </div>
+                                        </div>
+                        </div>
+                    </div>
                     <div class="row mp--none">
                         <div class="col-12 mp--none">
                             <div class="card border-primary my-2">
@@ -214,141 +242,6 @@
         <!-- ↑↑ End component__booking -->
 
         <!-- ↓↓ Modal-->
-
-        <!-- Modal title -->
-        <div class="modal fade animated fadeInUp" id="confirm__title__modal" tabindex="-1" role="dialog"
-            aria-labelledby="confirm__title__modalTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-bottom" role="document">
-                <div class="modal-content border__radius--none border__radius__top--10 border-0">
-                    <div class="modal-header py-2">
-                        <div class="row mp--none w-100">
-                            <div class="col-1 mp--none d-flex justify-content-center align-items-center">
-                                <span data-dismiss="modal"><i class="material-icons text__size--x13 text-primary">
-                                        close
-                                    </i></span>
-                            </div>
-                            <div class="col-10 mp--none text-center  text__size--x09">
-                                <span>Title by</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-body text__size--x08 py-0">
-                        <div class="row px-3">
-
-                            <div class="col-12">
-                                <div class="icheck-material-blue">
-                                    <input type="radio" id="title__price" name="sort" checked />
-                                    <label for="title__price">Mr.</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="icheck-material-blue">
-                                    <input type="radio" id="title__flytime" name="sort" />
-                                    <label for="title__flytime">Mrs.</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="icheck-material-blue">
-                                    <input type="radio" id="title__checkin" name="sort" />
-                                    <label for="title__checkin">Ms.</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer py-2">
-                        <button type="button"
-                            class="btn btn-warning border__radius--100 text-primary btn-sm text__size--x08"
-                            data-dismiss="modal">Apply</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Modal national code -->
-        <div class="modal fade bg-white animated fadeInUp" id="confirm__national__modal" tabindex="-1" role="dialog"
-            aria-labelledby="booking__class__modalTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-full" role="document">
-                <div class="modal-content border__radius--none h-100 border-0">
-                    <div class="py-2 bg-primary  border__radius--none">
-                        <div class="row mp--none w-100 my-2 px-2">
-                            <div class="col-1 mp--none">
-                                <span data-dismiss="modal"><i class="material-icons text__size--x13 text-white">
-                                        close
-                                    </i></span>
-                            </div>
-                            <div class="col-10 mp--none text-left text__size--x09 text-white">
-                                <span>Select Country</span>
-                            </div>
-                        </div>
-                        <div class="row mp--none w-100 my-2">
-                            <div class="col-12 mp--none px-2">
-                                <input type="text" class="w-100 form-control form-control-sm border__radius--none"
-                                    placeholder="Search Country">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-body text__size--x08 py-0">
-                        <div class="mp--none p-2 search-country">
-                            <div class="row p-2 mp--none cursor--pointer result__item">
-                                <div class="col-1 mp--none">
-                                    <i class="fas fa-city text-primary"></i>
-                                </div>
-                                <div class="col-9 mp--none country__item">
-                                    Việt Nam
-                                </div>
-                                <div class="col-2 mp--none">
-                                    <button
-                                        class="btn btn-sm btn-light border__radius--100 text-muted text__size--x08 select__countrycode__btn"
-                                        type="button">Select</button>
-                                </div>
-                            </div>
-                            <div class="row p-2 mp--none cursor--pointer result__item">
-                                <div class="col-1 mp--none">
-                                    <i class="fas fa-city text-primary"></i>
-                                </div>
-                                <div class="col-9 mp--none country__item">
-                                    Hàn Quốc
-                                </div>
-                                <div class="col-2 mp--none">
-                                    <button
-                                        class="btn btn-sm btn-light border__radius--100 text-muted text__size--x08 select__countrycode__btn"
-                                        type="button">Select</button>
-                                </div>
-                            </div>
-                            <div class="row p-2 mp--none cursor--pointer result__item">
-                                <div class="col-1 mp--none">
-                                    <i class="fas fa-city text-primary"></i>
-                                </div>
-                                <div class="col-9 mp--none country__item">
-                                    USA
-                                </div>
-                                <div class="col-2 mp--none">
-                                    <button
-                                        class="btn btn-sm btn-light border__radius--100 text-muted text__size--x08 select__countrycode__btn"
-                                        type="button">Select</button>
-                                </div>
-                            </div>
-                            <div class="row p-2 mp--none cursor--pointer result__item">
-                                <div class="col-1 mp--none">
-                                    <i class="fas fa-city text-primary"></i>
-                                </div>
-                                <div class="col-9 mp--none country__item">
-                                    Trung Quốc
-                                </div>
-                                <div class="col-2 mp--none">
-                                    <button
-                                        class="btn btn-sm btn-light border__radius--100 text-muted text__size--x08 select__countrycode__btn"
-                                        type="button">Select</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer py-2">
-                        <button type="button" class="btn btn-white text-primary btn-sm  text__size--x08"
-                            data-dismiss="modal">Done</button>
-                    </div>
-                </div>
-            </div>
-        </div>
         <!-- Modal detail ticket -->
         <div class="modal fade bg-white animated fadeInUp" id="order__detailticket__modal" tabindex="-1" role="dialog"
             aria-labelledby="booking__class__modalTitle" aria-hidden="true">
@@ -479,17 +372,21 @@
                                 <div class="tab-pane fade w-100" id="ticket__status" role="tabpanel"
                                     aria-labelledby="ticket__status-tab">
                                     <div class="row">
-                                            <div class="col-12 mp--none py-4 d-flex align-items-center justify-content-center border-top">
-                                                    <span class="position-relative mp--none checked__confirm">
-                                                          <i class="fas fa-shield-alt text__size--x4 custom__color--second"></i>
-                                                          <i class="fas fa-check absolute--center text__size--x2 custom__color--four"></i>
-                                                    </span>
-                                                   <div class="d-flex flex-column justify-content-start">
-                                                       <span class="text__size--x13 text-primary font-weight-bold">Wait for payment</span>
-                                                       <span class="text__size--x08 text-muted">Please finish payment by bellow bank transfer</span>
-                                                   </div> 
-                                                    
-                                              </div>
+                                        <div
+                                            class="col-12 mp--none py-4 d-flex align-items-center justify-content-center border-top">
+                                            <span class="position-relative mp--none checked__confirm">
+                                                <i class="fas fa-shield-alt text__size--x4 custom__color--second"></i>
+                                                <i
+                                                    class="fas fa-check absolute--center text__size--x2 custom__color--four"></i>
+                                            </span>
+                                            <div class="d-flex flex-column justify-content-start">
+                                                <span class="text__size--x13 text-primary font-weight-bold">Wait for
+                                                    payment</span>
+                                                <span class="text__size--x08 text-muted">Please finish payment by bellow
+                                                    bank transfer</span>
+                                            </div>
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>

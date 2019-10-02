@@ -718,7 +718,7 @@ $('.navi_home').on('click',function(){
   window.location.href = 'index.html';
 })
 $('.navi_user').on('click',function(){
-  window.location.href = 'login.html';
+  window.location.href = 'user.html';
 })
 $('.login__btn').on('click',function(){
   window.location.href = 'login.html';
