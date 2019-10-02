@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/owlcarousel/assets/owl.theme.default.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="assets/animated/animate.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="styles/custom.lib.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/custom.css">
+    <link rel="stylesheet" href="assets/flatpickr/flatpickr.min.css">
+    <link rel="stylesheet" href="assets/icheck/icheck-material.min.css">
+    <link rel="stylesheet" href="assets/bootstrapslider/bootstrap-slider.css">
+    <title>dabook.vn an online booking platform where flight tickets, tours and travel services are good value</title>
+    <!-- Hotjar Tracking Code for http://dabook.vn/ -->
+    <script>
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+            h._hjSettings = { hjid: 1491380, hjsv: 6 };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script'); r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header__component">
+            <!-- ↓↓ Header-->
+            <div class="header__component--header bg-primary">
+                <div class="row mp--none d-flex justify-content-start align-items-center px-2 py-3">
+                    <div class="col-2 mp--none">
+                        <button class="btn btn-primary btn-sm border-0 back__btn">
+                            <i class="fas fa-arrow-left mr-2 text__size--x1"></i>
+                        </button>
+                    </div>
+                    <div class="col-8 mp--none">
+                        <span class="text-white">Myorder</span>
+                    </div>
+                    <div class="col-2 mp--none text-right">
+                        <button class="btn btn-primary btn-sm border-0 menu__btn">
+                            <i class="fas fa-bars text__size--x1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- ↑↑ Header -->
+        </div>
+        <!-- ↓↓ result__component-->
+        <div class="result__component mp--none p-3 h-400">
+            <div class="card border-0 result__card border__radius--none overflow--hidden py-4 my-4">
+                <div class="card-body p-2">
+                    <div class="row mp--none">
+                        <div class="col-12 mp--none">
+                            <div class="card border-primary my-2">
+                                <div class="card-body p-1 py-3">
+                                    <div class="row mp--none">
+                                        <div
+                                            class="col-8 mp--none text__size--x08 border-right ticket__style__row ticket__style__row--primary">
+                                            <div><span class="font-weight-bold mx-1">HAN - HaNoi</span><span><i
+                                                        class="fas fa-exchange-alt mx-1 text__size--x06"></i></span><span
+                                                    class="font-weight-bold mx-1">SAG - HoChiMinh</span></div>
+                                            <div class="text-muted text__size--x06"><span
+                                                    class="px-1 border-right">CGT023</span> <span
+                                                    class="px-1">2019-09-12 23:00</span></div>
+                                        </div>
+                                        <div class="col-4 mp--none text-center">
+                                            <div class="custom__background--second text-primary p-1 border__radius--10"
+                                                data-toggle="modal" data-target="#order__detailticket__modal">
+                                                <span class="text__size--x07 font-weight-bold w-100">Wait for
+                                                    payment</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card my-2">
+                                <div class="card-body p-1 py-3">
+                                    <div class="row mp--none">
+                                        <div class="col-8 mp--none text__size--x08 border-right ticket__style__row">
+                                            <div><span class="font-weight-bold mx-1">HAN - HaNoi</span><span><i
+                                                        class="fas fa-exchange-alt mx-1 text__size--x06"></i></span><span
+                                                    class="font-weight-bold mx-1">SAG - HoChiMinh</span></div>
+                                            <div class="text-muted text__size--x06"><span
+                                                    class="px-1 border-right">CGT023</span> <span
+                                                    class="px-1">2019-09-12 23:00</span></div>
+                                        </div>
+                                        <div class="col-4 mp--none text-center">
+                                            <div class="custom__background--second text-primary p-1 border__radius--10"
+                                                data-toggle="modal" data-target="#order__detailticket__modal">
+                                                <span class="text__size--x07 font-weight-bold w-100">Wait for
+                                                    payment</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card my-2">
+                                <div class="card-body p-1 py-3">
+                                    <div class="row mp--none">
+                                        <div class="col-8 mp--none text__size--x08 border-right ticket__style__row">
+                                            <div><span class="font-weight-bold mx-1">HAN - HaNoi</span><span><i
+                                                        class="fas fa-exchange-alt mx-1 text__size--x06"></i></span><span
+                                                    class="font-weight-bold mx-1">SAG - HoChiMinh</span></div>
+                                            <div class="text-muted text__size--x06"><span
+                                                    class="px-1 border-right">CGT023</span> <span
+                                                    class="px-1">2019-09-12 23:00</span></div>
+                                        </div>
+                                        <div class="col-4 mp--none text-center">
+                                            <div class="custom__background--main text-white p-1 border__radius--10"
+                                                data-toggle="modal" data-target="#order__detailticket__modal">
+                                                <span class="text__size--x07 font-weight-bold w-100">VJ2567532</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card my-2">
+                                <div class="card-body p-1 py-3">
+                                    <div class="row mp--none">
+                                        <div class="col-8 mp--none text__size--x08 border-right ticket__style__row">
+                                            <div><span class="font-weight-bold mx-1">HAN - HaNoi</span><span><i
+                                                        class="fas fa-exchange-alt mx-1 text__size--x06"></i></span><span
+                                                    class="font-weight-bold mx-1">SAG - HoChiMinh</span></div>
+                                            <div class="text-muted text__size--x06"><span
+                                                    class="px-1 border-right">CGT023</span> <span
+                                                    class="px-1">2019-09-12 23:00</span></div>
+                                        </div>
+                                        <div class="col-4 mp--none text-center">
+                                            <div class="custom__background--second text-primary p-1 border__radius--10"
+                                                data-toggle="modal" data-target="#order__detailticket__modal">
+                                                <span class="text__size--x07 font-weight-bold w-100">Wait for
+                                                    payment</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card my-2">
+                                <div class="card-body p-1 py-3">
+                                    <div class="row mp--none">
+                                        <div class="col-8 mp--none text__size--x08 border-right ticket__style__row">
+                                            <div><span class="font-weight-bold mx-1">HAN - HaNoi</span><span><i
+                                                        class="fas fa-exchange-alt mx-1 text__size--x06"></i></span><span
+                                                    class="font-weight-bold mx-1">SAG - HoChiMinh</span></div>
+                                            <div class="text-muted text__size--x06"><span
+                                                    class="px-1 border-right">CGT023</span> <span
+                                                    class="px-1">2019-09-12 23:00</span></div>
+                                        </div>
+                                        <div class="col-4 mp--none text-center">
+                                            <div class="custom__background--second text-primary p-1 border__radius--10"
+                                                data-toggle="modal" data-target="#order__detailticket__modal">
+                                                <span class="text__size--x07 font-weight-bold w-100">Wait for
+                                                    payment</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card my-2">
+                                <div class="card-body p-1 py-3">
+                                    <div class="row mp--none">
+                                        <div class="col-8 mp--none text__size--x08 border-right ticket__style__row">
+                                            <div><span class="font-weight-bold mx-1">HAN - HaNoi</span><span><i
+                                                        class="fas fa-exchange-alt mx-1 text__size--x06"></i></span><span
+                                                    class="font-weight-bold mx-1">SAG - HoChiMinh</span></div>
+                                            <div class="text-muted text__size--x06"><span
+                                                    class="px-1 border-right">CGT023</span> <span
+                                                    class="px-1">2019-09-12 23:00</span></div>
+                                        </div>
+                                        <div class="col-4 mp--none text-center">
+                                            <div class="custom__background--second text-primary p-1 border__radius--10"
+                                                data-toggle="modal" data-target="#order__detailticket__modal">
+                                                <span class="text__size--x07 font-weight-bold w-100">Wait for
+                                                    payment</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card my-2">
+                                <div class="card-body p-1 py-3">
+                                    <div class="row mp--none">
+                                        <div class="col-8 mp--none text__size--x08 border-right ticket__style__row">
+                                            <div><span class="font-weight-bold mx-1">HAN - HaNoi</span><span><i
+                                                        class="fas fa-exchange-alt mx-1 text__size--x06"></i></span><span
+                                                    class="font-weight-bold mx-1">SAG - HoChiMinh</span></div>
+                                            <div class="text-muted text__size--x06"><span
+                                                    class="px-1 border-right">CGT023</span> <span
+                                                    class="px-1">2019-09-12 23:00</span></div>
+                                        </div>
+                                        <div class="col-4 mp--none text-center">
+                                            <div class="bg-danger text-white p-1 border__radius--10 order__status"
+                                                data-toggle="modal" data-target="#order__detailticket__modal">
+                                                <span class="text__size--x07 font-weight-bold w-100">Cancelation</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ↑↑ End component__booking -->
+
+        <!-- ↓↓ Modal-->
+
+        <!-- Modal title -->
+        <div class="modal fade animated fadeInUp" id="confirm__title__modal" tabindex="-1" role="dialog"
+            aria-labelledby="confirm__title__modalTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-bottom" role="document">
+                <div class="modal-content border__radius--none border__radius__top--10 border-0">
+                    <div class="modal-header py-2">
+                        <div class="row mp--none w-100">
+                            <div class="col-1 mp--none d-flex justify-content-center align-items-center">
+                                <span data-dismiss="modal"><i class="material-icons text__size--x13 text-primary">
+                                        close
+                                    </i></span>
+                            </div>
+                            <div class="col-10 mp--none text-center  text__size--x09">
+                                <span>Title by</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body text__size--x08 py-0">
+                        <div class="row px-3">
+
+                            <div class="col-12">
+                                <div class="icheck-material-blue">
+                                    <input type="radio" id="title__price" name="sort" checked />
+                                    <label for="title__price">Mr.</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="icheck-material-blue">
+                                    <input type="radio" id="title__flytime" name="sort" />
+                                    <label for="title__flytime">Mrs.</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="icheck-material-blue">
+                                    <input type="radio" id="title__checkin" name="sort" />
+                                    <label for="title__checkin">Ms.</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer py-2">
+                        <button type="button"
+                            class="btn btn-warning border__radius--100 text-primary btn-sm text__size--x08"
+                            data-dismiss="modal">Apply</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal national code -->
+        <div class="modal fade bg-white animated fadeInUp" id="confirm__national__modal" tabindex="-1" role="dialog"
+            aria-labelledby="booking__class__modalTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-full" role="document">
+                <div class="modal-content border__radius--none h-100 border-0">
+                    <div class="py-2 bg-primary  border__radius--none">
+                        <div class="row mp--none w-100 my-2 px-2">
+                            <div class="col-1 mp--none">
+                                <span data-dismiss="modal"><i class="material-icons text__size--x13 text-white">
+                                        close
+                                    </i></span>
+                            </div>
+                            <div class="col-10 mp--none text-left text__size--x09 text-white">
+                                <span>Select Country</span>
+                            </div>
+                        </div>
+                        <div class="row mp--none w-100 my-2">
+                            <div class="col-12 mp--none px-2">
+                                <input type="text" class="w-100 form-control form-control-sm border__radius--none"
+                                    placeholder="Search Country">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body text__size--x08 py-0">
+                        <div class="mp--none p-2 search-country">
+                            <div class="row p-2 mp--none cursor--pointer result__item">
+                                <div class="col-1 mp--none">
+                                    <i class="fas fa-city text-primary"></i>
+                                </div>
+                                <div class="col-9 mp--none country__item">
+                                    Việt Nam
+                                </div>
+                                <div class="col-2 mp--none">
+                                    <button
+                                        class="btn btn-sm btn-light border__radius--100 text-muted text__size--x08 select__countrycode__btn"
+                                        type="button">Select</button>
+                                </div>
+                            </div>
+                            <div class="row p-2 mp--none cursor--pointer result__item">
+                                <div class="col-1 mp--none">
+                                    <i class="fas fa-city text-primary"></i>
+                                </div>
+                                <div class="col-9 mp--none country__item">
+                                    Hàn Quốc
+                                </div>
+                                <div class="col-2 mp--none">
+                                    <button
+                                        class="btn btn-sm btn-light border__radius--100 text-muted text__size--x08 select__countrycode__btn"
+                                        type="button">Select</button>
+                                </div>
+                            </div>
+                            <div class="row p-2 mp--none cursor--pointer result__item">
+                                <div class="col-1 mp--none">
+                                    <i class="fas fa-city text-primary"></i>
+                                </div>
+                                <div class="col-9 mp--none country__item">
+                                    USA
+                                </div>
+                                <div class="col-2 mp--none">
+                                    <button
+                                        class="btn btn-sm btn-light border__radius--100 text-muted text__size--x08 select__countrycode__btn"
+                                        type="button">Select</button>
+                                </div>
+                            </div>
+                            <div class="row p-2 mp--none cursor--pointer result__item">
+                                <div class="col-1 mp--none">
+                                    <i class="fas fa-city text-primary"></i>
+                                </div>
+                                <div class="col-9 mp--none country__item">
+                                    Trung Quốc
+                                </div>
+                                <div class="col-2 mp--none">
+                                    <button
+                                        class="btn btn-sm btn-light border__radius--100 text-muted text__size--x08 select__countrycode__btn"
+                                        type="button">Select</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer py-2">
+                        <button type="button" class="btn btn-white text-primary btn-sm  text__size--x08"
+                            data-dismiss="modal">Done</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal detail ticket -->
+        <div class="modal fade bg-white animated fadeInUp" id="order__detailticket__modal" tabindex="-1" role="dialog"
+            aria-labelledby="booking__class__modalTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-full" role="document">
+                <div class="modal-content border__radius--none h-100 border-0">
+                    <div class="py-2 bg-primary  border__radius--none">
+                        <div class="row mp--none w-100 my-2 px-2">
+                            <div class="col-1 mp--none d-flex justify-content-center align-items-center">
+                                <span data-dismiss="modal"><i class="material-icons text__size--x13 text-white">
+                                        close
+                                    </i></span>
+                            </div>
+                            <div class="col-11 px-2 mp--none text-left text__size--x09 text-white">
+                                <span>Ha Noi</span><i class="fas fa-long-arrow-alt-right mx-2"></i> <span> Ho Chi
+                                    Minh</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body text__size--x08 py-0">
+                        <div class="row mp--none p-2 tiket__detail">
+                            <ul class="nav nav-tabs d-flex flex-nowrap overflow--x py-2 border-0 mb-4 w-100"
+                                id="ticket__detail__tab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active text__wrap--nowrap" id="ticket__flight-tab"
+                                        data-toggle="tab" href="#ticket__flight" role="tab"
+                                        aria-controls="ticket__flight" aria-selected="true">Flight</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text__wrap--nowrap" id="ticket__status-tab" data-toggle="tab"
+                                        href="#ticket__status" role="tab" aria-controls="ticket__status"
+                                        aria-selected="false">Status</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content w-100" id="ticket__detail__content">
+                                <div class="tab-pane fade show active w-100" id="ticket__flight" role="tabpanel"
+                                    aria-labelledby="ticket__flight-tab">
+                                    <div class="mb-4 pb-4 border-bottom">
+                                        <div class="row mp--none my-2">
+                                            <div class="col-12 mp--none font-weight-bold">
+                                                <span>HAN</span> <i class="fas fa-arrow-right mx-1 text__size--x06"></i>
+                                                <span>SAG</span>
+                                            </div>
+                                        </div>
+                                        <div class="row mp--none ticket__detail__body my-2">
+                                            <div
+                                                class="col-2 mp--none text__size--x08 d-flex flex-column justify-content-between align-items-start">
+                                                <div class="checkin__time">
+                                                    <p class="mp--none font-weight-bold">20:00</p>
+                                                    <p class="mp--none">Nov-28</p>
+                                                </div>
+                                                <div class="totaltime">
+                                                    <p class="mp--none text__size--x06">1h 30m</p>
+                                                </div>
+                                                <div class="checkin__time">
+                                                    <p class="mp--none font-weight-bold">20:00</p>
+                                                    <p class="mp--none">Nov-28</p>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="col-1 mp--none d-flex flex-column justify-content-center align-items-center text__size--x04 text-muted">
+                                                <i class="fas fa-circle"></i>
+                                                <i class="h-100 border-right"></i>
+                                                <i class="far fa-circle"></i>
+                                            </div>
+                                            <div
+                                                class="col-9 mp--none text__size--x08 d-flex flex-column justify-content-between align-items-start">
+                                                <div class="checkin__location text__wrap--nowrap">
+                                                    <span>Noi Bai International Airport (HAN)</span>
+                                                </div>
+                                                <div class="seat custom__background--light w-100 p-2">
+                                                    <img src="images/brand/AirAsia.png" class="result__brand__logo"
+                                                        alt="">
+                                                    <span class="border-right border-primary px-2"> SQ-495 </span><span
+                                                        class="px-2"> Economic</span>
+                                                </div>
+                                                <div class="checkin__location text__wrap--nowrap">
+                                                    <span>TanSonNhat International Airport (SAG)</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="my-4">
+                                        <div class="row mp--none my-2">
+                                            <div class="col-12 mp--none font-weight-bold">
+                                                <span>HAN</span> <i class="fas fa-arrow-right mx-1 text__size--x06"></i>
+                                                <span>SAG</span>
+                                            </div>
+                                        </div>
+                                        <div class="row mp--none ticket__detail__body my-2">
+                                            <div
+                                                class="col-2 mp--none text__size--x08 d-flex flex-column justify-content-between align-items-start">
+                                                <div class="checkin__time">
+                                                    <p class="mp--none font-weight-bold">20:00</p>
+                                                    <p class="mp--none">Nov-28</p>
+                                                </div>
+                                                <div class="totaltime">
+                                                    <p class="mp--none text__size--x06">1h 30m</p>
+                                                </div>
+                                                <div class="checkin__time">
+                                                    <p class="mp--none font-weight-bold">20:00</p>
+                                                    <p class="mp--none">Nov-28</p>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="col-1 mp--none d-flex flex-column justify-content-center align-items-center text__size--x04 text-muted">
+                                                <i class="fas fa-circle"></i>
+                                                <i class="h-100 border-right"></i>
+                                                <i class="far fa-circle"></i>
+                                            </div>
+                                            <div
+                                                class="col-9 mp--none text__size--x08 d-flex flex-column justify-content-between align-items-start">
+                                                <div class="checkin__location text__wrap--nowrap">
+                                                    <span>Noi Bai International Airport (HAN)</span>
+                                                </div>
+                                                <div class="seat custom__background--light w-100 p-2">
+                                                    <img src="images/brand/AirAsia.png" class="result__brand__logo"
+                                                        alt="">
+                                                    <span class="border-right border-primary px-2"> SQ-495 </span><span
+                                                        class="px-2"> Economic</span>
+                                                </div>
+                                                <div class="checkin__location text__wrap--nowrap">
+                                                    <span>TanSonNhat International Airport (SAG)</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade w-100" id="ticket__status" role="tabpanel"
+                                    aria-labelledby="ticket__status-tab">
+                                    <div class="row">
+                                            <div class="col-12 mp--none py-4 d-flex align-items-center justify-content-center border-top">
+                                                    <span class="position-relative mp--none checked__confirm">
+                                                          <i class="fas fa-shield-alt text__size--x4 custom__color--second"></i>
+                                                          <i class="fas fa-check absolute--center text__size--x2 custom__color--four"></i>
+                                                    </span>
+                                                   <div class="d-flex flex-column justify-content-start">
+                                                       <span class="text__size--x13 text-primary font-weight-bold">Wait for payment</span>
+                                                       <span class="text__size--x08 text-muted">Please finish payment by bellow bank transfer</span>
+                                                   </div> 
+                                                    
+                                              </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ↑↑ End Modal -->
+
+        <!-- ↓↓ Navibar-->
+        <div class="navibar__component w-100 mp--none">
+            <ul class="navibar d-flex justify-content-around align-items-center list__style--none w-100 mp--none py-2">
+                <li class="text-center navibar__item navi_home">
+                    <i class="fas fa-home"></i>
+                    <p class="mp--none text__size--x09">Home</p>
+                </li>
+                <li class="text-center navibar__item navi_explore">
+                    <i class="far fa-heart"></i>
+                    <p class="mp--none text__size--x09">Explore</p>
+                </li>
+                <li class="text-center navibar__item navi_order active">
+                    <i class="fas fa-list-ul"></i>
+                    <p class="mp--none text__size--x09">MyOrder</p>
+                </li>
+                <li class="text-center navibar__item navi_user">
+                    <i class="far fa-user-circle"></i>
+                    <p class="mp--none text__size--x09">
+                        Profile
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <!-- ↑↑ Navibar -->
+    </div>
+    <script src="assets/jquery/jquery.min.js"></script>
+    <script src="assets/jquery/popper.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/owlcarousel/owl.carousel.min.js"></script>
+    <script src="assets/flatpickr/flatpickr.min.js"></script>
+    <script src="assets/bootstrapslider/bootstrap-slider.js"></script>
+    <script src="assets/moment/moment.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/booking.js"></script>
+    <script src="js/sticky-scroll.js"></script>
+</body>
+
+</html>

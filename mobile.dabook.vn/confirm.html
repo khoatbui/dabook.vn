@@ -32,7 +32,7 @@
 </head>
 
 <body>
-    <div class="wrapper pb-4 mb-4">
+    <div class="wrapper">
         <div class="header__component">
             <!-- ↓↓ Header-->
             <div class="header__component--header bg-primary h-200">
@@ -51,7 +51,7 @@
         </div>
         <!-- ↓↓ result__component-->
         <div class="result__component mp--none p-3 h-400">
-            <div class="card border-0 result__card border__radius--none overflow--hidden">
+            <div class="card border-0 result__card border__radius--none overflow--hidden pb-4 mb-4">
                 <div class="card-header bg-white border__radius__top--none border-bottom border-primary">
                     <div class="row mp--none">
                         <div class="stepper d-flex">
@@ -66,7 +66,7 @@
                                 <span class="badge badge-pill stepper-item">3</span>
                                 <span class="text__size--x1 font-weight-bold mp--none">Xác nhận</span>
                             </div>
-                            <div class="stepper-group">
+                            <div class="stepper-group m-0">
                                 <span class="badge badge-pill stepper-item">4</span>
                             </div>
                         </div>
@@ -90,11 +90,13 @@
                                             </div>
                                         </div>
                                         <div class="col-12 mp--none text__size--x07 text-muted">
-                                        <i class="fas fa-plane-departure text__size--x06 text-primary mx-1"></i> <span class="mx-1">Thu, 07 Nov 2019</span> <span class="mx-1"> 09:20</span>
+                                            <i class="fas fa-plane-departure text__size--x06 text-primary mx-1"></i>
+                                            <span class="mx-1">Thu, 07 Nov 2019</span> <span class="mx-1"> 09:20</span>
                                         </div>
                                         <div class="col-12 mp--none text__size--x07 text-muted">
-                                                <i class="fas fa-plane-arrival text__size--x06 text-primary mx-1"></i> <span class="mx-1">Thu, 07 Nov 2019</span> <span class="mx-1"> 09:20</span>
-                                                </div>
+                                            <i class="fas fa-plane-arrival text__size--x06 text-primary mx-1"></i> <span
+                                                class="mx-1">Thu, 07 Nov 2019</span> <span class="mx-1"> 09:20</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -104,7 +106,7 @@
                         <div class="col-12 mp--none">
                             <h6 class="text__size--x1 font-weight-bold">Contact detail</h6>
                         </div>
-                        <div class="col-12 mp--none">
+                        <div class="col-12 mp--none my-2">
                             <div class="text-primary text__size--x08 d-flex justify-content-between align-items-center p-2 custom__background--light font-weight-bold"
                                 data-toggle="collapse" data-target="#contact__input" aria-expanded="false"
                                 aria-controls="contact__input">
@@ -123,31 +125,34 @@
                                             </div>
                                         </div>
                                         <div class="col-12 mp--none my-2">
-                                            <div class="custom__input__group">
+                                            <div class="custom__input__group" data-toggle="modal"
+                                                data-target="#confirm__title__modal">
                                                 <label for="icontact__name" class="custom__label">Title</label>
                                                 <i class="fas fa-user-circle text-primary custom__icon"></i>
-                                                <input type="text" id="icontact__name" class="custom__input">
+                                                <input type="text" id="icontact__title" class="custom__input" readonly>
                                             </div>
                                         </div>
                                         <div class="col-5 mp--none my-2 pr-2">
-                                            <div class="custom__input__group">
+                                            <div class="custom__input__group" data-toggle="modal"
+                                                data-target="#confirm__countrycode__modal">
                                                 <label for="icontact__name" class="custom__label">Country Code</label>
                                                 <i class="fas fa-globe-americas text-primary custom__icon"></i>
-                                                <input type="text" id="icontact__name" class="custom__input">
+                                                <input type="text" id="icontact__countrycode" class="custom__input"
+                                                    readonly>
                                             </div>
                                         </div>
                                         <div class="col-7 mp--none my-2 pl-2">
                                             <div class="custom__input__group">
                                                 <label for="icontact__name" class="custom__label">Phone number</label>
                                                 <i class="fas fa-mobile-alt text-primary custom__icon"></i>
-                                                <input type="text" id="icontact__name" class="custom__input">
+                                                <input type="number" id="icontact__phone" class="custom__input">
                                             </div>
                                         </div>
                                         <div class="col-12 mp--none my-2">
                                             <div class="custom__input__group">
                                                 <label for="icontact__name" class="custom__label">Email</label>
                                                 <i class="far fa-envelope text-primary custom__icon"></i>
-                                                <input type="text" id="icontact__name" class="custom__input">
+                                                <input type="email" id="icontact__email" class="custom__input">
                                             </div>
                                         </div>
                                     </div>
@@ -159,15 +164,15 @@
                         <div class="col-12 mp--none">
                             <h6 class="text__size--x1 font-weight-bold">Passenger detail</h6>
                         </div>
-                        <div class="col-12 mp--none">
+                        <div class="col-12 mp--none my-2">
                             <div class="text-primary text__size--x08 d-flex justify-content-between align-items-center p-2 custom__background--light font-weight-bold"
-                                data-toggle="collapse" data-target="#passenger__input" aria-expanded="false"
-                                aria-controls="passenger__input">
-                                <span>Enter passenger details</span>
+                                data-toggle="collapse" data-target="#passenger__1" aria-expanded="false"
+                                aria-controls="passenger__1">
+                                <span>Passenger 2: Adult</span>
                                 <i class="fas fa-pen"></i>
 
                             </div>
-                            <div class="collapse" id="passenger__input">
+                            <div class="collapse" id="passenger__1">
                                 <div class="card card-body border-0 text__size--x08 mp--none py-2">
                                     <div class="row mp--none">
                                         <div class="col-12 mp--none my-2">
@@ -188,24 +193,27 @@
                                         </div>
 
                                         <div class="col-5 mp--none my-2 pr-2">
-                                            <div class="custom__input__group">
+                                            <div class="custom__input__group" data-toggle="modal"
+                                            data-target="#confirm__title__modal">
                                                 <label for="icontact__name" class="custom__label">Title</label>
                                                 <i class="fas fa-user-circle text-primary custom__icon"></i>
-                                                <input type="text" id="icontact__name" class="custom__input">
+                                                <input type="text" id="icontact__name" class="custom__input" readonly>
                                             </div>
                                         </div>
                                         <div class="col-7 mp--none my-2 pl-2">
-                                            <div class="custom__input__group">
+                                            <div class="custom__input__group" data-toggle="modal"
+                                            data-target="#confirm__national__modal">
                                                 <label for="icontact__name" class="custom__label">Nationality</label>
                                                 <i class="fas fa-globe-americas text-primary custom__icon"></i>
-                                                <input type="text" id="icontact__name" class="custom__input">
+                                                <input type="text" id="icontact__name" class="custom__input" readonly>
                                             </div>
                                         </div>
                                         <div class="col-12 mp--none my-2">
-                                            <div class="custom__input__group">
+                                            <div class="custom__input__group" data-toggle="modal"
+                                            data-target="#confirm__dateofbirth__modal">
                                                 <label for="icontact__name" class="custom__label">Date of birth</label>
                                                 <i class="far fa-calendar-check text-primary custom__icon"></i>
-                                                <input type="text" id="icontact__name" class="custom__input">
+                                                <input type="text" id="icontact__name" class="custom__input" readonly>
                                             </div>
                                         </div>
                                         <div class="col-12 mp--none my-2">
@@ -217,22 +225,186 @@
                                         </div>
 
                                         <div class="col-5 mp--none my-2 pr-2">
-                                            <div class="custom__input__group">
+                                            <div class="custom__input__group" data-toggle="modal"
+                                            data-target="#confirm__national__modal">
                                                 <label for="icontact__name" class="custom__label">Issuring
                                                     Country</label>
                                                 <i class="fas fa-globe-americas text-primary custom__icon"></i>
-                                                <input type="text" id="icontact__name" class="custom__input">
+                                                <input type="text" id="icontact__name" class="custom__input" readonly>
                                             </div>
                                         </div>
                                         <div class="col-7 mp--none my-2 pl-2">
-                                            <div class="custom__input__group">
+                                            <div class="custom__input__group" data-toggle="modal"
+                                            data-target="#confirm__dateofbirth__modal">
                                                 <label for="icontact__name" class="custom__label">Expire Date</label>
                                                 <i class="far fa-calendar-check text-primary custom__icon"></i>
-                                                <input type="text" id="icontact__name" class="custom__input">
+                                                <input type="text" id="icontact__name" class="custom__input" readonly>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mp--none my-2">
+                            <div class="text-primary text__size--x08 d-flex justify-content-between align-items-center p-2 custom__background--light font-weight-bold"
+                                data-toggle="collapse" data-target="#passenger__2" aria-expanded="false"
+                                aria-controls="passenger__2">
+                                <span>Passenger 1: Adult</span>
+                                <i class="fas fa-pen"></i>
+
+                            </div>
+                            <div class="collapse" id="passenger__2">
+                                    <div class="card card-body border-0 text__size--x08 mp--none py-2">
+                                            <div class="row mp--none">
+                                                <div class="col-12 mp--none my-2">
+                                                    <div class="custom__input__group">
+                                                        <label for="icontact__name" class="custom__label">Given name (First &
+                                                            Middle name)</label>
+                                                        <i class="fas fa-user-circle text-primary custom__icon"></i>
+                                                        <input type="text" id="icontact__name" class="custom__input">
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 mp--none my-2">
+                                                    <div class="custom__input__group">
+                                                        <label for="icontact__name" class="custom__label">Surname name
+                                                            (family/last name)</label>
+                                                        <i class="fas fa-user-circle text-primary custom__icon"></i>
+                                                        <input type="text" id="icontact__name" class="custom__input">
+                                                    </div>
+                                                </div>
+        
+                                                <div class="col-5 mp--none my-2 pr-2">
+                                                    <div class="custom__input__group" data-toggle="modal"
+                                                    data-target="#confirm__title__modal">
+                                                        <label for="icontact__name" class="custom__label">Title</label>
+                                                        <i class="fas fa-user-circle text-primary custom__icon"></i>
+                                                        <input type="text" id="icontact__name" class="custom__input" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-7 mp--none my-2 pl-2">
+                                                    <div class="custom__input__group" data-toggle="modal"
+                                                    data-target="#confirm__national__modal">
+                                                        <label for="icontact__name" class="custom__label">Nationality</label>
+                                                        <i class="fas fa-globe-americas text-primary custom__icon"></i>
+                                                        <input type="text" id="icontact__name" class="custom__input" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 mp--none my-2">
+                                                    <div class="custom__input__group" data-toggle="modal"
+                                                    data-target="#confirm__dateofbirth__modal">
+                                                        <label for="icontact__name" class="custom__label">Date of birth</label>
+                                                        <i class="far fa-calendar-check text-primary custom__icon"></i>
+                                                        <input type="text" id="icontact__name" class="custom__input" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 mp--none my-2">
+                                                    <div class="custom__input__group">
+                                                        <label for="icontact__name" class="custom__label">Passport</label>
+                                                        <i class="fas fa-passport text-primary custom__icon"></i>
+                                                        <input type="text" id="icontact__name" class="custom__input">
+                                                    </div>
+                                                </div>
+        
+                                                <div class="col-5 mp--none my-2 pr-2">
+                                                    <div class="custom__input__group" data-toggle="modal"
+                                                    data-target="#confirm__national__modal">
+                                                        <label for="icontact__name" class="custom__label">Issuring
+                                                            Country</label>
+                                                        <i class="fas fa-globe-americas text-primary custom__icon"></i>
+                                                        <input type="text" id="icontact__name" class="custom__input" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-7 mp--none my-2 pl-2">
+                                                    <div class="custom__input__group" data-toggle="modal"
+                                                    data-target="#confirm__dateofbirth__modal">
+                                                        <label for="icontact__name" class="custom__label">Expire Date</label>
+                                                        <i class="far fa-calendar-check text-primary custom__icon"></i>
+                                                        <input type="text" id="icontact__name" class="custom__input" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mp--none my-2">
+                            <div class="text-primary text__size--x08 d-flex justify-content-between align-items-center p-2 custom__background--light font-weight-bold"
+                                data-toggle="collapse" data-target="#passenger__3" aria-expanded="false"
+                                aria-controls="passenger__3">
+                                <span>Passenger 3: Child</span>
+                                <i class="fas fa-pen"></i>
+
+                            </div>
+                            <div class="collapse" id="passenger__3">
+                                    <div class="card card-body border-0 text__size--x08 mp--none py-2">
+                                            <div class="row mp--none">
+                                                <div class="col-12 mp--none my-2">
+                                                    <div class="custom__input__group">
+                                                        <label for="icontact__name" class="custom__label">Given name (First &
+                                                            Middle name)</label>
+                                                        <i class="fas fa-user-circle text-primary custom__icon"></i>
+                                                        <input type="text" id="icontact__name" class="custom__input">
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 mp--none my-2">
+                                                    <div class="custom__input__group">
+                                                        <label for="icontact__name" class="custom__label">Surname name
+                                                            (family/last name)</label>
+                                                        <i class="fas fa-user-circle text-primary custom__icon"></i>
+                                                        <input type="text" id="icontact__name" class="custom__input">
+                                                    </div>
+                                                </div>
+        
+                                                <div class="col-5 mp--none my-2 pr-2">
+                                                    <div class="custom__input__group" data-toggle="modal"
+                                                    data-target="#confirm__title__modal">
+                                                        <label for="icontact__name" class="custom__label">Title</label>
+                                                        <i class="fas fa-user-circle text-primary custom__icon"></i>
+                                                        <input type="text" id="icontact__name" class="custom__input" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-7 mp--none my-2 pl-2">
+                                                    <div class="custom__input__group" data-toggle="modal"
+                                                    data-target="#confirm__national__modal">
+                                                        <label for="icontact__name" class="custom__label">Nationality</label>
+                                                        <i class="fas fa-globe-americas text-primary custom__icon"></i>
+                                                        <input type="text" id="icontact__name" class="custom__input" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 mp--none my-2">
+                                                    <div class="custom__input__group" data-toggle="modal"
+                                                    data-target="#confirm__dateofbirth__modal">
+                                                        <label for="icontact__name" class="custom__label">Date of birth</label>
+                                                        <i class="far fa-calendar-check text-primary custom__icon"></i>
+                                                        <input type="text" id="icontact__name" class="custom__input" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 mp--none my-2">
+                                                    <div class="custom__input__group">
+                                                        <label for="icontact__name" class="custom__label">Passport</label>
+                                                        <i class="fas fa-passport text-primary custom__icon"></i>
+                                                        <input type="text" id="icontact__name" class="custom__input">
+                                                    </div>
+                                                </div>
+        
+                                                <div class="col-5 mp--none my-2 pr-2">
+                                                    <div class="custom__input__group" data-toggle="modal"
+                                                    data-target="#confirm__national__modal">
+                                                        <label for="icontact__name" class="custom__label">Issuring
+                                                            Country</label>
+                                                        <i class="fas fa-globe-americas text-primary custom__icon"></i>
+                                                        <input type="text" id="icontact__name" class="custom__input" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-7 mp--none my-2 pl-2">
+                                                    <div class="custom__input__group" data-toggle="modal"
+                                                    data-target="#confirm__dateofbirth__modal">
+                                                        <label for="icontact__name" class="custom__label">Expire Date</label>
+                                                        <i class="far fa-calendar-check text-primary custom__icon"></i>
+                                                        <input type="text" id="icontact__name" class="custom__input" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                             </div>
                         </div>
                     </div>
@@ -243,9 +415,9 @@
 
         <!-- ↓↓ Modal-->
 
-        <!-- Modal sort -->
-        <div class="modal fade animated fadeInUp" id="booking__sort__modal" tabindex="-1" role="dialog"
-            aria-labelledby="booking__class__modalTitle" aria-hidden="true">
+        <!-- Modal title -->
+        <div class="modal fade animated fadeInUp" id="confirm__title__modal" tabindex="-1" role="dialog"
+            aria-labelledby="confirm__title__modalTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-bottom" role="document">
                 <div class="modal-content border__radius--none border__radius__top--10 border-0">
                     <div class="modal-header py-2">
@@ -256,7 +428,7 @@
                                     </i></span>
                             </div>
                             <div class="col-10 mp--none text-center  text__size--x09">
-                                <span>Sort by</span>
+                                <span>Title by</span>
                             </div>
                         </div>
                     </div>
@@ -265,26 +437,20 @@
 
                             <div class="col-12">
                                 <div class="icheck-material-blue">
-                                    <input type="radio" id="sort__price" name="sort" checked />
-                                    <label for="sort__price">Giá thấp nhất</label>
+                                    <input type="radio" id="title__price" name="sort" checked />
+                                    <label for="title__price">Mr.</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="icheck-material-blue">
-                                    <input type="radio" id="sort__flytime" name="sort" />
-                                    <label for="sort__flytime">Thời gian bay ngắn nhất</label>
+                                    <input type="radio" id="title__flytime" name="sort" />
+                                    <label for="title__flytime">Mrs.</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="icheck-material-blue">
-                                    <input type="radio" id="sort__checkin" name="sort" />
-                                    <label for="sort__checkin">Thời gian khởi hành sớm nhất</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="icheck-material-blue">
-                                    <input type="radio" id="sort__checkout" name="sort" />
-                                    <label for="sort__checkout">Thời gian đến sớm nhất</label>
+                                    <input type="radio" id="title__checkin" name="sort" />
+                                    <label for="title__checkin">Ms.</label>
                                 </div>
                             </div>
                         </div>
@@ -297,183 +463,216 @@
                 </div>
             </div>
         </div>
-        <!-- Modal filter -->
-        <div class="modal fade bg-white animated fadeInUp" id="booking__filter__modal" tabindex="-1" role="dialog"
+        <!-- Modal country code -->
+        <div class="modal fade bg-white animated fadeInUp" id="confirm__countrycode__modal" tabindex="-1" role="dialog"
             aria-labelledby="booking__class__modalTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-full" role="document">
                 <div class="modal-content border__radius--none h-100 border-0">
                     <div class="py-2 bg-primary  border__radius--none">
                         <div class="row mp--none w-100 my-2 px-2">
-                            <div class="col-1 mp--none d-flex justify-content-center align-items-center">
+                            <div class="col-1 mp--none">
                                 <span data-dismiss="modal"><i class="material-icons text__size--x13 text-white">
                                         close
                                     </i></span>
                             </div>
-                            <div class="col-9 mp--none text-left text__size--x09 text-white">
-                                <span>Sort & Filter</span>
+                            <div class="col-10 mp--none text-left text__size--x09 text-white">
+                                <span>Select Country</span>
                             </div>
-                            <div class="col-2 mp--none">
-                                <button
-                                    class="btn btn-warning text-primary border__radius--100 btn-sm text__size--x08">Reset</button>
+                        </div>
+                        <div class="row mp--none w-100 my-2">
+                            <div class="col-12 mp--none px-2">
+                                <input type="text" class="w-100 form-control form-control-sm border__radius--none"
+                                    placeholder="Search Country">
                             </div>
                         </div>
                     </div>
                     <div class="modal-body text__size--x08 py-0">
-                        <div class="row w-100 mp--none sky__member py-2 pb-3 mb-4 border-bottom">
-                            <h6 class="text-muted font-weight-bold text__size--x07">Liên minh</h6>
-                            <div class="col-12 mp--none">
-                                <div class="btn-group w-100" role="group" aria-label="Basic example">
-                                    <button type="button" class="btn btn-sm btn-light text__size--x08">Star
-                                        Alliance</button>
-                                    <button type="button"
-                                        class="btn btn-sm btn-primary text__size--x08">OneWorld</button>
-                                    <button type="button" class="btn btn-sm btn-light text__size--x08">SkyTeam</button>
+                        <div class="mp--none p-2 search-country">
+                            <div class="row p-2 mp--none cursor--pointer result__item">
+                                <div class="col-1 mp--none">
+                                    <i class="fas fa-city text-primary"></i>
+                                </div>
+                                <div class="col-9 mp--none country__item">
+                                    Việt Nam ( +84)
+                                </div>
+                                <div class="col-2 mp--none">
+                                    <button
+                                        class="btn btn-sm btn-light border__radius--100 text-muted text__size--x08 select__countrycode__btn"
+                                        type="button">Select</button>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row w-100 mp--none brand__departure py-2 my-4 border-bottom">
-                            <h6 class="text-muted font-weight-bold text__size--x07">Hãng chiều đi</h6>
-                            <div class="col-12 mp--none">
-                                <div class="icheck-material-blue">
-                                    <input type="checkbox" checked id="brand__depart__vietnamairline" />
-                                    <label for="brand__depart__vietnamairline">VietNam Airline</label>
+                            <div class="row p-2 mp--none cursor--pointer result__item">
+                                <div class="col-1 mp--none">
+                                    <i class="fas fa-city text-primary"></i>
                                 </div>
-                                <div class="icheck-material-blue">
-                                    <input type="checkbox" checked id="brand__depart__jetstar" />
-                                    <label for="brand__depart__jetstar">Jetstar Pacific</label>
+                                <div class="col-9 mp--none country__item">
+                                    Hàn Quốc ( +82)
                                 </div>
-                                <div class="icheck-material-blue">
-                                    <input type="checkbox" checked id="brand__depart__vietjet" />
-                                    <label for="brand__depart__vietjet">VietJet Air</label>
-                                </div>
-                                <div class="icheck-material-blue">
-                                    <input type="checkbox" checked id="brand__depart__china" />
-                                    <label for="brand__depart__china">China Airline</label>
+                                <div class="col-2 mp--none">
+                                    <button
+                                        class="btn btn-sm btn-light border__radius--100 text-muted text__size--x08 select__countrycode__btn"
+                                        type="button">Select</button>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row w-100 mp--none brand__arriver py-2 my-4 border-bottom">
-                            <h6 class="text-muted font-weight-bold text__size--x07">Hãng chiều về</h6>
-                            <div class="col-12 mp--none">
-                                <div class="icheck-material-blue">
-                                    <input type="checkbox" checked id="brand__arive__vietnamairline" />
-                                    <label for="brand__arive__vietnamairline">VietNam Airline</label>
+                            <div class="row p-2 mp--none cursor--pointer result__item">
+                                <div class="col-1 mp--none">
+                                    <i class="fas fa-city text-primary"></i>
                                 </div>
-                                <div class="icheck-material-blue">
-                                    <input type="checkbox" checked id="brand__arive__jetstar" />
-                                    <label for="brand__arive__jetstar">Jetstar Pacific</label>
+                                <div class="col-9 mp--none country__item">
+                                    USA ( +1)
                                 </div>
-                                <div class="icheck-material-blue">
-                                    <input type="checkbox" checked id="brand__arive__vietjet" />
-                                    <label for="brand__arive__vietjet">VietJet Air</label>
-                                </div>
-                                <div class="icheck-material-blue">
-                                    <input type="checkbox" checked id="brand__arive__china" />
-                                    <label for="brand__arive__china">China Airline</label>
+                                <div class="col-2 mp--none">
+                                    <button
+                                        class="btn btn-sm btn-light border__radius--100 text-muted text__size--x08 select__countrycode__btn"
+                                        type="button">Select</button>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="row w-100 mp--none brand__arriver py-2 my-4 border-bottom">
-                            <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                <li class="nav-item">
-                                    <a class="nav-link active" id="departure-tab" data-toggle="tab" href="#departure"
-                                        role="tab" aria-controls="departure" aria-selected="true">
-                                        <h6 class="text-muted font-weight-bold text__size--x07">Thời gian di
-                                        </h6>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="arrived-tab" data-toggle="tab" href="#arrived" role="tab"
-                                        aria-controls="arrived" aria-selected="false">
-                                        <h6 class="text-muted font-weight-bold text__size--x07">Thời gian ve
-                                        </h6>
-                                    </a>
-                                </li>
-                            </ul>
-                            <div class="tab-content w-100 pt-2" id="myTabContent">
-                                <div class="tab-pane fade show active" id="departure" role="tabpanel"
-                                    aria-labelledby="departure-tab">
-                                    <div class="row mp--none">
-                                        <div class="col-12 mp--none mb-2">
-                                            <label for="ideparture__checkin__time"
-                                                class="text__size--x06 text-muted mp--none"><i
-                                                    class="fas fa-plane-departure text__size--x06 mr-2"></i>Thoi
-                                                gian
-                                                khoi hanh <span class="text-primary"
-                                                    id="ideparture__checkin__value"></span></label>
-                                            <div class="w-100 mp--none text-center px-2">
-                                                <input id="ideparture__checkin__time" type="text" class="span2 w-100"
-                                                    value="" data-slider-min="0" data-slider-max="24"
-                                                    data-slider-step="0.5" data-slider-value="[0,24]" />
-                                            </div>
-                                        </div>
-                                        <div class="col-12 mp--none mb-2">
-                                            <label for="ideparture__checkout__time"
-                                                class="text__size--x06 text-muted mp--none"><i
-                                                    class="fas fa-plane-arrival text__size--x06 mr-2"></i>Thoi
-                                                gian den <span class="text-primary"
-                                                    id="ideparture__checkout__value"></span></label>
-                                            <div class="w-100 mp--none text-center px-2">
-                                                <input id="ideparture__checkout__time" type="text" class="span2 w-100"
-                                                    value="" data-slider-min="0" data-slider-max="24"
-                                                    data-slider-step="0.5" data-slider-value="[0,24]" />
-                                            </div>
-                                        </div>
-                                    </div>
+                            <div class="row p-2 mp--none cursor--pointer result__item">
+                                <div class="col-1 mp--none">
+                                    <i class="fas fa-city text-primary"></i>
                                 </div>
-                                <div class="tab-pane fade" id="arrived" role="tabpanel" aria-labelledby="arrived-tab">
-                                    <div class="row mp--none">
-                                        <div class="col-12 mp--none mb-2">
-                                            <label for="iarrived__checkin__time"
-                                                class="text__size--x06 text-muted mp--none"><i
-                                                    class="fas fa-plane-departure text__size--x06 mr-2"></i>Thoi
-                                                gian
-                                                khoi hanh <span class="text-primary"
-                                                    id="iarrived__checkin__value"></span></label>
-                                            <div class="w-100 mp--none text-center px-2">
-                                                <input id="iarrived__checkin__time" type="text" class="span2 w-100"
-                                                    value="" data-slider-min="0" data-slider-max="24"
-                                                    data-slider-step="0.5" data-slider-value="[0,24]" />
-                                            </div>
-                                        </div>
-                                        <div class="col-12 mp--none mb-2">
-                                            <label for="iarrived__checkout__time"
-                                                class="text__size--x06 text-muted mp--none"><i
-                                                    class="fas fa-plane-arrival text__size--x06 mr-2"></i>Thoi
-                                                gian den <span class="text-primary"
-                                                    id="iarrived__checkout__value"></span></label>
-                                            <div class="w-100 mp--none text-center px-2">
-                                                <input id="iarrived__checkout__time" type="text" class="span2 w-100"
-                                                    value="" data-slider-min="0" data-slider-max="24"
-                                                    data-slider-step="0.5" data-slider-value="[0,24]" />
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="col-9 mp--none country__item">
+                                    Trung Quốc( +86)
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="row w-100 mp--none py-2 my-4">
-                            <h6 class="text-muted font-weight-bold text__size--x07">Giá <span class="text-primary"
-                                    id="i__filter__price__value"></span></h6>
-                            <div class="col-12 mp--none mb-2">
-                                <div class="w-100 mp--none text-center px-2">
-                                    <input id="i__filter__price" type="text" class="span2 w-100" value=""
-                                        data-slider-min="0" data-slider-max="10000000" data-slider-step="10000"
-                                        data-slider-value="[500000,3000000]" />
+                                <div class="col-2 mp--none">
+                                    <button
+                                        class="btn btn-sm btn-light border__radius--100 text-muted text__size--x08 select__countrycode__btn"
+                                        type="button">Select</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="modal-footer py-2">
-                        <button type="button"
-                            class="btn btn-warning border__radius--100 text-primary btn-sm text__size--x08"
-                            data-dismiss="modal">Apply</button>
+                        <button type="button" class="btn btn-white text-primary btn-sm  text__size--x08"
+                            data-dismiss="modal">Done</button>
                     </div>
                 </div>
             </div>
         </div>
+         <!-- Modal national code -->
+         <div class="modal fade bg-white animated fadeInUp" id="confirm__national__modal" tabindex="-1" role="dialog"
+         aria-labelledby="booking__class__modalTitle" aria-hidden="true">
+         <div class="modal-dialog modal-dialog-full" role="document">
+             <div class="modal-content border__radius--none h-100 border-0">
+                 <div class="py-2 bg-primary  border__radius--none">
+                     <div class="row mp--none w-100 my-2 px-2">
+                         <div class="col-1 mp--none">
+                             <span data-dismiss="modal"><i class="material-icons text__size--x13 text-white">
+                                     close
+                                 </i></span>
+                         </div>
+                         <div class="col-10 mp--none text-left text__size--x09 text-white">
+                             <span>Select Country</span>
+                         </div>
+                     </div>
+                     <div class="row mp--none w-100 my-2">
+                         <div class="col-12 mp--none px-2">
+                             <input type="text" class="w-100 form-control form-control-sm border__radius--none"
+                                 placeholder="Search Country">
+                         </div>
+                     </div>
+                 </div>
+                 <div class="modal-body text__size--x08 py-0">
+                     <div class="mp--none p-2 search-country">
+                         <div class="row p-2 mp--none cursor--pointer result__item">
+                             <div class="col-1 mp--none">
+                                 <i class="fas fa-city text-primary"></i>
+                             </div>
+                             <div class="col-9 mp--none country__item">
+                                 Việt Nam
+                             </div>
+                             <div class="col-2 mp--none">
+                                 <button
+                                     class="btn btn-sm btn-light border__radius--100 text-muted text__size--x08 select__countrycode__btn"
+                                     type="button">Select</button>
+                             </div>
+                         </div>
+                         <div class="row p-2 mp--none cursor--pointer result__item">
+                             <div class="col-1 mp--none">
+                                 <i class="fas fa-city text-primary"></i>
+                             </div>
+                             <div class="col-9 mp--none country__item">
+                                 Hàn Quốc
+                             </div>
+                             <div class="col-2 mp--none">
+                                 <button
+                                     class="btn btn-sm btn-light border__radius--100 text-muted text__size--x08 select__countrycode__btn"
+                                     type="button">Select</button>
+                             </div>
+                         </div>
+                         <div class="row p-2 mp--none cursor--pointer result__item">
+                             <div class="col-1 mp--none">
+                                 <i class="fas fa-city text-primary"></i>
+                             </div>
+                             <div class="col-9 mp--none country__item">
+                                 USA
+                             </div>
+                             <div class="col-2 mp--none">
+                                 <button
+                                     class="btn btn-sm btn-light border__radius--100 text-muted text__size--x08 select__countrycode__btn"
+                                     type="button">Select</button>
+                             </div>
+                         </div>
+                         <div class="row p-2 mp--none cursor--pointer result__item">
+                             <div class="col-1 mp--none">
+                                 <i class="fas fa-city text-primary"></i>
+                             </div>
+                             <div class="col-9 mp--none country__item">
+                                 Trung Quốc
+                             </div>
+                             <div class="col-2 mp--none">
+                                 <button
+                                     class="btn btn-sm btn-light border__radius--100 text-muted text__size--x08 select__countrycode__btn"
+                                     type="button">Select</button>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="modal-footer py-2">
+                     <button type="button" class="btn btn-white text-primary btn-sm  text__size--x08"
+                         data-dismiss="modal">Done</button>
+                 </div>
+             </div>
+         </div>
+     </div>
+
+      <!-- Modal time -->
+      <div class="modal fade bg-white animated fadeInUp" id="confirm__dateofbirth__modal" tabindex="-1"
+      role="dialog" aria-labelledby="booking__class__modalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-full" role="document">
+          <div class="modal-content border__radius--none h-100 border-0">
+              <div class="py-2 bg-primary  border__radius--none">
+                  <div class="row mp--none w-100 my-2 px-2">
+                      <div class="col-1 mp--none">
+                          <span data-dismiss="modal"><i class="material-icons text__size--x13 text-white">
+                                  close
+                                  </i></span>
+                      </div>
+                      <div class="col-10 mp--none text-left text__size--x09 text-white">
+                          <span>Date</span>
+                      </div>
+                  </div>
+                  <div class="row mp--none w-100 my-2">
+                      <div class="col-6 mp--none d-flex flex-column  justify-content-center align-items-center">
+                          <span class="text-white text__size--x08 pb-1">Select day</span>
+                          <span class="badge custom__background--second text-primary p-1 border__radius--100">Wed,
+                              09 Oct 2019</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="modal-body text__size--x08 py-0">
+                  <div class="row">
+                      <input type="text" class="form-control border-0 text__size--x09" id="booking__birthday"
+                          aria-describedby="basic-addon3" placeholder="Checkout" style="visibility: hidden;">
+                  </div>
+              </div>
+              <div class="modal-footer py-2">
+                  <button type="button" class="btn btn-white text-primary btn-sm  text__size--x08"
+                      data-dismiss="modal">Done</button>
+              </div>
+          </div>
+      </div>
+  </div>
         <!-- Modal detail ticket -->
         <div class="modal fade bg-white animated fadeInUp" id="booking__detailticket__modal" tabindex="-1" role="dialog"
             aria-labelledby="booking__class__modalTitle" aria-hidden="true">
@@ -666,23 +865,23 @@
 
         <!-- ↓↓ Payment sticky-->
         <div class="payment__action__component bg-white p-2">
-                <div class="row mp--none">
-                    <div class="col-6 mp--none">
-                    </div>
-                    <div class="col-6 mp--none">
-                        <div class="d-flex flex-nowrap justify-content-end align-items-center">
-                            <strong class="font-weight-bold text-primary text__size--x09">VND
-                                2.326.722 </strong><span class="text-muted text__size--x06">/pax</span></div>
-                    </div>
+            <div class="row mp--none">
+                <div class="col-6 mp--none">
                 </div>
-                <div class="row mp--none">
-                    <div class="col-12 mp--none">
-                        <button type="button"
-                            class="btn w-100 btn-warning border__radius--100 text-primary btn-sm text__size--x08 w-100 font-weight-bold py-2 select__return__btn"
-                            data-dismiss="modal">SELECT FLIGHT</button>
-                    </div>
+                <div class="col-6 mp--none">
+                    <div class="d-flex flex-nowrap justify-content-end align-items-center">
+                        <strong class="font-weight-bold text-primary text__size--x09">VND
+                            2.326.722 </strong><span class="text-muted text__size--x06">/pax</span></div>
                 </div>
             </div>
+            <div class="row mp--none">
+                <div class="col-12 mp--none">
+                    <button type="button"
+                        class="btn w-100 btn-warning border__radius--100 text-primary btn-sm text__size--x08 w-100 font-weight-bold py-2 payment__btn"
+                        data-dismiss="modal">HOLD THE SEAT</button>
+                </div>
+            </div>
+        </div>
         <!-- ↑↑ Filter sticky -->
     </div>
     <script src="assets/jquery/jquery.min.js"></script>

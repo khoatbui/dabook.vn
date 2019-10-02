@@ -132,6 +132,12 @@ var booking__checkout = flatpickr('#booking__checkout', {
     booking__checkout__sticky.setDate(selectedDates, true, 'Y-m-d');
   },
 });
+var booking__birthday = flatpickr('#booking__birthday', {
+  dateFormat: 'Y-m-d',
+  inline: true,
+  nextArrow: '<i class="fas fa-chevron-right" style="color:#FFF"></i>',
+  prevArrow: '<i class="fas fa-chevron-left" style="color:#FFF"></i>',
+});
 var booking__checkin__sticky = flatpickr('#booking__checkin__sticky', {
   minDate: 'today',
   dateFormat: 'Y-m-d',
@@ -639,9 +645,10 @@ $('.nav__flight').on('click', function() {
 $('.search__btn').on('click', function() {
   window.location.href = 'booking.html';
 });
-$('.select__departure__btn').on('click', function() {
-  window.location.href = 'booking_return.html';
-});
+// $('.select__departure__btn').on('click', function(event) {
+//   window.location.href = 'booking_return.html';
+//   event.preventDefault()
+// });
 $('.result__departure__item').on('click', function() {
   window.location.href = 'booking_return.html';
 });
@@ -651,3 +658,71 @@ $('.select__return__btn').on('click', function() {
 $('.result__arrived__item').on('click', function() {
   window.location.href = 'confirm.html';
 });
+$('.payment__btn').on('click', function() {
+  window.location.href = 'payment.html';
+});
+$('.finish__btn').on('click', function() {
+  window.location.href = 'finish.html';
+});
+
+$('.detailmodal__btn').on('click', function() {
+  $('#booking__detailticket__modal').modal('show')
+  event.stopPropagation();
+});
+$('.copyandclose__btn').on('click', function() {
+  /* Get the text field */
+  var bankAccount=$('#iholdseat__number').text();
+  var textarea = document.createElement('textarea');
+  textarea.textContent = bankAccount;
+  document.body.appendChild(textarea);
+
+  var selection = document.getSelection();
+  var range = document.createRange();
+//  range.selectNodeContents(textarea);
+  range.selectNode(textarea);
+  selection.removeAllRanges();
+  selection.addRange(range);
+
+  console.log('copy success', document.execCommand('copy'));
+  selection.removeAllRanges();
+
+  document.body.removeChild(textarea);
+  // window.location.href = 'index.html';
+
+});
+
+$('.bank__copy__btn').on('click', function() {
+  /* Get the text field */
+  var bankAccount=$(this).siblings('.payment__bankaccount').text();
+  var textarea = document.createElement('textarea');
+  textarea.textContent = bankAccount;
+  document.body.appendChild(textarea);
+
+  var selection = document.getSelection();
+  var range = document.createRange();
+//  range.selectNodeContents(textarea);
+  range.selectNode(textarea);
+  selection.removeAllRanges();
+  selection.addRange(range);
+
+  console.log('copy success', document.execCommand('copy'));
+  selection.removeAllRanges();
+
+  document.body.removeChild(textarea);
+});
+
+
+// =======NAVIGATION BAR============
+
+$('.navi_home').on('click',function(){
+  window.location.href = 'index.html';
+})
+$('.navi_user').on('click',function(){
+  window.location.href = 'login.html';
+})
+$('.login__btn').on('click',function(){
+  window.location.href = 'login.html';
+})
+$('.navi_order').on('click',function(){
+  window.location.href = 'myorder.html';
+})

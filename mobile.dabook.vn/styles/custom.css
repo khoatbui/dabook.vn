@@ -54,6 +54,12 @@ body {
 .mb-4rem {
   margin-bottom: 4rem;
 }
+.mb-8rem {
+  margin-bottom: 8rem;
+}
+.mb-400{
+  margin-bottom: 400px;
+}
 /* -------------List Style------------------*/
 .list__style--none {
   list-style: none;
@@ -137,6 +143,9 @@ body {
 }
 .text__size--x2 {
   font-size: 2rem;
+}
+.text__size--x4 {
+  font-size: 4rem;
 }
 /* -------------Font decorate-------------- */
 .text__decorate--underline {
@@ -329,6 +338,14 @@ input:checked + .slider:before {
 }
 .custom__input:focus .custom__label,.custom__input:active .custom__label,.custom__input:hover .custom__label{
   color: #0064D2 !important;
+}
+
+/* Position */
+.absolute--center{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
 }
 /*-----------------DROPDOWN OUTER HIDE----------------- */
 .dropdown-menu--outerhide {
@@ -552,7 +569,7 @@ HOMEPAGE
 .stepper-item{
   width: 20px;
   height: 20px;
-  line-height: 12px;
+  line-height: 14px;
   text-align: center;
   border-radius: 50%;
 }
@@ -587,4 +604,57 @@ HOMEPAGE
   position: absolute;
   top: 50%;
   z-index:0;
+}
+.ticket__style{
+  position: relative;
+}
+.ticket__style::after,.ticket__style::before{
+  content: ' ';
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  background-color: #FFF;
+  transform: translateY(-50%);
+}
+.ticket__style::after{
+  left: -30px;
+  border-right: 1px solid #dedede;
+}
+.ticket__style::before{
+  right: -30px;
+  border-left: 1px solid #dedede;
+}
+
+.ticket__style__row{
+  position: relative;
+}
+.ticket__style__row::after,.ticket__style__row::before{
+  content: ' ';
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  right: 0%;
+  z-index: 1;
+  background-color: #FFF;
+  transform: translateX(50%);
+}
+.ticket__style__row--primary::after{
+  top: -30px;
+  border-bottom: 1px solid #0064D2 !important;
+}
+.ticket__style__row--primary::before{
+  bottom: -30px;
+  border-top: 1px solid #0064D2 !important;
+}
+.ticket__style__row::after{
+  top: -30px;
+  border-bottom: 1px solid #dedede;
+}
+.ticket__style__row::before{
+  bottom: -30px;
+  border-top: 1px solid #dedede;
 }

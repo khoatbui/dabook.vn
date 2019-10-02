@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/owlcarousel/assets/owl.theme.default.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="assets/animated/animate.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="styles/custom.lib.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/custom.css">
+    <link rel="stylesheet" href="assets/flatpickr/flatpickr.min.css">
+    <link rel="stylesheet" href="assets/icheck/icheck-material.min.css">
+    <link rel="stylesheet" href="assets/bootstrapslider/bootstrap-slider.css">
+    <title>dabook.vn an online booking platform where flight tickets, tours and travel services are good value</title>
+    <!-- Hotjar Tracking Code for http://dabook.vn/ -->
+    <script>
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+            h._hjSettings = { hjid: 1491380, hjsv: 6 };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script'); r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header__component">
+            <!-- ↓↓ Header-->
+            <div class="header__component--header bg-primary h-200">
+                <div class="row mp--none d-flex justify-content-start align-items-center px-2 py-3">
+                    <div class="col-2 mp--none">
+                        <button class="btn btn-primary btn-sm border-0 back__btn">
+                            <i class="fas fa-arrow-left mr-2 text__size--x1"></i>
+                        </button>
+                    </div>
+                    <div class="col-10 mp--none">
+                        <span class="text-white">Register</span>
+                    </div>
+                </div>
+            </div>
+            <!-- ↑↑ Header -->
+        </div>
+        <!-- ↓↓ result__component-->
+        <div class="result__component mp--none p-3 h-400">
+            <div class="card border-0 result__card border__radius--none overflow--hidden py-4 my-4">
+                <div class="card-body px-1 p-2">
+                    <div class="row mp--none">
+                        <div class="col-12 mp--none my-2">
+                            <div class="custom__input__group">
+                                <label for="icontact__name" class="custom__label">First name</label>
+                                <i class="fas fa-user-circle text-primary custom__icon"></i>
+                                <input type="text" id="icontact__firstname" class="custom__input">
+                            </div>
+                        </div>
+                        <div class="col-12 mp--none my-2">
+                            <div class="custom__input__group">
+                                <label for="icontact__name" class="custom__label">Last name</label>
+                                <i class="fas fa-user-circle text-primary custom__icon"></i>
+                                <input type="text" id="icontact__lastname" class="custom__input">
+                            </div>
+                        </div>
+                        <div class="col-12 mp--none my-2">
+                            <div class="custom__input__group">
+                                <label for="icontact__name" class="custom__label">Email</label>
+                                <i class="far fa-envelope text-primary custom__icon"></i>
+                                <input type="email" id="icontact__email" class="custom__input">
+                            </div>
+                        </div>
+                        <div class="col-12 mp--none my-2">
+                            <div class="custom__input__group" data-toggle="modal"
+                                data-target="#confirm__countrycode__modal">
+                                <label for="icontact__name" class="custom__label">Nationality</label>
+                                <i class="fas fa-globe-americas text-primary custom__icon"></i>
+                                <input type="text" id="icontact__countrycode" class="custom__input" readonly>
+                            </div>
+                        </div>
+                        <div class="col-12 mp--none my-2">
+                            <div class="custom__input__group">
+                                <label for="icontact__name" class="custom__label">Password</label>
+                                <i class="fas fa-shield-alt text-primary custom__icon"></i>
+                                <input type="password" id="icontact__pass" class="custom__input">
+                            </div>
+                        </div>
+                        <div class="col-12 mp--none my-2">
+                            <div class="custom__input__group">
+                                <label for="icontact__name" class="custom__label">Confirm password</label>
+                                <i class="fas fa-shield-alt text-primary custom__icon"></i>
+                                <input type="password" id="icontact__confirmpass" class="custom__input">
+                            </div>
+                        </div>
+                        <div class="col-12 mp--none my-2">
+                            <button type="button"
+                                class="btn w-100 btn-warning border__radius--100 text-primary btn-sm text__size--x08 w-100 font-weight-bold py-2 payment__btn"
+                                data-dismiss="modal">REGISTER</button>
+                        </div>
+                        <div class="col-12 mp--none">
+                                <p class="text-muted text__size--x08 text-center">Have account ?<a class="text-primary mx-1 font-weight-bold" href="login.html"> LOGIN</a></p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ↑↑ End component__booking -->
+
+        <!-- ↓↓ Modal-->
+
+        <!-- Modal title -->
+        <div class="modal fade animated fadeInUp" id="confirm__title__modal" tabindex="-1" role="dialog"
+            aria-labelledby="confirm__title__modalTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-bottom" role="document">
+                <div class="modal-content border__radius--none border__radius__top--10 border-0">
+                    <div class="modal-header py-2">
+                        <div class="row mp--none w-100">
+                            <div class="col-1 mp--none d-flex justify-content-center align-items-center">
+                                <span data-dismiss="modal"><i class="material-icons text__size--x13 text-primary">
+                                        close
+                                    </i></span>
+                            </div>
+                            <div class="col-10 mp--none text-center  text__size--x09">
+                                <span>Title by</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body text__size--x08 py-0">
+                        <div class="row px-3">
+
+                            <div class="col-12">
+                                <div class="icheck-material-blue">
+                                    <input type="radio" id="title__price" name="sort" checked />
+                                    <label for="title__price">Mr.</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="icheck-material-blue">
+                                    <input type="radio" id="title__flytime" name="sort" />
+                                    <label for="title__flytime">Mrs.</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="icheck-material-blue">
+                                    <input type="radio" id="title__checkin" name="sort" />
+                                    <label for="title__checkin">Ms.</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer py-2">
+                        <button type="button"
+                            class="btn btn-warning border__radius--100 text-primary btn-sm text__size--x08"
+                            data-dismiss="modal">Apply</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal national code -->
+        <div class="modal fade bg-white animated fadeInUp" id="confirm__national__modal" tabindex="-1" role="dialog"
+            aria-labelledby="booking__class__modalTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-full" role="document">
+                <div class="modal-content border__radius--none h-100 border-0">
+                    <div class="py-2 bg-primary  border__radius--none">
+                        <div class="row mp--none w-100 my-2 px-2">
+                            <div class="col-1 mp--none">
+                                <span data-dismiss="modal"><i class="material-icons text__size--x13 text-white">
+                                        close
+                                    </i></span>
+                            </div>
+                            <div class="col-10 mp--none text-left text__size--x09 text-white">
+                                <span>Select Country</span>
+                            </div>
+                        </div>
+                        <div class="row mp--none w-100 my-2">
+                            <div class="col-12 mp--none px-2">
+                                <input type="text" class="w-100 form-control form-control-sm border__radius--none"
+                                    placeholder="Search Country">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body text__size--x08 py-0">
+                        <div class="mp--none p-2 search-country">
+                            <div class="row p-2 mp--none cursor--pointer result__item">
+                                <div class="col-1 mp--none">
+                                    <i class="fas fa-city text-primary"></i>
+                                </div>
+                                <div class="col-9 mp--none country__item">
+                                    Việt Nam
+                                </div>
+                                <div class="col-2 mp--none">
+                                    <button
+                                        class="btn btn-sm btn-light border__radius--100 text-muted text__size--x08 select__countrycode__btn"
+                                        type="button">Select</button>
+                                </div>
+                            </div>
+                            <div class="row p-2 mp--none cursor--pointer result__item">
+                                <div class="col-1 mp--none">
+                                    <i class="fas fa-city text-primary"></i>
+                                </div>
+                                <div class="col-9 mp--none country__item">
+                                    Hàn Quốc
+                                </div>
+                                <div class="col-2 mp--none">
+                                    <button
+                                        class="btn btn-sm btn-light border__radius--100 text-muted text__size--x08 select__countrycode__btn"
+                                        type="button">Select</button>
+                                </div>
+                            </div>
+                            <div class="row p-2 mp--none cursor--pointer result__item">
+                                <div class="col-1 mp--none">
+                                    <i class="fas fa-city text-primary"></i>
+                                </div>
+                                <div class="col-9 mp--none country__item">
+                                    USA
+                                </div>
+                                <div class="col-2 mp--none">
+                                    <button
+                                        class="btn btn-sm btn-light border__radius--100 text-muted text__size--x08 select__countrycode__btn"
+                                        type="button">Select</button>
+                                </div>
+                            </div>
+                            <div class="row p-2 mp--none cursor--pointer result__item">
+                                <div class="col-1 mp--none">
+                                    <i class="fas fa-city text-primary"></i>
+                                </div>
+                                <div class="col-9 mp--none country__item">
+                                    Trung Quốc
+                                </div>
+                                <div class="col-2 mp--none">
+                                    <button
+                                        class="btn btn-sm btn-light border__radius--100 text-muted text__size--x08 select__countrycode__btn"
+                                        type="button">Select</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer py-2">
+                        <button type="button" class="btn btn-white text-primary btn-sm  text__size--x08"
+                            data-dismiss="modal">Done</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ↑↑ End Modal -->
+    </div>
+    <script src="assets/jquery/jquery.min.js"></script>
+    <script src="assets/jquery/popper.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/owlcarousel/owl.carousel.min.js"></script>
+    <script src="assets/flatpickr/flatpickr.min.js"></script>
+    <script src="assets/bootstrapslider/bootstrap-slider.js"></script>
+    <script src="assets/moment/moment.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/booking.js"></script>
+    <script src="js/sticky-scroll.js"></script>
+</body>
+
+</html>

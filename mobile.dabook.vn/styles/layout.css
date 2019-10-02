@@ -215,3 +215,40 @@
   width: 100%;
   padding-left: 0.5rem 0;
 }
+
+.payment__bankicon{
+  height: 20px;
+}
+.payment__bankaccount{
+  background-color: #0064d2;
+  padding: 1px 5px;
+  color: #FFF;
+  border-radius: 3px;
+}
+.payment__bankowner,.payment__bankaddress{
+  text-align: right;
+}
+.bank__copy__btn{
+  width: 20px;
+  height: 20px;
+  padding: 1px;
+  text-align: center;
+  line-height: 20px;
+  margin:1px;
+  border-radius: 50%;
+  display: inline-block;
+}
+#ibank__copy__hidden{
+  visibility: hidden;
+  position: absolute;
+}
+.checked__confirm{
+  width: 70px;
+  height: 70px;
+  display: inline-block;
+}
+
+/* ======MY ORDER========== */
+.order__status{
+  
+}

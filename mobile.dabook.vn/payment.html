@@ -32,7 +32,7 @@
 </head>
 
 <body>
-    <div class="wrapper pb-4 mb-4">
+    <div class="wrapper pb-4 mb-8rem">
         <div class="header__component">
             <!-- ↓↓ Header-->
             <div class="header__component--header bg-primary h-200">
@@ -43,19 +43,7 @@
                         </button>
                     </div>
                     <div class="col-10 mp--none">
-                        <div class="d-flex justify-content-start align-items-center text__size--x08 text-white">
-                            <span class="mx-1">HaNoi</span> <i class="fas fa-arrow-right mx-1 text__size--x06"></i>
-                            <span class="mx-1">Ho Chi Minh</span>
-                        </div>
-                        <div class="d-flex justify-content-start align-items-center text__size--x06 text-white">
-                            <span class="border-right"> <span class="mx-1">HAN</span> <i
-                                    class="fas fa-exchange-alt mx-1 text__size--x06"></i> <span
-                                    class="mx-1">SAG</span></span>
-                            <span class="border-right"> <span class="mx-1">05 Nov</span> - <span class="mx-1">21
-                                    Nov</span></span>
-                            <span> <i class="fas fa-user-check text-white text__size--x06 mx-1"></i><span class="mx-1">1
-                                    Passenger</span></span>
-                        </div>
+                        <span class="text-white">Completed</span>
                     </div>
                 </div>
             </div>
@@ -63,14 +51,12 @@
         </div>
         <!-- ↓↓ result__component-->
         <div class="result__component mp--none p-3 h-400">
-            <div class="card border-0 result__card border__radius--20 custom__background--four overflow--hidden">
-                <div class="card-header bg-white border__radius__top--20 border-bottom border-primary">
+            <div class="card border-0 result__card border__radius--none overflow--hidden">
+                <div class="card-header bg-white border__radius__top--none border-bottom border-primary">
                     <div class="row mp--none">
                         <div class="stepper d-flex">
-                            <div class="stepper-group active">
+                            <div class="stepper-group">
                                 <span class="badge badge-pill stepper-item">1</span>
-                                <span class="text__size--x1 font-weight-bold mp--none">Select chiều
-                                    đi</span>
                             </div>
                             <div class="stepper-group">
                                 <span class="badge badge-pill stepper-item">2</span>
@@ -78,359 +64,349 @@
                             </div>
                             <div class="stepper-group">
                                 <span class="badge badge-pill stepper-item">3</span>
+                                <span class="text__size--x1 font-weight-bold mp--none">Xác nhận</span>
                             </div>
-                            <div class="stepper-group m-0">
+                            <div class="stepper-group active m-0">
                                 <span class="badge badge-pill stepper-item">4</span>
+                                <span class="text__size--x1 font-weight-bold mp--none">Thankyou</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="card-body px-1 py-2">
-                    <div class="row mp--none">
+                <div class="card-body px-1 p-2 pb-4">
+                    <div class="row mp--none my-4">
                         <div class="col-12 mp--none">
-                            <div class="card border-0 border__radius--5 my-2 result__departure__item">
+                            <h6 class="text__size--x1 font-weight-bold">Flight detail</h6>
+                        </div>
+                        <div class="col-12 mp--none">
+                            <div class="card mp--none">
                                 <div class="card-body p-2">
-                                    <div
-                                        class="row mp--none my-2 brand text__size--x07 text-muted d-flex align-items-center border-bottom">
-                                        <div class="col-6 mp--none pl-2">
-                                            <img src="images/brand/AirAsia.png" class="result__brand__logo" alt="">
-                                            <span>Air Asia</span>
-                                        </div>
-                                        <div class="col-6 mp--none">
-                                            <div class="d-flex flex-nowrap justify-content-end align-items-center">
-                                                <strong class="font-weight-bold text-primary text__size--x1">VND
-                                                    2.326.722 </strong><span
-                                                    class="text-muted text__size--x07">/pax</span></div>
-                                        </div>
-                                    </div>
-                                    <div class="row detail mp--none">
-                                        <div
-                                            class="col-1 mp--none d-flex flex-column justify-content-center align-items-center text__size--x04 text-muted">
-                                            <i class="fas fa-circle"></i>
-                                            <i class="h-100 border-right"></i>
-                                            <i class="far fa-circle"></i>
-                                        </div>
-                                        <div
-                                            class="col-10 mp--none text__size--x08 d-flex flex-column justify-content-between align-items-start">
-                                            <div class="checkin__time font-weight-bold">9.20 <span
-                                                    class="checkin__airport__code">HAN - Ha Noi</span></div>
-                                            <div class="total__time text-muted ml-2">12h 25m</div>
-                                            <div class="checkout__time font-weight-bold">9.20 <span
-                                                    class="checkout__airport__code">SAG - HoChiMinh</span></div>
-                                        </div>
-                                        <div
-                                            class="col-1 mp--none d-flex flex-column justify-content-between align-items-end">
-                                            <div>
-                                                <button type="button"
-                                                    class="btn bg-white text-primary btn-sm border-0 detailmodal__btn"
-                                                    data-toggle="modal" data-target="#booking__detailticket__modal"><i
-                                                        class="fas fa-chevron-down text__size--x07"></i></button>
+                                    <div class="row mp--none ticket__style">
+                                        <div class="col-12 mp--none my-2 pt-4">
+                                            <div
+                                                class="d-flex justify-content-start align-items-center text__size--x08 font-weight-bold">
+                                                <span class="mx-1">Mã giữ chỗ</span> <i
+                                                    class="fas fa-ticket-alt text__size--x06"></i>
+                                                <span class="mx-1" id="iholdseat__number">882900159</span>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card border-0 border__radius--5 my-2 result__departure__item">
-                                <div class="card-body p-2">
-                                    <div
-                                        class="row mp--none my-2 brand text__size--x07 text-muted d-flex align-items-center border-bottom">
-                                        <div class="col-6 mp--none pl-2">
-                                            <img src="images/brand/Jetstar-logo.jpg" class="result__brand__logo" alt="">
-                                            <span>Jetstar Airline</span>
-                                        </div>
-                                        <div class="col-6 mp--none">
-                                            <div class="d-flex flex-nowrap justify-content-end align-items-center">
-                                                <strong class="font-weight-bold text-primary text__size--x1">VND
-                                                    2.326.722 </strong><span
-                                                    class="text-muted text__size--x07">/pax</span></div>
-                                        </div>
-                                    </div>
-                                    <div class="row detail mp--none">
                                         <div
-                                            class="col-1 mp--none d-flex flex-column justify-content-center align-items-center text__size--x04 text-muted">
-                                            <i class="fas fa-circle"></i>
-                                            <i class="h-100 border-right"></i>
-                                            <i class="far fa-circle"></i>
+                                            class="col-12 mp--none text__size--x09 text-primary font-weight-bold  my-2 d-flex justify-content-between align-items-center pb-4">
+
+                                            <span class="mx-1">Total Payment</span>
+                                            <span class="mx-1">2,302,156 VND</span>
                                         </div>
-                                        <div
-                                            class="col-10 mp--none text__size--x08 d-flex flex-column justify-content-between align-items-start">
-                                            <div class="checkin__time font-weight-bold">9.20 <span
-                                                    class="checkin__airport__code">HAN - Ha Noi</span></div>
-                                            <div class="total__time text-muted ml-2">12h 25m</div>
-                                            <div class="checkout__time font-weight-bold">9.20 <span
-                                                    class="checkout__airport__code">DAN - Da Nang</span></div>
-                                        </div>
-                                        <div
-                                            class="col-1 mp--none d-flex flex-column justify-content-between align-items-end">
-                                            <div>
-                                                <button type="button"
-                                                    class="btn bg-white text-primary btn-sm border-0 detailmodal__btn"
-                                                    data-toggle="modal" data-target="#booking__detailticket__modal"><i
-                                                        class="fas fa-chevron-down text__size--x07"></i></button>
-                                            </div>
+                                        <div class="col-12 mp--none py-4 d-flex align-items-center justify-content-center border-top">
+                                              <span class="position-relative mp--none checked__confirm">
+                                                    <i class="fas fa-shield-alt text__size--x4 custom__color--second"></i>
+                                                    <i class="fas fa-check absolute--center text__size--x2 custom__color--four"></i>
+                                              </span>
+                                             <div class="d-flex flex-column justify-content-start">
+                                                 <span class="text__size--x13 text-primary font-weight-bold">Wait for payment</span>
+                                                 <span class="text__size--x08 text-muted">Please finish payment by bellow bank transfer</span>
+                                             </div> 
+                                              
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="card border-0 border__radius--5 my-2 result__departure__item">
-                                <div class="card-body p-2">
-                                    <div
-                                        class="row mp--none my-2 brand text__size--x07 text-muted d-flex align-items-center border-bottom">
-                                        <div class="col-6 mp--none pl-2">
-                                            <img src="images/brand/logo-vietnam-airlines.png"
-                                                class="result__brand__logo" alt="">
-                                            <span>VietNam Airline</span>
-                                        </div>
-                                        <div class="col-6 mp--none">
-                                            <div class="d-flex flex-nowrap justify-content-end align-items-center">
-                                                <strong class="font-weight-bold text-primary text__size--x1">VND
-                                                    2.326.722 </strong><span
-                                                    class="text-muted text__size--x07">/pax</span></div>
-                                        </div>
-                                    </div>
-                                    <div class="row detail mp--none">
-                                        <div
-                                            class="col-1 mp--none d-flex flex-column justify-content-center align-items-center text__size--x04 text-muted">
-                                            <i class="fas fa-circle"></i>
-                                            <i class="h-100 border-right"></i>
-                                            <i class="far fa-circle"></i>
-                                        </div>
-                                        <div
-                                            class="col-10 mp--none text__size--x08 d-flex flex-column justify-content-between align-items-start">
-                                            <div class="checkin__time font-weight-bold">9.20 <span
-                                                    class="checkin__airport__code">HAN - Ha Noi</span></div>
-                                            <div class="total__time text-muted ml-2">12h 25m</div>
-                                            <div class="checkout__time font-weight-bold">9.20 <span
-                                                    class="checkout__airport__code">DAN - Da Nang</span></div>
-                                        </div>
-                                        <div
-                                            class="col-1 mp--none d-flex flex-column justify-content-between align-items-end">
-                                            <div>
-                                                <button type="button"
-                                                    class="btn bg-white text-primary btn-sm border-0 detailmodal__btn"
-                                                    data-toggle="modal" data-target="#booking__detailticket__modal"><i
-                                                        class="fas fa-chevron-down text__size--x07"></i></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card border-0 border__radius--5 my-2 result__departure__item">
-                                <div class="card-body p-2">
-                                    <div
-                                        class="row mp--none my-2 brand text__size--x07 text-muted d-flex align-items-center border-bottom">
-                                        <div class="col-6 mp--none pl-2">
-                                            <img src="images/brand/vietjet-logo.png" class="result__brand__logo" alt="">
-                                            <span>VietJet Air</span>
-                                        </div>
-                                        <div class="col-6 mp--none">
-                                            <div class="d-flex flex-nowrap justify-content-end align-items-center">
-                                                <strong class="font-weight-bold text-primary text__size--x1">VND
-                                                    2.326.722 </strong><span
-                                                    class="text-muted text__size--x07">/pax</span></div>
-                                        </div>
-                                    </div>
-                                    <div class="row detail mp--none">
-                                        <div
-                                            class="col-1 mp--none d-flex flex-column justify-content-center align-items-center text__size--x04 text-muted">
-                                            <i class="fas fa-circle"></i>
-                                            <i class="h-100 border-right"></i>
-                                            <i class="far fa-circle"></i>
-                                        </div>
-                                        <div
-                                            class="col-10 mp--none text__size--x08 d-flex flex-column justify-content-between align-items-start">
-                                            <div class="checkin__time font-weight-bold">9.20 <span
-                                                    class="checkin__airport__code">HAN - Ha Noi</span></div>
-                                            <div class="total__time text-muted ml-2">12h 25m</div>
-                                            <div class="checkout__time font-weight-bold">9.20 <span
-                                                    class="checkout__airport__code">DAN - Da Nang</span></div>
-                                        </div>
-                                        <div
-                                            class="col-1 mp--none d-flex flex-column justify-content-between align-items-end">
-                                            <div>
-                                                <button type="button"
-                                                    class="btn bg-white text-primary btn-sm border-0 detailmodal__btn"
-                                                    data-toggle="modal" data-target="#booking__detailticket__modal"><i
-                                                        class="fas fa-chevron-down text__size--x07"></i></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card border-0 border__radius--5 my-2 result__departure__item">
-                                <div class="card-body p-2">
-                                    <div
-                                        class="row mp--none my-2 brand text__size--x07 text-muted d-flex align-items-center border-bottom">
-                                        <div class="col-6 mp--none pl-2">
-                                            <img src="images/brand/AirAsia.png" class="result__brand__logo" alt="">
-                                            <span>Air Asia</span>
-                                        </div>
-                                        <div class="col-6 mp--none">
-                                            <div class="d-flex flex-nowrap justify-content-end align-items-center">
-                                                <strong class="font-weight-bold text-primary text__size--x1">VND
-                                                    2.326.722 </strong><span
-                                                    class="text-muted text__size--x07">/pax</span></div>
-                                        </div>
-                                    </div>
-                                    <div class="row detail mp--none">
-                                        <div
-                                            class="col-1 mp--none d-flex flex-column justify-content-center align-items-center text__size--x04 text-muted">
-                                            <i class="fas fa-circle"></i>
-                                            <i class="h-100 border-right"></i>
-                                            <i class="far fa-circle"></i>
-                                        </div>
-                                        <div
-                                            class="col-10 mp--none text__size--x08 d-flex flex-column justify-content-between align-items-start">
-                                            <div class="checkin__time font-weight-bold">9.20 <span
-                                                    class="checkin__airport__code">HAN - Ha Noi</span></div>
-                                            <div class="total__time text-muted ml-2">12h 25m</div>
-                                            <div class="checkout__time font-weight-bold">9.20 <span
-                                                    class="checkout__airport__code">DAN - Da Nang</span></div>
-                                        </div>
-                                        <div
-                                            class="col-1 mp--none d-flex flex-column justify-content-between align-items-end">
-                                            <div>
-                                                <button type="button"
-                                                    class="btn bg-white text-primary btn-sm border-0 detailmodal__btn"
-                                                    data-toggle="modal" data-target="#booking__detailticket__modal"><i
-                                                        class="fas fa-chevron-down text__size--x07"></i></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card border-0 shadow border__radius--none my-2">
-                                <div class="card-body border__radius--none mp--none p-2 custom__background--three">
-                                    <div class="row mp--none d-flex justify-content-between align-items-center">
-                                        <div class="col-9 mp--none">
-                                            <h6 class="mp--none text-white"> Dont have account ?</h6>
-                                        </div>
-                                        <div class="col-3 mp--none">
-                                            <button
-                                                class="btn btn-sm btn-primary border__radius--100 border-0 text__size--x09">Register</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card border-0 border__radius--5 my-2 result__departure__item">
-                                <div class="card-body p-2">
-                                    <div
-                                        class="row mp--none my-2 brand text__size--x07 text-muted d-flex align-items-center border-bottom">
-                                        <div class="col-6 mp--none pl-2">
-                                            <img src="images/brand/AirAsia.png" class="result__brand__logo" alt="">
-                                            <span>Air Asia</span>
-                                        </div>
-                                        <div class="col-6 mp--none">
-                                            <div class="d-flex flex-nowrap justify-content-end align-items-center">
-                                                <strong class="font-weight-bold text-primary text__size--x1">VND
-                                                    2.326.722 </strong><span
-                                                    class="text-muted text__size--x07">/pax</span></div>
-                                        </div>
-                                    </div>
-                                    <div class="row detail mp--none">
-                                        <div
-                                            class="col-1 mp--none d-flex flex-column justify-content-center align-items-center text__size--x04 text-muted">
-                                            <i class="fas fa-circle"></i>
-                                            <i class="h-100 border-right"></i>
-                                            <i class="far fa-circle"></i>
-                                        </div>
-                                        <div
-                                            class="col-10 mp--none text__size--x08 d-flex flex-column justify-content-between align-items-start">
-                                            <div class="checkin__time font-weight-bold">9.20 <span
-                                                    class="checkin__airport__code">HAN - Ha Noi</span></div>
-                                            <div class="total__time text-muted ml-2">12h 25m</div>
-                                            <div class="checkout__time font-weight-bold">9.20 <span
-                                                    class="checkout__airport__code">DAN - Da Nang</span></div>
-                                        </div>
-                                        <div
-                                            class="col-1 mp--none d-flex flex-column justify-content-between align-items-end">
-                                            <div>
-                                                <button type="button"
-                                                    class="btn bg-white text-primary btn-sm border-0 detailmodal__btn"
-                                                    data-toggle="modal" data-target="#booking__detailticket__modal"><i
-                                                        class="fas fa-chevron-down text__size--x07"></i></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card border-0 border__radius--5 my-2 result__departure__item">
-                                <div class="card-body p-2">
-                                    <div
-                                        class="row mp--none my-2 brand text__size--x07 text-muted d-flex align-items-center border-bottom">
-                                        <div class="col-6 mp--none pl-2">
-                                            <img src="images/brand/AirAsia.png" class="result__brand__logo" alt="">
-                                            <span>Air Asia</span>
-                                        </div>
-                                        <div class="col-6 mp--none">
-                                            <div class="d-flex flex-nowrap justify-content-end align-items-center">
-                                                <strong class="font-weight-bold text-primary text__size--x1">VND
-                                                    2.326.722 </strong><span
-                                                    class="text-muted text__size--x07">/pax</span></div>
-                                        </div>
-                                    </div>
-                                    <div class="row detail mp--none">
-                                        <div
-                                            class="col-1 mp--none d-flex flex-column justify-content-center align-items-center text__size--x04 text-muted">
-                                            <i class="fas fa-circle"></i>
-                                            <i class="h-100 border-right"></i>
-                                            <i class="far fa-circle"></i>
-                                        </div>
-                                        <div
-                                            class="col-10 mp--none text__size--x08 d-flex flex-column justify-content-between align-items-start">
-                                            <div class="checkin__time font-weight-bold">9.20 <span
-                                                    class="checkin__airport__code">HAN - Ha Noi</span></div>
-                                            <div class="total__time text-muted ml-2">12h 25m</div>
-                                            <div class="checkout__time font-weight-bold">9.20 <span
-                                                    class="checkout__airport__code">DAN - Da Nang</span></div>
-                                        </div>
-                                        <div
-                                            class="col-1 mp--none d-flex flex-column justify-content-between align-items-end">
-                                            <div>
-                                                <button type="button"
-                                                    class="btn bg-white text-primary btn-sm border-0 detailmodal__btn"><i
-                                                        class="fas fa-chevron-down text__size--x07"></i></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card border-0 border__radius--5 my-2 result__departure__item">
-                                <div class="card-body p-2">
-                                    <div
-                                        class="row mp--none my-2 brand text__size--x07 text-muted d-flex align-items-center border-bottom">
-                                        <div class="col-6 mp--none pl-2">
-                                            <img src="images/brand/AirAsia.png" class="result__brand__logo" alt="">
-                                            <span>Air Asia</span>
-                                        </div>
-                                        <div class="col-6 mp--none">
-                                            <div class="d-flex flex-nowrap justify-content-end align-items-center">
-                                                <strong class="font-weight-bold text-primary text__size--x1">VND
-                                                    2.326.722 </strong><span
-                                                    class="text-muted text__size--x07">/pax</span></div>
-                                        </div>
-                                    </div>
-                                    <div class="row detail mp--none">
-                                        <div
-                                            class="col-1 mp--none d-flex flex-column justify-content-center align-items-center text__size--x04 text-muted">
-                                            <i class="fas fa-circle"></i>
-                                            <i class="h-100 border-right"></i>
-                                            <i class="far fa-circle"></i>
-                                        </div>
-                                        <div
-                                            class="col-10 mp--none text__size--x08 d-flex flex-column justify-content-between align-items-start">
-                                            <div class="checkin__time font-weight-bold">9.20 <span
-                                                    class="checkin__airport__code">HAN - Ha Noi</span></div>
-                                            <div class="total__time text-muted ml-2">12h 25m</div>
-                                            <div class="checkout__time font-weight-bold">9.20 <span
-                                                    class="checkout__airport__code">DAN - Da Nang</span></div>
-                                        </div>
-                                        <div
-                                            class="col-1 mp--none d-flex flex-column justify-content-between align-items-end">
-                                            <div>
-                                                <button type="button"
-                                                    class="btn bg-white text-primary btn-sm border-0 detailmodal__btn"><i
-                                                        class="fas fa-chevron-down text__size--x07"></i></button>
+                        </div>
+                    </div>
+                    <div class="row mp--none my-4 pt-4">
+                        <div class="col-12 mp--none">
+                            <h6 class="text__size--x1 font-weight-bold">Bank transfer <span class="text__size--x06 text-muted">(select to view detail)</span></h6>
+                        </div>
+                        <div class="col-12 mp--none">
+                            <div class="card mp--none">
+                                <div class="card-body mp--none">
+                                    <div class="row mp--none">
+                                        <div class="col-12 mp--none">
+                                            <div class="accordion  text__size--x08" id="ipayment__banktransfer">
+                                                <div class="card border-0">
+                                                    <div class="card-header mp--none custom__background--light"
+                                                        id="headingOne">
+                                                        <button
+                                                            class="btn btn-link  text__size--x08 py-2 d-flex justify-content-between align-items-center w-100"
+                                                            type="button" data-toggle="collapse"
+                                                            data-target="#collapseOne" aria-expanded="true"
+                                                            aria-controls="collapseOne">
+                                                            <span class="mx-1 font-weight-bold">Agribank</span>
+                                                            <span class="mx-1">
+                                                                <img class="payment__bankicon"
+                                                                    src="images/payment/agribank.jpg" alt="">
+                                                            </span>
+                                                        </button>
+                                                    </div>
+
+                                                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                                                        data-parent="#ipayment__banktransfer">
+                                                        <div class="card-body p-3">
+                                                            <div class="row mp--none">
+                                                                <div
+                                                                    class="col-12 mp--none d-flex justify-content-between align-items-center border-bottom py-2">
+                                                                    <span class="font-weight-bold text-muted">Chủ tài
+                                                                        khoản</span>
+                                                                    <span class="payment__bankowner">Công ty TNHH thương
+                                                                        mại, dịch vụ và du lịch Đại Mịnh</span>
+                                                                </div>
+                                                                <div
+                                                                    class="col-12 mp--none d-flex justify-content-between align-items-center border-bottom py-2">
+                                                                    <span class="font-weight-bold text-muted">Số tài
+                                                                        khoản</span>
+                                                                    <span><span><span
+                                                                                class="payment__bankaccount">1410206030890</span><span
+                                                                                class="ml-2 text-primary shadow bank__copy__btn custom__background--second"><i
+                                                                                    class="far fa-copy"></i></span></span>
+                                                                </div>
+                                                                <div
+                                                                    class="col-12 mp--none d-flex justify-content-between align-items-center py-2">
+                                                                    <span class="font-weight-bold text-muted">Chi
+                                                                        nhánh</span>
+                                                                    <span class="payment__bankaddress">Ngân hàng nông
+                                                                        nghiệp và phát triền nông thôn Việt Nam - CN Mỹ
+                                                                        Đình</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card border-0">
+                                                    <div class="card-header mp--none custom__background--light"
+                                                        id="headingTwo">
+                                                        <button
+                                                            class="btn btn-link  text__size--x08 py-2 d-flex justify-content-between align-items-center w-100"
+                                                            type="button" data-toggle="collapse"
+                                                            data-target="#collapseTwo" aria-expanded="true"
+                                                            aria-controls="collapseTwo">
+                                                            <span class="mx-1 font-weight-bold">HDBank</span>
+                                                            <span class="mx-1">
+                                                                <img class="payment__bankicon"
+                                                                    src="images/payment/hdbank.jpg" alt="">
+                                                            </span>
+                                                        </button>
+                                                    </div>
+                                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                                        data-parent="#ipayment__banktransfer">
+                                                        <div class="card-body p-3">
+                                                            <div class="row mp--none">
+                                                                <div
+                                                                    class="col-12 mp--none d-flex justify-content-between align-items-center border-bottom py-2">
+                                                                    <span class="font-weight-bold text-muted">Chủ tài
+                                                                        khoản</span>
+                                                                    <span class="payment__bankowner">Công ty TNHH thương
+                                                                        mại, dịch vụ và du lịch Đại Mịnh</span>
+                                                                </div>
+                                                                <div
+                                                                    class="col-12 mp--none d-flex justify-content-between align-items-center border-bottom py-2">
+                                                                    <span class="font-weight-bold text-muted">Số tài
+                                                                        khoản</span>
+                                                                    <span><span
+                                                                            class="payment__bankaccount">118704070162636</span><span
+                                                                            class="ml-2 text-primary shadow bank__copy__btn custom__background--second"><i
+                                                                                class="far fa-copy"></i></span></span>
+                                                                </div>
+                                                                <div
+                                                                    class="col-12 mp--none d-flex justify-content-between align-items-center py-2">
+                                                                    <span class="font-weight-bold text-muted">Chi
+                                                                        nhánh</span>
+                                                                    <span class="payment__bankaddress">Ngân hàng TMCP
+                                                                        phát triển Tp. Hồ Chí Minh - CN Ba Đinh- PGD Mỹ
+                                                                        Đình 2</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card border-0">
+                                                    <div class="card-header mp--none custom__background--light"
+                                                        id="headingThree">
+                                                        <button
+                                                            class="btn btn-link  text__size--x08 py-2 d-flex justify-content-between align-items-center w-100"
+                                                            type="button" data-toggle="collapse"
+                                                            data-target="#collapseThree" aria-expanded="true"
+                                                            aria-controls="collapseThree">
+                                                            <span class="mx-1 font-weight-bold">Shinhanbank</span>
+                                                            <span class="mx-1">
+                                                                <img class="payment__bankicon"
+                                                                    src="images/payment/shinhanbank.jpg" alt="">
+                                                            </span>
+                                                        </button>
+                                                    </div>
+                                                    <div id="collapseThree" class="collapse"
+                                                        aria-labelledby="headingThree"
+                                                        data-parent="#ipayment__banktransfer">
+                                                        <div class="card-body p-3">
+                                                            <div class="row mp--none">
+                                                                <div
+                                                                    class="col-12 mp--none d-flex justify-content-between align-items-center border-bottom py-2">
+                                                                    <span class="font-weight-bold text-muted">Chủ tài
+                                                                        khoản</span>
+                                                                    <span class="payment__bankowner">Công ty TNHH thương
+                                                                        mại, dịch vụ và du lịch Đại Mịnh</span>
+                                                                </div>
+                                                                <div
+                                                                    class="col-12 mp--none d-flex justify-content-between align-items-center border-bottom py-2">
+                                                                    <span class="font-weight-bold text-muted">Số tài
+                                                                        khoản</span>
+                                                                    <span><span
+                                                                            class="payment__bankaccount">700003733597</span><span
+                                                                            class="ml-2 text-primary shadow bank__copy__btn custom__background--second"><i
+                                                                                class="far fa-copy"></i></span></span>
+                                                                </div>
+                                                                <div
+                                                                    class="col-12 mp--none d-flex justify-content-between align-items-center py-2">
+                                                                    <span class="font-weight-bold text-muted">Chi
+                                                                        nhánh</span>
+                                                                    <span class="payment__bankaddress">Shinhanbank công
+                                                                        ty - CN Hà Nội</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card border-0">
+                                                    <div class="card-header mp--none custom__background--light"
+                                                        id="headingFour">
+                                                        <button
+                                                            class="btn btn-link  text__size--x08 py-2 d-flex justify-content-between align-items-center w-100"
+                                                            type="button" data-toggle="collapse"
+                                                            data-target="#collapseFour" aria-expanded="true"
+                                                            aria-controls="collapseFour">
+                                                            <span class="mx-1 font-weight-bold">Techcombank</span>
+                                                            <span class="mx-1">
+                                                                <img class="payment__bankicon"
+                                                                    src="images/payment/techcombank.png" alt="">
+                                                            </span>
+                                                        </button>
+                                                    </div>
+                                                    <div id="collapseFour" class="collapse"
+                                                        aria-labelledby="headingThree"
+                                                        data-parent="#ipayment__banktransfer">
+                                                        <div class="card-body p-3">
+                                                            <div class="row mp--none">
+                                                                <div
+                                                                    class="col-12 mp--none d-flex justify-content-between align-items-center border-bottom py-2">
+                                                                    <span class="font-weight-bold text-muted">Chủ tài
+                                                                        khoản</span>
+                                                                    <span class="payment__bankowner">Công ty TNHH thương
+                                                                        mại, dịch vụ và du lịch Đại Mịnh</span>
+                                                                </div>
+                                                                <div
+                                                                    class="col-12 mp--none d-flex justify-content-between align-items-center border-bottom py-2">
+                                                                    <span class="font-weight-bold text-muted">Số tài
+                                                                        khoản</span>
+                                                                    <span><span
+                                                                            class="payment__bankaccount">19120166939018
+                                                                        </span><span
+                                                                            class="ml-2 text-primary shadow bank__copy__btn custom__background--second"><i
+                                                                                class="far fa-copy"></i></span></span>
+                                                                </div>
+                                                                <div
+                                                                    class="col-12 mp--none d-flex justify-content-between align-items-center py-2">
+                                                                    <span class="font-weight-bold text-muted">Chi
+                                                                        nhánh</span>
+                                                                    <span class="payment__bankaddress">Techcombank- CN
+                                                                        Nội bài quỹ tiết kiệm The Manor</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card border-0">
+                                                    <div class="card-header mp--none custom__background--light"
+                                                        id="headingFive">
+                                                        <button
+                                                            class="btn btn-link  text__size--x08 py-2 d-flex justify-content-between align-items-center w-100"
+                                                            type="button" data-toggle="collapse"
+                                                            data-target="#collapseFive" aria-expanded="true"
+                                                            aria-controls="collapseFive">
+                                                            <span class="mx-1 font-weight-bold">Vietcombank</span>
+                                                            <span class="mx-1">
+                                                                <img class="payment__bankicon"
+                                                                    src="images/payment/vietcombank.jpg" alt="">
+                                                            </span>
+                                                        </button>
+                                                    </div>
+                                                    <div id="collapseFive" class="collapse"
+                                                        aria-labelledby="headingThree"
+                                                        data-parent="#ipayment__banktransfer">
+                                                        <div class="card-body p-3">
+                                                            <div class="row mp--none">
+                                                                <div
+                                                                    class="col-12 mp--none d-flex justify-content-between align-items-center border-bottom py-2">
+                                                                    <span class="font-weight-bold text-muted">Chủ tài
+                                                                        khoản</span>
+                                                                    <span class="payment__bankowner">Công ty TNHH thương
+                                                                        mại, dịch vụ và du lịch Đại Mịnh</span>
+                                                                </div>
+                                                                <div
+                                                                    class="col-12 mp--none d-flex justify-content-between align-items-center border-bottom py-2">
+                                                                    <span class="font-weight-bold text-muted">Số tài
+                                                                        khoản</span>
+                                                                    <span><span
+                                                                            class="payment__bankaccount">0451001906812</span><span
+                                                                            class="ml-2 text-primary shadow bank__copy__btn custom__background--second"><i
+                                                                                class="far fa-copy"></i></span></span>
+                                                                </div>
+                                                                <div
+                                                                    class="col-12 mp--none d-flex justify-content-between align-items-center py-2">
+                                                                    <span class="font-weight-bold text-muted">Chi
+                                                                        nhánh</span>
+                                                                    <span class="payment__bankaddress">Vietcombank công
+                                                                        ty - CN Thành Công</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card border-0">
+                                                    <div class="card-header mp--none custom__background--light"
+                                                        id="headingSix">
+                                                        <button
+                                                            class="btn btn-link  text__size--x08 py-2 d-flex justify-content-between align-items-center w-100"
+                                                            type="button" data-toggle="collapse"
+                                                            data-target="#collapseSix" aria-expanded="true"
+                                                            aria-controls="collapseSix">
+                                                            <span class="mx-1 font-weight-bold">Vietinbank</span>
+                                                            <span class="mx-1">
+                                                                <img class="payment__bankicon"
+                                                                    src="images/payment/vietinbank.png" alt="">
+                                                            </span>
+                                                        </button>
+                                                    </div>
+                                                    <div id="collapseSix" class="collapse"
+                                                        aria-labelledby="headingThree"
+                                                        data-parent="#ipayment__banktransfer">
+                                                        <div class="card-body p-3">
+                                                            <div class="row mp--none">
+                                                                <div
+                                                                    class="col-12 mp--none d-flex justify-content-between align-items-center border-bottom py-2">
+                                                                    <span class="font-weight-bold text-muted">Chủ tài
+                                                                        khoản</span>
+                                                                    <span class="payment__bankowner">Công ty TNHH thương
+                                                                        mại, dịch vụ và du lịch Đại Mịnh</span>
+                                                                </div>
+                                                                <div
+                                                                    class="col-12 mp--none d-flex justify-content-between align-items-center border-bottom py-2">
+                                                                    <span class="font-weight-bold text-muted">Số tài
+                                                                        khoản</span>
+                                                                    <span><span
+                                                                            class="payment__bankaccount">118002690095</span><span
+                                                                            class="ml-2 text-primary shadow bank__copy__btn custom__background--second"><i
+                                                                                class="far fa-copy"></i></span></span>
+                                                                </div>
+                                                                <div
+                                                                    class="col-12 mp--none d-flex justify-content-between align-items-center py-2">
+                                                                    <span class="font-weight-bold text-muted">Chi
+                                                                        nhánh</span>
+                                                                    <span class="payment__bankaddress">Ngân hàng TMCP
+                                                                        Công thương Việt Nam - Chi nhánh Nam Thăng Long
+                                                                        - PGD Mễ Trì</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -739,7 +715,7 @@
                                             </div>
                                         </div>
                                         <div
-                                            class="col-1 mp--none d-flex flex-column justify-content-center align-items-center text__size--x04 text-muted">
+                                            class="col-1 mp--none d-flex flex-column justify-content-center align-items-center text__size--x06 text-muted">
                                             <i class="fas fa-circle"></i>
                                             <i class="h-100 border-right"></i>
                                             <i class="far fa-circle"></i>
@@ -866,16 +842,13 @@
         <!-- ↑↑ End Modal -->
 
 
-        <!-- ↓↓ Filter sticky-->
-        <div class="filter__component">
-            <div class="row mp--none w-100">
-                <div class="col-12 mp--none d-flex align-items-center justify-content-center">
-                    <div class="btn-group border__radius--100 overflow--hidden shadow" role="group">
-                        <button type="button" class="btn btn-primary btn-sm text__size--x08" data-toggle="modal"
-                            data-target="#booking__filter__modal"><i class="fas fa-filter mr-2"></i>Filter</button>
-                        <button type="button" class="btn btn-primary btn-sm text__size--x08" data-toggle="modal"
-                            data-target="#booking__sort__modal"><i class="fas fa-sort-alpha-up mr-2"></i>Sort</button>
-                    </div>
+        <!-- ↓↓ Payment sticky-->
+        <div class="payment__action__component bg-white p-2">
+            <div class="row mp--none">
+                <div class="col-12 mp--none">
+                    <button type="button"
+                        class="btn w-100 btn-warning border__radius--100 text-primary btn-sm text__size--x08 w-100 font-weight-bold py-2 copyandclose__btn"
+                        data-dismiss="modal">COPY CODE & CLOSE</button>
                 </div>
             </div>
         </div>
