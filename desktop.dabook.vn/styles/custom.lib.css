@@ -111,3 +111,17 @@
   right: -10px;
   background-color: #0065b8;
 }
+
+/*↓↓ Pagination */
+.page-link{
+  border:none !important;
+  font-size: 0.9rem;
+}
+.page-item.active .page-link{
+  border-radius: 50%;
+}
+.page-item:hover .page-link,.page-item:focus .page-link,.page-item:active .page-link{
+  background-color: transparent;
+  outline: none;
+}
+/*↑↑ Pagination */
