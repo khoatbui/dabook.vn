@@ -734,3 +734,58 @@ $('.default__departure .select__departure__btn').on('click', function() {
   seletedLocationV2('arrived', value.code, value.name);
   closeDropdrownMenu();
 });
+$('.booking__exchangedes').on('click',function(){
+  var depart = $('#booking__departure').val();
+  console.log(depart);
+  $('#booking__departure').val($('#booking__arrived').val());
+  $('#booking__sticky__departure').val($('#booking__arrived').val());
+  $('#booking__arrived').val(depart);
+  $('#booking__sticky__arrived').val(depart);
+  event.stopPropagation();
+});
+$('#booking__departure').on('keypress',function(e) {
+  if(e.which == 13) {
+    if($('.search__departure>.result__item').length===1){
+      
+      $('#booking__sticky__departure').val($('.departure__item').text().trim());
+      $('#booking__departure').val($('.departure__item').text().trim());
+    }
+    else{
+      //Gọi hàm search luôn, không timeout nữa
+    }
+  }
+});
+$('#booking__arrived').on('keypress',function(e) {
+  if(e.which == 13) {
+    if($('.search__arrived>.result__item').length===1){
+      $('#booking__sticky__arrived').val($('.arrived__item').text().trim());
+      $('#booking__arrived').val($('.arrived__item').text().trim());
+    }
+  }
+  else{
+    //Gọi hàm search luôn, không timeout nữa
+  }
+});
+$('#booking__sticky__departure').on('keypress',function(e) {
+  if(e.which == 13) {
+    if($('.search__sticky__departure>.result__item').length===1){
+      
+      $('#booking__sticky__departure').val($('.departure__sticky__item').text().trim());
+      $('#booking__departure').val($('.departure__sticky__item').text().trim());
+    }
+    else{
+      //Gọi hàm search luôn, không timeout nữa
+    }
+  }
+});
+$('#booking__sticky__arrived').on('keypress',function(e) {
+  if(e.which == 13) {
+    if($('.search__sticky__arrived>.result__item').length===1){
+      $('#booking__sticky__arrived').val($('.arrived__sticky__item').text().trim());
+      $('#booking__arrived').val($('.arrived__sticky__item').text().trim());
+    }
+  }
+  else{
+    //Gọi hàm search luôn, không timeout nữa
+  }
+});

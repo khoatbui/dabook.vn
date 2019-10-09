@@ -21,3 +21,7 @@ var slider__filter__price = new Slider('#i__filter__price', {tooltip: 'always'})
 slider__filter__price.on("slide", function(sliderValue) {
 	document.getElementById("i__filter__price__value").textContent =new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(sliderValue[0]) + ' - ' + new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(sliderValue[1]);
 });
+
+slider__departure__checkin.on("change",function(sliderValue){
+	console.log(sliderValue[0]);
+})
