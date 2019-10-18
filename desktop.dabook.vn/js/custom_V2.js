@@ -960,6 +960,7 @@ $('.owl__topdes').owlCarousel({
     else{
       //Gọi hàm search luôn, không timeout nữa
     }
+    return false;
   });
   $('#booking__sticky__departure').on('keypress',function(e) {
     if(e.which == 13) {
@@ -971,6 +972,7 @@ $('.owl__topdes').owlCarousel({
       else{
         //Gọi hàm search luôn, không timeout nữa
       }
+      return false;
     }
   });
   $('#booking__sticky__arrived').on('keypress',function(e) {
